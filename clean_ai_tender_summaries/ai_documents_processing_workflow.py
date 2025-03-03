@@ -1,3 +1,4 @@
+import os
 import logging
 import asyncio
 from typing import Dict, List, Optional, Any
@@ -52,12 +53,16 @@ class AIDocumentsProcessingWorkflow:
         client_tender = self.tender_repository.get_client_tender(tender_id, client_id)
 
         # Check if we need to generate AI docs or can return existing ones
-        if not regenerate and tender.get('ai_summary') and client_tender.get('ai_doc'):
+        if not regenerate and tender.get('ai_summary') and client_tender.get('ai_doc_path'):  # Fixed to check ai_doc_path
             self.logger.info("Using existing AI documents")
+            # Calculate processing time
+            end_time = datetime.now()
+            processing_time = (end_time - start_time).total_seconds()
             return {
                 'ai_summary': tender['ai_summary'],
-                'ai_doc': client_tender['ai_doc'],
-                'regenerated': False
+                'ai_doc_path': client_tender['ai_doc_path'],  # Return ai_doc_path instead of ai_doc
+                'regenerated': False,
+                'processing_time': processing_time
             }
 
         # 2. Identify missing Markdown files
@@ -107,8 +112,8 @@ class AIDocumentsProcessingWorkflow:
                 self.logger.error(f"Failed to generate AI summary for tender {tender_id}")
 
         # 6. Generate client-specific AI document if needed
-        ai_doc = client_tender.get('ai_doc')
-        if regenerate or not ai_doc:
+        ai_doc_path = client_tender.get('ai_doc_path')  # Use consistent naming
+        if regenerate or not ai_doc_path:
             # Use provided questions or default questions
             doc_questions = questions or [
                 "1. ¿Cuál es el objeto de la licitación?",
@@ -118,27 +123,31 @@ class AIDocumentsProcessingWorkflow:
                 "5. ¿Cuáles son los plazos clave?"
             ]
 
-            # Generate output filename for caching results
+            # Generate output filename for storing results
+            timestamp = int(datetime.now().timestamp())
             output_dir = "data/client_docs"
             os.makedirs(output_dir, exist_ok=True)
-            output_file = os.path.join(output_dir, f"{client_id}_{tender_id}_{int(datetime.now().timestamp())}.md")
+            output_file = os.path.join(output_dir, f"{client_id}_{tender_id}_{timestamp}.md")
 
-            ai_doc = await self.ai_document_generator_service.generate_ai_documents(
+            # Generate the AI document and get the path
+            ai_doc_path = await self.ai_document_generator_service.generate_ai_documents(
                 all_markdown_paths, doc_questions, output_file
             )
 
-            if ai_doc:
-                client_tender = self.tender_repository.update_ai_doc(tender_id, client_id, ai_doc)
+            if ai_doc_path:
+                client_tender = self.tender_repository.update_ai_doc(tender_id, client_id, ai_doc_path)
             else:
                 self.logger.error(f"Failed to generate AI document for client {client_id}, tender {tender_id}")
 
+        # Calculate final processing time
         end_time = datetime.now()
         processing_time = (end_time - start_time).total_seconds()
         self.logger.info(f"Tender processing completed in {processing_time:.2f} seconds")
 
+        # Update the return value to include paths
         return {
             'ai_summary': tender.get('ai_summary'),
-            'ai_doc': client_tender.get('ai_doc'),
-            'regenerated': regenerate or not ai_summary or not ai_doc,
+            'ai_doc_path': client_tender.get('ai_doc_path'),  # Return the path
+            'regenerated': regenerate or not ai_summary or not ai_doc_path,
             'processing_time': processing_time
         }

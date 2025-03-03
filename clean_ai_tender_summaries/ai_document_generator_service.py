@@ -211,11 +211,11 @@ class AIDocumentGeneratorService:
         Args:
             markdown_paths: List of paths to markdown files
             questions: List of questions/sections to process
-            output_file: Optional file to write the results to
+            output_file: File to write the results to
             max_retries: Maximum number of retries for API calls
 
         Returns:
-            The complete generated document if successful, None otherwise
+            Path to the generated document if successful, None otherwise
         """
         self.logger.info("Generating AI documents sequentially...")
 
@@ -319,18 +319,14 @@ class AIDocumentGeneratorService:
                     # Exponential backoff
                     delay *= 2
 
-            if section_response:
-                # Append to result
-                full_response += section_response + "\n\n"
+            # Write to file when successful
+            if full_response:
+                os.makedirs(os.path.dirname(output_file), exist_ok=True)
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    f.write(full_response)
 
-                # Update the accumulated context
-                accumulated_context += section_response
-
-                # Optionally write to file as we go (in case of interruptions)
-                if output_file:
-                    os.makedirs(os.path.dirname(output_file), exist_ok=True)
-                    with open(output_file, 'w', encoding='utf-8') as f:
-                        f.write(full_response)
+                self.logger.info(f"AI document written to {output_file}")
+                return output_file
 
 
         return full_response

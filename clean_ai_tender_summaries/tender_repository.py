@@ -35,7 +35,7 @@ class TenderRepository:
             self._client_tenders[key] = {
                 'tender_id': tender_id,
                 'client_id': client_id,
-                'ai_doc': None,
+                'ai_doc_path': None,
                 'created_at': datetime.now(),
                 'updated_at': datetime.now()
             }
