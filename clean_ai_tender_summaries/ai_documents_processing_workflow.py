@@ -96,23 +96,8 @@ class AIDocumentsProcessingWorkflow:
         if not all_markdown_paths:
             raise ValueError(f"No markdown documents available for tender {tender_id}")
 
-        # 5. Generate AI summary if needed
-        ai_summary = tender.get('ai_summary')
-        if regenerate or not ai_summary:
-            # Use a simple summary template if none provided
-            summary_template = "Proporciona un resumen detallado de los documentos de licitación, incluyendo información general, aspectos económicos, aspectos técnicos, condiciones contractuales y criterios de adjudicación."
-
-            ai_summary = await self.ai_document_generator_service.generate_summary(
-                all_markdown_paths, summary_template
-            )
-
-            if ai_summary:
-                tender = self.tender_repository.update_ai_summary(tender_id, ai_summary)
-            else:
-                self.logger.error(f"Failed to generate AI summary for tender {tender_id}")
-
-        # 6. Generate client-specific AI document if needed
-        ai_doc_path = client_tender.get('ai_doc_path')  # Use consistent naming
+        # 5. Generate client-specific AI document
+        ai_doc_path = client_tender.get('ai_doc_path')
         if regenerate or not ai_doc_path:
             # Use provided questions or default questions
             doc_questions = questions or [
@@ -138,6 +123,34 @@ class AIDocumentsProcessingWorkflow:
                 client_tender = self.tender_repository.update_ai_doc(tender_id, client_id, ai_doc_path)
             else:
                 self.logger.error(f"Failed to generate AI document for client {client_id}, tender {tender_id}")
+                # If AI document generation failed, we can't continue with summary generation
+                end_time = datetime.now()
+                processing_time = (end_time - start_time).total_seconds()
+                return {
+                    'ai_summary': None,
+                    'ai_doc_path': None,
+                    'regenerated': True,
+                    'processing_time': processing_time
+                }
+
+        # 6. Generate AI summary based on the AI document
+        if regenerate or not tender.get('ai_summary'):
+            # Read the AI document
+            try:
+                with open(client_tender.get('ai_doc_path'), 'r', encoding='utf-8') as f:
+                    ai_doc_content = f.read()
+
+                # Now generate summary using the AI document as context
+                ai_summary = await self.ai_document_generator_service.generate_conversational_summary(
+                    ai_doc_content, tender_id
+                )
+
+                if ai_summary:
+                    tender = self.tender_repository.update_ai_summary(tender_id, ai_summary)
+                else:
+                    self.logger.error(f"Failed to generate AI summary for tender {tender_id}")
+            except Exception as e:
+                self.logger.error(f"Error reading AI document or generating summary: {e}")
 
         # Calculate final processing time
         end_time = datetime.now()
@@ -147,7 +160,7 @@ class AIDocumentsProcessingWorkflow:
         # Update the return value to include paths
         return {
             'ai_summary': tender.get('ai_summary'),
-            'ai_doc_path': client_tender.get('ai_doc_path'),  # Return the path
-            'regenerated': regenerate or not ai_summary or not ai_doc_path,
+            'ai_doc_path': client_tender.get('ai_doc_path'),
+            'regenerated': regenerate or not tender.get('ai_summary') or not ai_doc_path,
             'processing_time': processing_time
         }

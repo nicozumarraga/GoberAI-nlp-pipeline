@@ -158,6 +158,7 @@ class AIDocumentGeneratorService:
         system_prompt += "Analiza estos documentos y proporciona información precisa basándote en ellos."
         return system_prompt
 
+    ## THIS METHOD BELOW IS DEPRECATED IN FAVOUR OF GENERATING A SUMMARY FROM THE AI DOC
     async def generate_summary(
         self,
         markdown_paths: List[str],
@@ -415,6 +416,79 @@ class AIDocumentGeneratorService:
 
                 if retry_count > max_retries:
                     self.logger.error(f"Failed to process section {section_number} after {max_retries} retries")
+                    return None
+
+                # Add jitter to avoid thundering herd
+                jitter = random.uniform(0.8, 1.2)
+                actual_delay = delay * jitter
+                self.logger.info(f"Retrying in {actual_delay:.2f} seconds...")
+                time.sleep(actual_delay)
+
+                # Exponential backoff
+                delay *= 2
+
+        return None
+
+    async def generate_conversational_summary(
+        self,
+        document_content: str,
+        tender_id: str,
+        max_retries: int = 3
+    ) -> Optional[str]:
+        """
+        Generate a conversational summary based on the AI document
+
+        Args:
+            document_content: Content of the AI document
+            tender_id: ID of the tender
+            max_retries: Maximum number of retries for API calls
+
+        Returns:
+            Conversational summary if successful, None otherwise
+        """
+        self.logger.info("Generating conversational summary from AI document...")
+
+        prompt = f"""
+        Eres un asistente experto en licitaciones públicas. A continuación, te presento un documento detallado
+        sobre la licitación {tender_id}.
+
+        {document_content}
+
+        Por favor, genera un resumen breve (máximo 1500 caracteres) en un estilo profesional y
+        directo que destaque los puntos más importantes de esta licitación. Incluye el objeto, presupuesto,
+        plazos clave y cualquier particularidad que consideres relevante.
+        """
+
+        # Retry with exponential backoff
+        retry_count = 0
+        initial_delay = 1.0
+        delay = initial_delay
+
+        while retry_count <= max_retries:
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=[{
+                        "role": "user",
+                        "parts": [{"text": prompt}]
+                    }]
+                )
+
+                # Log token usage if available
+                if hasattr(response, 'usage_metadata'):
+                    self.logger.info("\nToken Usage (Summary):")
+                    self.logger.info(f"Prompt tokens: {response.usage_metadata.prompt_token_count}")
+                    self.logger.info(f"Response tokens: {response.usage_metadata.candidates_token_count}")
+                    self.logger.info(f"Total tokens: {response.usage_metadata.total_token_count}")
+
+                return response.text
+
+            except Exception as e:
+                retry_count += 1
+                self.logger.error(f"Error generating conversational summary (attempt {retry_count}/{max_retries}): {e}")
+
+                if retry_count > max_retries:
+                    self.logger.error(f"Failed to generate conversational summary after {max_retries} retries")
                     return None
 
                 # Add jitter to avoid thundering herd
