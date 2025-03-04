@@ -74,7 +74,7 @@ class AIDocumentsProcessingWorkflow:
             if doc_id not in markdown_paths or not markdown_paths[doc_id]:
                 missing_docs[doc_id] = url
 
-        # 3. Process missing documents in parallel
+        # 3. Process missing documents in parallel (only if there are any)
         new_markdown_paths = {}
         if missing_docs:
             self.logger.info(f"Processing {len(missing_docs)} missing documents")
@@ -90,6 +90,8 @@ class AIDocumentsProcessingWorkflow:
             # 3c. Update Tender with new Markdown paths
             if new_markdown_paths:
                 tender = self.tender_repository.update_markdown_paths(tender_id, new_markdown_paths)
+        else:
+            self.logger.info("All documents already have markdown versions, skipping download and conversion")
 
         # 4. Prepare the complete list of Markdown paths
         all_markdown_paths = list(tender['markdown_paths'].values())

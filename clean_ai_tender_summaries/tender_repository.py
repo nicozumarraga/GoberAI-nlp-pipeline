@@ -11,31 +11,6 @@ class TenderRepository:
         # Mock database tables
         self._tenders = {}
         self._client_tenders = {}
-        self._initialize_test_data()
-
-    def _initialize_test_data(self):
-        """Initialize test data with pre-populated markdown paths"""
-        test_tender_id = "10/2024/CONM-CEE"
-        test_client_id = "client123"
-
-        # Set up test tender with pre-populated markdown paths
-        self._tenders[test_tender_id] = {
-            'id': test_tender_id,
-            'document_urls': {
-                'doc1': "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-                'doc2': "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-            },
-            'markdown_paths': {
-                'doc1': "data/markdown/DOC_CN2024-001193585_1741072724.md",
-                'doc2': "data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741072725.md",
-                'doc3': "data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md",
-                'doc4': "data/markdown/DOC20241111094338ANEXO_I.md",
-                'doc5': "data/markdown/DOC20241111094425ANEXO_II.md"
-            },
-            'ai_summary': None,
-            'created_at': datetime.now(),
-            'updated_at': datetime.now()
-        }
 
     def get_tender_by_id(self, tender_id: str) -> Dict[str, Any]:
         """Retrieve a tender by its ID"""
@@ -50,6 +25,35 @@ class TenderRepository:
                 'created_at': datetime.now(),
                 'updated_at': datetime.now()
             }
+        return self._tenders[tender_id]
+
+    def create_or_update_tender(self, tender_id: str, document_urls: Dict[str, str],
+                            markdown_paths: Dict[str, str] = None,
+                            ai_summary: str = None) -> Dict[str, Any]:
+        """Create or update a tender with the given data"""
+
+        if tender_id in self._tenders:
+            # Update existing tender
+            tender = self._tenders[tender_id]
+            tender['document_urls'].update(document_urls)
+            if markdown_paths:
+                if 'markdown_paths' not in tender:
+                    tender['markdown_paths'] = {}
+                tender['markdown_paths'].update(markdown_paths)
+            if ai_summary is not None:
+                tender['ai_summary'] = ai_summary
+            tender['updated_at'] = datetime.now()
+        else:
+            # Create new tender
+            self._tenders[tender_id] = {
+                'id': tender_id,
+                'document_urls': document_urls,
+                'markdown_paths': markdown_paths or {},
+                'ai_summary': ai_summary,
+                'created_at': datetime.now(),
+                'updated_at': datetime.now()
+            }
+
         return self._tenders[tender_id]
 
     def get_client_tender(self, tender_id: str, client_id: str) -> Dict[str, Any]:

@@ -148,111 +148,43 @@ class AIDocumentGeneratorService:
         for i, doc in enumerate(document_contents):
             # Extract filename from path for better context
             filename = os.path.basename(doc["path"])
-            # Limit document size to avoid exceeding token limits
-            content_preview = doc["content"][:10000]
-            if len(doc["content"]) > 10000:
-                content_preview += "\n... [Contenido truncado por límite de tamaño]"
 
-            system_prompt += f"--- DOCUMENTO {i+1}: {filename} ---\n{content_preview}\n\n"
+            # Include the full document content without truncation
+            system_prompt += f"--- DOCUMENTO {i+1}: {filename} ---\n{doc['content']}\n\n"
 
         system_prompt += "Analiza estos documentos y proporciona información precisa basándote en ellos."
         return system_prompt
 
-    ## THIS METHOD BELOW IS DEPRECATED IN FAVOUR OF GENERATING A SUMMARY FROM THE AI DOC
-    async def generate_summary(
-        self,
-        markdown_paths: List[str],
-        template: str,
-        max_retries: int = 5
-    ) -> Optional[str]:
+    def estimate_total_tokens(self, markdown_paths: List[str]) -> int:
         """
-        Generate an AI summary of the tender documents
+        Estimate the total token count from markdown files without API calls
 
         Args:
             markdown_paths: List of paths to markdown files
-            template: Template for the summary
-            max_retries: Maximum number of retries for API calls
 
         Returns:
-            The generated summary if successful, None otherwise
+            Estimated total token count
         """
-        self.logger.info("Generating AI summary...")
+        total_tokens = 0
 
-        # Process documents
-        cache_result = self.process_markdown_documents(markdown_paths)
-
-        prompt = f"""Por favor, busca en los documentos proporcionados y completa de manera
-        específica y detallada la siguiente plantilla.
-
-        Plantilla: {template}
-
-        IMPORTANTE: Responde siempre con la información extraida del texto, asume que el usuario
-        final no tiene acceso al documento y debemos darle toda la información necesaria en nuestra
-        respuesta. Cita textualmente el texto cuando sea relevante.
-        Nunca respondas con "se especifica en el apartado...", siempre responde con la información final.
-        """
-
-        # Retry with exponential backoff
-        retry_count = 0
-        initial_delay = 1.0
-        delay = initial_delay
-
-        while retry_count <= max_retries:
+        for path in markdown_paths:
             try:
-                if cache_result.get("use_cache", False):
-                    # Use cache if available
-                    response = self.client.models.generate_content(
-                        model=self.model_name,
-                        contents=prompt,
-                        config=types.GenerateContentConfig(cached_content=cache_result["cache"].name)
-                    )
-                else:
-                    # Fallback to direct query with document content in system prompt
-                    system_prompt = self._build_system_prompt_with_documents(
-                        cache_result.get("document_contents", [])
-                    )
+                # Read the file content
+                with open(path, 'r', encoding='utf-8') as f:
+                    content = f.read()
 
-                    response = self.client.models.generate_content(
-                        model=self.model_name,
-                        contents=[
-                            {
-                                "role": "user",
-                                "parts": [{"text": system_prompt}]
-                            },
-                            {
-                                "role": "user",
-                                "parts": [{"text": prompt}]
-                            }
-                        ]
-                    )
+                # Roughly estimate token count
+                file_tokens = self._calculate_tokens(content)
+                total_tokens += file_tokens
 
-                # Log token usage if available
-                if hasattr(response, 'usage_metadata'):
-                    self.logger.info("\nToken Usage:")
-                    self.logger.info(f"Prompt tokens: {response.usage_metadata.prompt_token_count}")
-                    if hasattr(response.usage_metadata, 'cached_content_token_count'):
-                        self.logger.info(f"Cached content tokens: {response.usage_metadata.cached_content_token_count}")
-                    self.logger.info(f"Response tokens: {response.usage_metadata.candidates_token_count}")
-                    self.logger.info(f"Total tokens: {response.usage_metadata.total_token_count}")
-
-                return response.text
+                self.logger.debug(f"Estimated tokens for {path}: {file_tokens}")
 
             except Exception as e:
-                retry_count += 1
-                self.logger.error(f"Error generating summary (attempt {retry_count}/{max_retries}): {e}")
+                self.logger.error(f"Error estimating tokens for {path}: {e}")
+                continue
 
-                if retry_count > max_retries:
-                    self.logger.error(f"Failed to generate summary after {max_retries} retries")
-                    return None
-
-                # Add jitter to avoid thundering herd
-                jitter = random.uniform(0.8, 1.2)
-                actual_delay = delay * jitter
-                self.logger.info(f"Retrying in {actual_delay:.2f} seconds...")
-                time.sleep(actual_delay)
-
-                # Exponential backoff
-                delay *= 2
+        self.logger.info(f"Total estimated tokens: {total_tokens}")
+        return total_tokens
 
     async def generate_ai_documents(
         self,
@@ -283,8 +215,36 @@ class AIDocumentGeneratorService:
         sections_dir = os.path.join(output_dir, "sections")
         os.makedirs(sections_dir, exist_ok=True)
 
-        # Process documents
-        cache_result = self.process_markdown_documents(markdown_paths)
+        # Estimate token count before processing
+        estimated_tokens = self.estimate_total_tokens(markdown_paths)
+
+        # Check if total tokens meet minimum requirement for caching
+        use_cache = estimated_tokens >= self.min_token_count
+        cache_result = {"use_cache": use_cache}
+
+        if use_cache:
+            # Only process documents if we'll be using caching
+            self.logger.info(f"Estimated tokens ({estimated_tokens}) exceed minimum for caching. Processing documents...")
+
+            # Process documents
+            cache_result = await self.process_markdown_documents(markdown_paths)
+        else:
+            self.logger.warning(
+                f"Estimated tokens ({estimated_tokens}) is below minimum required for caching "
+                f"({self.min_token_count}). Will process without caching."
+            )
+            # Add document contents for direct use if needed
+            cache_result["document_contents"] = []
+            for file_path in markdown_paths:
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    cache_result["document_contents"].append({
+                        "path": file_path,
+                        "content": content
+                    })
+                except Exception as e:
+                    self.logger.error(f"Error reading markdown file {file_path}: {e}")
 
         # Prepare system prompt if not using cache
         system_prompt = None
@@ -304,13 +264,10 @@ class AIDocumentGeneratorService:
 
             # Build a prompt that incorporates previous context
             if accumulated_context:
-                prompt = f"""Por favor, continúa completando la plantilla con la siguiente sección.
+                prompt = f"""Por favor, busca en los documentos proporcionados y completa de manera
+                específica y detallada la siguiente plantilla.
 
-                Lo que ya has respondido anteriormente (NO REPETIR ESTE CONTENIDO):
-                {accumulated_context}
-
-                Ahora completa SOLO la siguiente sección sin repetir lo anterior:
-                {question}
+                Plantilla: {question}
 
                 IMPORTANTE:
                 1. Continúa donde lo dejaste sin repetir información.
@@ -458,6 +415,15 @@ class AIDocumentGeneratorService:
         Por favor, genera un resumen breve (máximo 1500 caracteres) en un estilo profesional y
         directo que destaque los puntos más importantes de esta licitación. Incluye el objeto, presupuesto,
         plazos clave y cualquier particularidad que consideres relevante.
+
+        Ejemplo: La licitación 10/2024/CONM-CEE busca un proveedor para el suministro de plantas y decoración
+        floral navideña en el centro de Jaén. El proyecto se divide en dos lotes: Suministro de plantas (7.040€ + IVA)
+        y servicio de decoración (4.840€ + IVA), con un presupuesto total de 11.880€ + IVA. No se exige solvencia
+        económica o técnica y el plazo de presentación de ofertas finaliza el 25/11/2024 a las 14:00. La adjudicación
+        se realiza a la oferta económica más baja.  El contrato se extiende hasta fin de 2024 y el adjudicatario debe
+        presentar una declaración responsable sobre medidas de igualdad de género en el mercado laboral.  Se deben
+        cumplir las normas de protección medioambiental y la normativa vigente en materia laboral.  Los licitadores deben
+        revisar los anexos para detalles específicos sobre las plantas, materiales y plazos de entrega.
         """
 
         # Retry with exponential backoff
