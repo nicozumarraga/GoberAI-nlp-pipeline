@@ -24,9 +24,9 @@ logger = logging.getLogger(__name__)
 
 async def main():
     # Load environment variables
-    marker_api_key = os.getenv("MARKER_API", "VE2rjbBG2PS4_XBVrjIwJb1spnflusuWbwGsO9RkbKo")
+    marker_api_key = os.getenv("MARKER_API", "")
     print(f"Marker API is: {marker_api_key}")
-    google_ai_api_key = os.getenv("GOOGLE_AI_API", "AIzaSyCPaAqSyedsedLml8FtA_mQDZnvA5w0Uo8")
+    google_ai_api_key = os.getenv("GOOGLE_AI_API", "")
 
     # Check if keys are available
     if not marker_api_key:
