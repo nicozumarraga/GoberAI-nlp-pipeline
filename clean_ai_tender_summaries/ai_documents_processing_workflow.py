@@ -53,14 +53,14 @@ class AIDocumentsProcessingWorkflow:
         client_tender = self.tender_repository.get_client_tender(tender_id, client_id)
 
         # Check if we need to generate AI docs or can return existing ones
-        if not regenerate and tender.get('ai_summary') and client_tender.get('ai_doc_path'):  # Fixed to check ai_doc_path
+        if not regenerate and tender.get('ai_summary') and client_tender.get('ai_doc_path'):
             self.logger.info("Using existing AI documents")
             # Calculate processing time
             end_time = datetime.now()
             processing_time = (end_time - start_time).total_seconds()
             return {
                 'ai_summary': tender['ai_summary'],
-                'ai_doc_path': client_tender['ai_doc_path'],  # Return ai_doc_path instead of ai_doc
+                'ai_doc_path': client_tender['ai_doc_path'],
                 'regenerated': False,
                 'processing_time': processing_time
             }

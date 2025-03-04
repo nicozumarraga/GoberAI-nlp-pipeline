@@ -201,3 +201,965 @@ Section 2 completed in 0.75 seconds
 2025-03-04 08:19:29,291 - __main__ - INFO - 
 AI Summary Sample (first 200 chars):
 2025-03-04 08:19:29,291 - __main__ - INFO - Por favor, proporciona los documentos de licitación para que pueda ayudarte a completar la plantilla de manera específica y detallada. Necesito tener acceso a los documentos para poder extraer la info...
+2025-03-04 08:48:32,209 - __main__ - ERROR - MARKER_API environment variable not set
+2025-03-04 08:50:47,544 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-04 08:50:47,545 - __main__ - INFO - Processing 5 missing documents
+2025-03-04 08:50:47,545 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:50:48,200 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC_CN2024-001193585_1741074647.pdf
+2025-03-04 08:50:48,201 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:50:49,386 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741074648.pdf
+2025-03-04 08:50:49,387 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:50:53,300 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741074649.pdf
+2025-03-04 08:50:53,301 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:50:56,612 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094338ANEXO_I_1741074653.pdf
+2025-03-04 08:50:56,613 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:50:58,010 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094425ANEXO_II_1741074656.pdf
+2025-03-04 08:50:58,012 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC_CN2024-001193585_1741074647.pdf to Marker API...
+2025-03-04 08:50:59,528 - document_conversion_service - INFO - Processing request PFHzCSLr8Z4ZlRHhmqBFBA...
+2025-03-04 08:50:59,939 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC_CN2024-001193585_1741074647.pdf to data/markdown/DOC_CN2024-001193585_1741074647.md
+2025-03-04 08:50:59,941 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741074648.pdf to Marker API...
+2025-03-04 08:51:01,780 - document_conversion_service - INFO - Processing request ThWjDuYegxFWLQdfLkdIVg...
+2025-03-04 08:51:02,193 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741074648.pdf to data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741074648.md
+2025-03-04 08:51:02,194 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741074649.pdf to Marker API...
+2025-03-04 08:51:04,241 - document_conversion_service - INFO - Processing request bDXXBu0NJLyk1WQEJ2q8nA...
+2025-03-04 08:51:04,639 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741074649.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741074649.md
+2025-03-04 08:51:04,640 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094338ANEXO_I_1741074653.pdf to Marker API...
+2025-03-04 08:51:06,492 - document_conversion_service - INFO - Processing request gRzfL1k0g6lqU8tNHLVCzA...
+2025-03-04 08:51:07,186 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094338ANEXO_I_1741074653.pdf to data/markdown/DOC20241111094338ANEXO_I_1741074653.md
+2025-03-04 08:51:07,187 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094425ANEXO_II_1741074656.pdf to Marker API...
+2025-03-04 08:51:09,716 - document_conversion_service - INFO - Processing request g5TGn5ii4UNp2o8wMaeKFQ...
+2025-03-04 08:51:10,078 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094425ANEXO_II_1741074656.pdf to data/markdown/DOC20241111094425ANEXO_II_1741074656.md
+2025-03-04 08:51:10,079 - ai_document_generator_service - INFO - Generating AI summary...
+2025-03-04 08:51:10,079 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585_1741074647.md...
+2025-03-04 08:51:11,613 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/ptxh5fs0e7zi
+2025-03-04 08:51:11,613 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741074648.md...
+2025-03-04 08:51:13,251 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/jczslf3gzad6
+2025-03-04 08:51:13,251 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741074649.md...
+2025-03-04 08:51:14,480 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/jzdw1676krv4
+2025-03-04 08:51:14,481 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I_1741074653.md...
+2025-03-04 08:51:15,710 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/rea1xqath47j
+2025-03-04 08:51:15,710 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II_1741074656.md...
+2025-03-04 08:51:17,141 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/dua763pacr7e
+2025-03-04 08:51:17,141 - ai_document_generator_service - WARNING - Total tokens (25372) is below minimum required for caching (32768). Will process without caching.
+2025-03-04 08:51:17,142 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:51:17,307 - ai_document_generator_service - ERROR - Error generating summary (attempt 1/5): 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Please use a valid role: user, model.', 'status': 'INVALID_ARGUMENT'}}
+2025-03-04 08:51:17,308 - ai_document_generator_service - INFO - Retrying in 0.85 seconds...
+2025-03-04 08:51:18,168 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:51:18,336 - ai_document_generator_service - ERROR - Error generating summary (attempt 2/5): 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Please use a valid role: user, model.', 'status': 'INVALID_ARGUMENT'}}
+2025-03-04 08:51:18,337 - ai_document_generator_service - INFO - Retrying in 1.85 seconds...
+2025-03-04 08:51:20,189 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:51:20,383 - ai_document_generator_service - ERROR - Error generating summary (attempt 3/5): 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Please use a valid role: user, model.', 'status': 'INVALID_ARGUMENT'}}
+2025-03-04 08:51:20,383 - ai_document_generator_service - INFO - Retrying in 3.45 seconds...
+2025-03-04 08:51:23,839 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:51:24,024 - ai_document_generator_service - ERROR - Error generating summary (attempt 4/5): 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Please use a valid role: user, model.', 'status': 'INVALID_ARGUMENT'}}
+2025-03-04 08:51:24,025 - ai_document_generator_service - INFO - Retrying in 8.67 seconds...
+2025-03-04 08:51:32,701 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:51:32,871 - ai_document_generator_service - ERROR - Error generating summary (attempt 5/5): 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Please use a valid role: user, model.', 'status': 'INVALID_ARGUMENT'}}
+2025-03-04 08:51:32,872 - ai_document_generator_service - INFO - Retrying in 15.13 seconds...
+2025-03-04 08:51:48,007 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:51:48,170 - ai_document_generator_service - ERROR - Error generating summary (attempt 6/5): 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Please use a valid role: user, model.', 'status': 'INVALID_ARGUMENT'}}
+2025-03-04 08:51:48,171 - ai_document_generator_service - ERROR - Failed to generate summary after 5 retries
+2025-03-04 08:51:48,171 - __main__ - ERROR - Failed to generate AI summary for tender 10/2024/CONM-CEE
+2025-03-04 08:51:48,172 - ai_document_generator_service - INFO - Generating AI documents sequentially...
+2025-03-04 08:51:48,172 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585_1741074647.md...
+2025-03-04 08:51:49,704 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/42d2lczref5v
+2025-03-04 08:51:49,705 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741074648.md...
+2025-03-04 08:51:50,935 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/2ta4fb298911
+2025-03-04 08:51:50,935 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741074649.md...
+2025-03-04 08:51:52,368 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/o3xz3pn75gv9
+2025-03-04 08:51:52,368 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I_1741074653.md...
+2025-03-04 08:51:53,749 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/4xh1c8fg6rcs
+2025-03-04 08:51:53,749 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II_1741074656.md...
+2025-03-04 08:51:55,266 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/jnsoiz1hfmk5
+2025-03-04 08:51:55,266 - ai_document_generator_service - WARNING - Total tokens (25372) is below minimum required for caching (32768). Will process without caching.
+2025-03-04 08:51:55,266 - ai_document_generator_service - INFO - Processing section 1/2: 
+PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACI...
+2025-03-04 08:51:55,267 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:51:55,434 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 1/5): 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Please use a valid role: user, model.', 'status': 'INVALID_ARGUMENT'}}
+2025-03-04 08:51:55,435 - ai_document_generator_service - INFO - Retrying in 0.83 seconds...
+2025-03-04 08:51:56,273 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:51:56,412 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 2/5): 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Please use a valid role: user, model.', 'status': 'INVALID_ARGUMENT'}}
+2025-03-04 08:51:56,412 - ai_document_generator_service - INFO - Retrying in 2.06 seconds...
+2025-03-04 08:51:58,477 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:51:58,632 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 3/5): 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Please use a valid role: user, model.', 'status': 'INVALID_ARGUMENT'}}
+2025-03-04 08:51:58,633 - ai_document_generator_service - INFO - Retrying in 4.07 seconds...
+2025-03-04 08:54:19,565 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-04 08:54:19,566 - __main__ - INFO - Processing 5 missing documents
+2025-03-04 08:54:19,566 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:54:19,974 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC_CN2024-001193585.pdf
+2025-03-04 08:54:19,975 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:54:20,974 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf
+2025-03-04 08:54:20,975 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:54:21,952 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf
+2025-03-04 08:54:21,953 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:54:22,942 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094338ANEXO_I.pdf
+2025-03-04 08:54:22,943 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 08:54:24,421 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094425ANEXO_II.pdf
+2025-03-04 08:54:24,423 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC_CN2024-001193585.pdf to Marker API...
+2025-03-04 08:54:25,765 - document_conversion_service - INFO - Processing request Ro0Um4SUbUfcNCJVu8BeJg...
+2025-03-04 08:54:26,176 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC_CN2024-001193585.pdf to data/markdown/DOC_CN2024-001193585.md
+2025-03-04 08:54:26,177 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to Marker API...
+2025-03-04 08:54:28,018 - document_conversion_service - INFO - Processing request NXfz77aVXkDe7ZHUyLfcvQ...
+2025-03-04 08:54:28,435 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md
+2025-03-04 08:54:28,436 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to Marker API...
+2025-03-04 08:54:30,274 - document_conversion_service - INFO - Processing request 2QF1YUPfp_C1qm42U66x2A...
+2025-03-04 08:54:31,305 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md
+2025-03-04 08:54:31,306 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to Marker API...
+2025-03-04 08:54:33,190 - document_conversion_service - INFO - Processing request xdqlXY0pC8k5bcqdlOi5eA...
+2025-03-04 08:54:33,760 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to data/markdown/DOC20241111094338ANEXO_I.md
+2025-03-04 08:54:33,761 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to Marker API...
+2025-03-04 08:54:35,596 - document_conversion_service - INFO - Processing request 47xoAyepdDGfVaiDXqvo0Q...
+2025-03-04 08:54:36,010 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to data/markdown/DOC20241111094425ANEXO_II.md
+2025-03-04 08:54:36,011 - ai_document_generator_service - INFO - Generating AI summary...
+2025-03-04 08:54:36,011 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 08:54:37,234 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/yf13ma6we56d
+2025-03-04 08:54:37,234 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 08:54:38,591 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/g7agej6kxmdh
+2025-03-04 08:54:38,591 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 08:54:39,899 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/tzhn4tqo3rmm
+2025-03-04 08:54:39,900 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 08:54:41,332 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/z15dqdx5g9o5
+2025-03-04 08:54:41,332 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 08:54:42,362 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/kjfy1mguq984
+2025-03-04 08:54:42,362 - ai_document_generator_service - WARNING - Total tokens (25372) is below minimum required for caching (32768). Will process without caching.
+2025-03-04 08:54:42,363 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:54:48,297 - root - INFO - AFC remote call 1 is done.
+2025-03-04 08:54:48,298 - ai_document_generator_service - INFO - 
+Token Usage:
+2025-03-04 08:54:48,298 - ai_document_generator_service - INFO - Prompt tokens: 10669
+2025-03-04 08:54:48,299 - ai_document_generator_service - INFO - Cached content tokens: None
+2025-03-04 08:54:48,299 - ai_document_generator_service - INFO - Response tokens: 1142
+2025-03-04 08:54:48,299 - ai_document_generator_service - INFO - Total tokens: 11811
+2025-03-04 08:54:48,299 - ai_document_generator_service - INFO - Generating AI documents sequentially...
+2025-03-04 08:54:48,300 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 08:54:49,524 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/huocmm4vqdjy
+2025-03-04 08:54:49,525 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 08:54:51,367 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/ijiu4udwzi0f
+2025-03-04 08:54:51,367 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 08:54:52,588 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/kr1qk37j3r3r
+2025-03-04 08:54:52,588 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 08:54:53,700 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/erzcjc4hfuz
+2025-03-04 08:54:53,700 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 08:54:54,851 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/w0k66sirl8r2
+2025-03-04 08:54:54,852 - ai_document_generator_service - WARNING - Total tokens (25372) is below minimum required for caching (32768). Will process without caching.
+2025-03-04 08:54:54,852 - ai_document_generator_service - INFO - Processing section 1/2: 
+PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACI...
+2025-03-04 08:54:54,852 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:54:56,037 - root - INFO - AFC remote call 1 is done.
+2025-03-04 08:54:56,037 - ai_document_generator_service - INFO - 
+Section 1 completed in 1.19 seconds
+2025-03-04 08:54:56,037 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 08:54:56,037 - ai_document_generator_service - INFO -   Prompt tokens: 10732
+2025-03-04 08:54:56,038 - ai_document_generator_service - INFO -   Cached content tokens: None
+2025-03-04 08:54:56,038 - ai_document_generator_service - INFO -   Response tokens: 169
+2025-03-04 08:54:56,038 - ai_document_generator_service - INFO -   Section total: 10901
+2025-03-04 08:54:56,039 - ai_document_generator_service - INFO - Processing section 2/2: 
+2. ASPECTOS ECONÓMICOS Y FINANCIEROS
+Solvencia Ec...
+2025-03-04 08:54:56,039 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 08:54:58,537 - root - INFO - AFC remote call 1 is done.
+2025-03-04 08:54:58,538 - ai_document_generator_service - INFO - 
+Section 2 completed in 2.50 seconds
+2025-03-04 08:54:58,538 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 08:54:58,538 - ai_document_generator_service - INFO -   Prompt tokens: 11021
+2025-03-04 08:54:58,538 - ai_document_generator_service - INFO -   Cached content tokens: None
+2025-03-04 08:54:58,538 - ai_document_generator_service - INFO -   Response tokens: 479
+2025-03-04 08:54:58,538 - ai_document_generator_service - INFO -   Section total: 11500
+2025-03-04 08:54:58,539 - ai_document_generator_service - INFO - AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741074888.md
+2025-03-04 08:54:58,540 - __main__ - INFO - Tender processing completed in 38.97 seconds
+2025-03-04 08:54:58,540 - __main__ - INFO - === Processing Results ===
+2025-03-04 08:54:58,540 - __main__ - INFO - AI Summary generated: True
+2025-03-04 08:54:58,540 - __main__ - INFO - AI Document generated: True
+2025-03-04 08:54:58,540 - __main__ - INFO - Processing time: 38.97 seconds
+2025-03-04 08:54:58,540 - __main__ - INFO - 
+AI Summary Sample (first 200 chars):
+2025-03-04 08:54:58,540 - __main__ - INFO - ## Resumen Detallado de los Documentos de Licitación
+
+**Información General**
+
+* **Número de Expediente:** 10/2024/CONM-CEE
+* **Objeto del Contrato:** Suministro de plantas y servicio de decoración co...
+2025-03-04 08:54:58,540 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-04 08:54:58,540 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741074888.md...
+2025-03-04 09:00:12,593 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-04 09:00:12,595 - __main__ - INFO - Processing 5 missing documents
+2025-03-04 09:00:12,595 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:00:12,979 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC_CN2024-001193585.pdf
+2025-03-04 09:00:12,980 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:00:14,848 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf
+2025-03-04 09:00:14,849 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:00:16,499 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf
+2025-03-04 09:00:16,500 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:00:18,471 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094338ANEXO_I.pdf
+2025-03-04 09:00:18,472 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:00:20,184 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094425ANEXO_II.pdf
+2025-03-04 09:00:20,187 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC_CN2024-001193585.pdf to Marker API...
+2025-03-04 09:00:22,334 - document_conversion_service - INFO - Processing request 85vWl88vpjOGszmjZjfJKw...
+2025-03-04 09:00:23,156 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC_CN2024-001193585.pdf to data/markdown/DOC_CN2024-001193585.md
+2025-03-04 09:00:23,157 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to Marker API...
+2025-03-04 09:00:25,612 - document_conversion_service - INFO - Processing request tHvSRaq_DOVCZI8WgnqFfQ...
+2025-03-04 09:00:26,023 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md
+2025-03-04 09:00:26,024 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to Marker API...
+2025-03-04 09:00:28,684 - document_conversion_service - INFO - Processing request 5eZ20b0oRyGVkp113T3KJg...
+2025-03-04 09:00:29,080 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md
+2025-03-04 09:00:29,081 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to Marker API...
+2025-03-04 09:00:31,139 - document_conversion_service - INFO - Processing request MRF8uPzoFQeJy1sB8JgsLA...
+2025-03-04 09:00:31,509 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to data/markdown/DOC20241111094338ANEXO_I.md
+2025-03-04 09:00:31,510 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to Marker API...
+2025-03-04 09:00:34,001 - document_conversion_service - INFO - Processing request gulXlvoOBU3bLiP3GuZAHQ...
+2025-03-04 09:00:34,417 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to data/markdown/DOC20241111094425ANEXO_II.md
+2025-03-04 09:00:34,419 - ai_document_generator_service - INFO - Generating AI summary...
+2025-03-04 09:00:34,419 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 09:00:36,230 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/438eb46qcdsx
+2025-03-04 09:00:36,231 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 09:00:37,343 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/scsunxkhuy4x
+2025-03-04 09:00:37,344 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 09:00:38,536 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/smmfopqcvykj
+2025-03-04 09:00:38,536 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 09:00:40,054 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/z6iv44h1dnco
+2025-03-04 09:00:40,054 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 09:00:41,311 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/6l0xakdk3hdo
+2025-03-04 09:00:41,311 - ai_document_generator_service - WARNING - Total tokens (25372) is below minimum required for caching (32768). Will process without caching.
+2025-03-04 09:00:41,312 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:00:49,173 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:00:49,175 - ai_document_generator_service - INFO - 
+Token Usage:
+2025-03-04 09:00:49,175 - ai_document_generator_service - INFO - Prompt tokens: 10669
+2025-03-04 09:00:49,175 - ai_document_generator_service - INFO - Cached content tokens: None
+2025-03-04 09:00:49,175 - ai_document_generator_service - INFO - Response tokens: 1573
+2025-03-04 09:00:49,175 - ai_document_generator_service - INFO - Total tokens: 12242
+2025-03-04 09:00:49,176 - ai_document_generator_service - INFO - Generating AI documents sequentially...
+2025-03-04 09:00:49,176 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 09:00:50,329 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/o4bqqk8gpl4t
+2025-03-04 09:00:50,329 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 09:00:51,760 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/66ao5dr551ku
+2025-03-04 09:00:51,761 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 09:00:52,891 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/p4uw6bcvr4m9
+2025-03-04 09:00:52,892 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 09:00:54,224 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/8kbkxwf2v4yt
+2025-03-04 09:00:54,225 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 09:00:55,486 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/l2preq5n5v85
+2025-03-04 09:00:55,486 - ai_document_generator_service - WARNING - Total tokens (25372) is below minimum required for caching (32768). Will process without caching.
+2025-03-04 09:00:55,486 - ai_document_generator_service - INFO - Processing section 1/4: 
+PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACI...
+2025-03-04 09:00:55,487 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:00:58,586 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:00:58,587 - ai_document_generator_service - INFO - 
+Section 1 completed in 3.10 seconds
+2025-03-04 09:00:58,587 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:00:58,587 - ai_document_generator_service - INFO -   Prompt tokens: 10929
+2025-03-04 09:00:58,587 - ai_document_generator_service - INFO -   Cached content tokens: None
+2025-03-04 09:00:58,587 - ai_document_generator_service - INFO -   Response tokens: 622
+2025-03-04 09:00:58,587 - ai_document_generator_service - INFO -   Section total: 11551
+2025-03-04 09:00:58,588 - ai_document_generator_service - INFO - Processing section 2/4: 
+3. ASPECTOS TÉCNICOS
+Plazo de Ejecución
+Duración ...
+2025-03-04 09:00:58,588 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:01:04,493 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:01:04,493 - ai_document_generator_service - INFO - 
+Section 2 completed in 5.91 seconds
+2025-03-04 09:01:04,493 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:01:04,493 - ai_document_generator_service - INFO -   Prompt tokens: 11429
+2025-03-04 09:01:04,493 - ai_document_generator_service - INFO -   Cached content tokens: None
+2025-03-04 09:01:04,493 - ai_document_generator_service - INFO -   Response tokens: 1487
+2025-03-04 09:01:04,493 - ai_document_generator_service - INFO -   Section total: 12916
+2025-03-04 09:01:04,494 - ai_document_generator_service - INFO - Processing section 3/4: 
+4. CONDICIONES CONTRACTUALES
+Condiciones de Ejecu...
+2025-03-04 09:01:04,494 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:01:12,309 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:01:12,310 - ai_document_generator_service - INFO - 
+Section 3 completed in 7.82 seconds
+2025-03-04 09:01:12,310 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:01:12,310 - ai_document_generator_service - INFO -   Prompt tokens: 12888
+2025-03-04 09:01:12,311 - ai_document_generator_service - INFO -   Cached content tokens: None
+2025-03-04 09:01:12,311 - ai_document_generator_service - INFO -   Response tokens: 2039
+2025-03-04 09:01:12,311 - ai_document_generator_service - INFO -   Section total: 14927
+2025-03-04 09:01:12,312 - ai_document_generator_service - INFO - Processing section 4/4: 
+5. CRITERIOS DE ADJUDICACIÓN
+Criterios de valorac...
+2025-03-04 09:01:12,312 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:01:21,319 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:01:21,320 - ai_document_generator_service - INFO - 
+Section 4 completed in 9.01 seconds
+2025-03-04 09:01:21,320 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:01:21,320 - ai_document_generator_service - INFO -   Prompt tokens: 14988
+2025-03-04 09:01:21,320 - ai_document_generator_service - INFO -   Cached content tokens: None
+2025-03-04 09:01:21,320 - ai_document_generator_service - INFO -   Response tokens: 2383
+2025-03-04 09:01:21,320 - ai_document_generator_service - INFO -   Section total: 17371
+2025-03-04 09:01:21,322 - ai_document_generator_service - INFO - AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741075249.md
+2025-03-04 09:01:21,322 - __main__ - INFO - Tender processing completed in 68.73 seconds
+2025-03-04 09:01:21,322 - __main__ - INFO - === Processing Results ===
+2025-03-04 09:01:21,322 - __main__ - INFO - AI Summary generated: True
+2025-03-04 09:01:21,322 - __main__ - INFO - AI Document generated: True
+2025-03-04 09:01:21,322 - __main__ - INFO - Processing time: 68.73 seconds
+2025-03-04 09:01:21,322 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-04 09:01:21,322 - __main__ - INFO - ## Resumen Detallado de los Documentos de Licitación
+
+**Información General:**
+
+* **Objeto del Contrato:** Suministro de plantas y servicio de decoración con adornos de navidad para el embellecimiento de zonas del centro de Jaén.
+* **Número de Expediente:** 10/2024/CONM-CEE
+* **Fecha de Publicación:** 11-11-2024 a las 09:49 horas
+* **Entidad Adjudicadora:** Presidencia del Centro Especial de Empleo Municipal Jardines y Naturaleza (Ayuntamiento de Jaén)
+* **Tipo de Administración:** Autoridad Local
+* **Actividad Principal:** 5 Protección del medio ambiente
+* **Tipo de Entidad Adjudicadora:** Órgano de Contratación
+* **Valor Estimado del Contrato:** 10.400 EUR
+* **Presupuesto Base de Licitación:** 11.880 EUR (IVA Incluido)
+* **Plazo de Ejecución:** Del 26/11/2024 al 31/12/2024
+* **Procedimiento:** Abierto simplificado, tramitación ordinaria, presentación de la oferta manual.
+* **Número de Lotes:** 2. Se puede ofertar a uno o varios lotes, máximo 2 lotes por licitador y se pueden adjudicar hasta 2 lotes a un licitador.
+* **Clasificación CPV:** 
+    * **Lote 1:** 03121100 (Plantas vivas, bulbos, raíces y esquejes.)
+    * **Lote 2:** 77330000 (Servicios de exposición floral)
+* **Contratación Electrónica:** Sí (pedido electrónico, factura electrónica y pago electrónico)
+* **Financiación:** No hay financiación con fondos de la UE
+* **Subcontratación:** Permitida hasta un 100%
+
+**Aspectos Económicos:**
+
+* **Valor Estimado del Contrato:** 10.400 EUR
+* **Presupuesto Base de Licitación (PBL):** 11.880 EUR (IVA Incluido)
+* **Importe del Lote 1:** 7.040 EUR (IVA Incluido)
+* **Importe del Lote 2:** 4.840 EUR (IVA Incluido)
+* **Método de Cálculo del Valor Estimado:** Se ha tenido en cuenta las necesidades demandadas por el CEE, realizando una previsión de gasto en función del consumo que se prevé para estas fechas del año y teniendo en cuenta los precios habituales del mercado.
+* **Cálculo del Presupuesto Base de Licitación:** Se ha elaborado teniendo en cuenta los precios de mercado, atendiendo al valor real de los contratos sucesivos similares adjudicados en los doce meses previos a la elaboración del Pliego.
+
+**Aspectos Técnicos:**
+
+* **Lote 1:**  
+    * **Suministro de Planta Navideña CPV 03121100 (Plantas vivas)**
+    * Se debe suministrar planta de flor de temporada, cuyas especies se encuentran detalladas en el **ANEXO I** del Pliego de Prescripciones Técnicas.
+    * Las plantas deben estar en perfectas condiciones, sin malformaciones o enfermedades, con sistema radicular desarrollado correctamente y totalmente contenido en la maceta. 
+    * El 80% de cada planta debe estar florida y el resto con presencia de abundantes yemas florales.
+    * Se debe presentar certificado fitosanitario con cada albarán de entrega. 
+    * Se garantiza la salud de los ejemplares suministrados durante 30 días.
+    * Se debe cumplir con la normativa medioambiental vigente en la fecha de su entrega.
+* **Lote 2:**
+    * **Servicio de Decoración Floral y Suministro de Adornos Típicos Navideños CPV 77330000**
+    * El adjudicatario debe suministrar y realizar la decoración de 15 maceteros grandes, 25 pequeños y dos torres de 2m de altura con árboles, pascueros y adornos navideños típicos de la época. 
+    * Se debe reponer el material en caso de vandalismo o sustracción en un plazo de 24 horas.
+    * Los materiales a suministrar se encuentran en la relación del **ANEXO II** del Pliego de Prescripciones Técnicas.
+
+**Condiciones Contractuales:**
+
+* **Plazo de Obtención de Pliegos:** Hasta el 25/11/2024 a las 14:00
+* **Plazo de Presentación de Oferta:** Hasta el 25/11/2024 a las 14:00
+* **Apertura de Ofertas Económicas:** El día 27/11/2024 a las 09:00 horas (fecha y hora sujeta a posibles cambios)
+* **Lugar de Apertura:** Secretaria del Excmo. Ayuntamiento de Jaén, Plaza Santa María, 1, (23002) Jaén España.
+* **Garantía Provisional:** No se exige.
+* **Garantía Definitiva:** No se exige.
+* **Subcontratación:** Permitida hasta un 100%. Se debe indicar en la oferta el porcentaje a subcontratar, el importe y el nombre o perfil empresarial del subcontratista.
+* **Cesión:** El contrato podrá ser cedido a otro empresario, cumpliendo los requisitos establecidos en el artículo 214.2 LCSP.
+* **Penalizaciones:**
+    * Se impondrá una penalidad de 100 € por cada día de demora en la entrega del suministro.
+    * Se impondrá una penalidad de 100 € por cada día de demora en la sustitución de un suministro devuelto por el Responsable del Contrato (plazo máximo de 10 días naturales).
+
+**Criterios de Adjudicación:**
+
+* **Criterio Único:** Oferta económica.
+* **Ponderación:** 100 puntos.
+* **Fórmula de Baremación:** Se otorgará la puntuación máxima a la oferta más baja. El resto de ofertas se puntuarán en proporción directa a la oferta más baja, según la siguiente fórmula: P = PM x (OMB/O), donde:
+    * P = puntuación de cada oferta.
+    * PM = puntuación máxima.
+    * OMB = cantidad a que asciende la oferta más baja entre las que se consideren en este apartado.
+    * O = oferta a puntuar.
+* **Ofertas Anormales o Desproporcionadas:** Se dará audiencia al licitador para que justifique la valoración de la oferta si la baja sobre el tipo es superior al 20%.
+* **Criterios de Desempate:** Se resolverá por el sistema establecido en el artículo 147.2 LCSP. 
+
+**Documentación Adicional:**
+
+* **ANEXO I:**  Características del contrato
+* **ANEXO II:** Declaración Responsable
+* **ANEXO III:** Proposición Económica
+* **ANEXO IV:** Modelo de Declaración Responsable relativa a trabajadores con discapacidad y cumplimiento de la normativa laboral y social. 
+...
+2025-03-04 09:01:21,323 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-04 09:01:21,323 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741075249.md...
+2025-03-04 09:19:47,311 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-04 09:19:47,313 - __main__ - INFO - Processing 6 missing documents
+2025-03-04 09:19:47,313 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:19:48,138 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC_CN2024-001193585.pdf
+2025-03-04 09:19:48,139 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:19:51,800 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf
+2025-03-04 09:19:51,801 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:19:56,901 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf
+2025-03-04 09:19:56,902 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:20:00,661 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094338ANEXO_I.pdf
+2025-03-04 09:20:00,662 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:20:04,222 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094425ANEXO_II.pdf
+2025-03-04 09:20:04,223 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:20:10,346 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741076404.pdf
+2025-03-04 09:20:10,347 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC_CN2024-001193585.pdf to Marker API...
+2025-03-04 09:20:11,726 - document_conversion_service - INFO - Processing request prYvCSBdGg5pp2EWuBrOiQ...
+2025-03-04 09:20:12,092 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC_CN2024-001193585.pdf to data/markdown/DOC_CN2024-001193585.md
+2025-03-04 09:20:12,093 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to Marker API...
+2025-03-04 09:20:14,185 - document_conversion_service - INFO - Processing request w2P4zGG0s8bT0iQXdOhY8A...
+2025-03-04 09:20:14,595 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md
+2025-03-04 09:20:14,596 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to Marker API...
+2025-03-04 09:20:16,638 - document_conversion_service - INFO - Processing request MK1QwwamTtWRE4hv5Ee2nQ...
+2025-03-04 09:20:17,031 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md
+2025-03-04 09:20:17,032 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to Marker API...
+2025-03-04 09:20:18,892 - document_conversion_service - INFO - Processing request dDmYvfwxC8A8xEauaxakMw...
+2025-03-04 09:20:19,306 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to data/markdown/DOC20241111094338ANEXO_I.md
+2025-03-04 09:20:19,307 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to Marker API...
+2025-03-04 09:20:21,144 - document_conversion_service - INFO - Processing request E5cn4yMx4GhnTXeDvkGwXQ...
+2025-03-04 09:20:21,700 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to data/markdown/DOC20241111094425ANEXO_II.md
+2025-03-04 09:20:21,701 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741076404.pdf to Marker API...
+2025-03-04 09:20:23,561 - document_conversion_service - INFO - Processing request ZvtJU0w0qkaAH42XOvh2zA...
+2025-03-04 09:20:24,018 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741076404.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741076404.md
+2025-03-04 09:20:24,020 - ai_document_generator_service - INFO - Generating AI summary...
+2025-03-04 09:20:24,020 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 09:20:25,241 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/8jojl3ltgkpj
+2025-03-04 09:20:25,241 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 09:20:26,473 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/yxtmsa47op7r
+2025-03-04 09:20:26,473 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 09:20:28,109 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/mq1iqzshb9et
+2025-03-04 09:20:28,110 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 09:20:29,336 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/r4nn8oyyla5h
+2025-03-04 09:20:29,337 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 09:20:31,183 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/b2d3g5de6hzz
+2025-03-04 09:20:31,183 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741076404.md...
+2025-03-04 09:20:32,820 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/jk86esnteqbp
+2025-03-04 09:20:35,484 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:20:36,094 - ai_document_generator_service - ERROR - Error generating summary (attempt 1/5): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2025-03-04 09:20:36,095 - ai_document_generator_service - INFO - Retrying in 0.99 seconds...
+2025-03-04 09:20:37,088 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:21:07,638 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:21:07,639 - ai_document_generator_service - INFO - 
+Token Usage:
+2025-03-04 09:21:07,640 - ai_document_generator_service - INFO - Prompt tokens: 37502
+2025-03-04 09:21:07,640 - ai_document_generator_service - INFO - Cached content tokens: 37368
+2025-03-04 09:21:07,640 - ai_document_generator_service - INFO - Response tokens: 1934
+2025-03-04 09:21:07,640 - ai_document_generator_service - INFO - Total tokens: 39436
+2025-03-04 09:21:07,640 - ai_document_generator_service - INFO - Generating AI documents sequentially...
+2025-03-04 09:21:07,640 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 09:21:08,837 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/i9esplgeveph
+2025-03-04 09:21:08,837 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 09:21:10,192 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/xhmu5cpayn96
+2025-03-04 09:21:10,192 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 09:21:11,286 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/q1nhrgiv68u3
+2025-03-04 09:21:11,286 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 09:21:12,550 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/k4x18m2gn4fa
+2025-03-04 09:21:12,551 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 09:21:13,778 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/4lr4ef3rhu2
+2025-03-04 09:21:13,779 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741076404.md...
+2025-03-04 09:21:15,213 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/ztnt17w50mzy
+2025-03-04 09:21:17,803 - ai_document_generator_service - INFO - Processing section 1/2: 
+PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACI...
+2025-03-04 09:21:17,804 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:21:26,272 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:21:26,272 - ai_document_generator_service - INFO - 
+Section 1 completed in 8.47 seconds
+2025-03-04 09:21:26,273 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:21:26,273 - ai_document_generator_service - INFO -   Prompt tokens: 37914
+2025-03-04 09:21:26,273 - ai_document_generator_service - INFO -   Cached content tokens: 37368
+2025-03-04 09:21:26,273 - ai_document_generator_service - INFO -   Response tokens: 1345
+2025-03-04 09:21:26,273 - ai_document_generator_service - INFO -   Section total: 39259
+2025-03-04 09:21:26,274 - ai_document_generator_service - INFO - Processing section 2/2: 
+4. CONDICIONES CONTRACTUALES
+Condiciones de Ejecu...
+2025-03-04 09:21:26,274 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:21:38,473 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:21:38,475 - ai_document_generator_service - INFO - 
+Section 2 completed in 12.20 seconds
+2025-03-04 09:21:38,475 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:21:38,475 - ai_document_generator_service - INFO -   Prompt tokens: 39136
+2025-03-04 09:21:38,475 - ai_document_generator_service - INFO -   Cached content tokens: 37368
+2025-03-04 09:21:38,475 - ai_document_generator_service - INFO -   Response tokens: 2459
+2025-03-04 09:21:38,475 - ai_document_generator_service - INFO -   Section total: 41595
+2025-03-04 09:21:38,476 - ai_document_generator_service - INFO - AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741076467.md
+2025-03-04 09:21:38,477 - __main__ - INFO - Tender processing completed in 111.17 seconds
+2025-03-04 09:21:38,477 - __main__ - INFO - === Processing Results ===
+2025-03-04 09:21:38,477 - __main__ - INFO - AI Summary generated: True
+2025-03-04 09:21:38,477 - __main__ - INFO - AI Document generated: True
+2025-03-04 09:21:38,477 - __main__ - INFO - Processing time: 111.17 seconds
+2025-03-04 09:21:38,477 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-04 09:21:38,477 - __main__ - INFO - ## Resumen Detallado de los Documentos de Licitación: Suministro de Plantas y Adornos de Navidad
+
+**Información General:**
+
+* **Número de Expediente:** 10/2024/CONM-CEE
+* **Fecha de Publicación:** 11-11-2024 a las 09:49 horas.
+* **Objeto del Contrato:** "Suministro de plantas y servicio de decoración con adornos de navidad para el embellecimiento de zonas del centro de Jaén."
+* **Tipo de Contrato:** Suministros
+* **Subtipo:** Adquisición
+* **Contrato Mixto:** Sí
+* **Procedimiento:** Abierto simplificado
+* **Tramitación:** Ordinaria
+* **Presentación de Oferta:** Manual
+* **Número de Lotes:** 2 (Se debe ofertar a uno o varios lotes)
+* **Entidad Adjudicadora:** Presidencia del Centro Especial de Empleo Municipal Jardines y Naturaleza (CEE).
+* **Tipo de Administración:** Autoridad local
+* **Actividad Principal:** Protección del medio ambiente
+* **Tipo de Entidad Adjudicadora:** Órgano de Contratación
+* **Plazo de Obtención de Pliegos:** Hasta el 25/11/2024 a las 14:00
+* **Plazo de Presentación de Oferta:** Hasta el 25/11/2024 a las 14:00
+* **Apertura de Ofertas Económicas:** El día 27/11/2024 a las 09:00 horas (sujeta a posibles cambios).
+
+**Aspectos Económicos:**
+
+* **Valor Estimado del Contrato:** 10.400 EUR.
+* **Presupuesto Base de Licitación:** 11.880 EUR.
+* **Importe (sin impuestos):** 10.400 EUR.
+* **IVA:** Incluido en el presupuesto base de licitación.
+* **Desglose por Lote:**
+    * **Lote 1 - Suministro de plantas de temporada:** 7.040,00 EUR (IVA incluido)
+    * **Lote 2 - Servicio de decoración floral y suministro de adornos de navidad:** 4.840,00 EUR (IVA incluido)
+* **Revisión de Precios:** No.
+
+**Aspectos Técnicos:**
+
+* **Descripción del suministro:**
+    * **Lote 1:** "SUMINISTRO DE ARBUSTOS Y PLANTAS TÍPICAS DE LA TEMPORADA DE NAVIDAD."
+        * **Especies:** Las plantas deberán estar dentro de las contenidas en el ANEXO I.
+        * **Características generales:** Las plantas deberán estar en perfectas condiciones, sin presentar ninguna malformación o enfermedad tanto en su parte aérea como en el cuello y raíces, sin sufrir recortes o poda alguna y teniendo un sistema radicular desarrollado correctamente.
+        * **Medidas:** Como mínimo las especificadas en el Pliego de Prescripciones Técnicas.
+        * **Garantía:** 30 días, garantizando que no se aprecien plagas ni enfermedades.
+    * **Lote 2:** "SUMINISTRO DE ADORNOS NAVIDEÑOS Y SERVICIO DE DECORACION DE MACETEROS"
+        * **Materiales:** Los materiales a suministrar serán los incluidos en la relación del ANEXO II.
+        * **Decoración:** El adjudicatario está obligado a suministrar y realizar la decoración de 15 maceteros grandes, 25 pequeños y dos torres de 2m de altura, con árboles, pascueros y adornos navideños. 
+* **Plazo de Ejecución:** Del 26/11/2024 al 31/12/2024
+* **Lugar de ejecución:** Subentidad Nacional Jaén, código de subentidad territorial ES616.
+* **Lugar de entrega:**  En las zonas designadas por el personal del CEE, dentro del término municipal de Jaén.
+* **Transporte:** Correrá a cargo del adjudicatario.
+
+**Condiciones Contractuales:**
+
+* **Prórroga:** No se contempla.
+* **Cesión del Contrato:** Se podrá ceder a otro empresario, con cumplimiento de los requisitos establecidos en el artículo 214.2 LCSP.
+* **Subcontratación:** Se podrá subcontratar, con comunicación al órgano de contratación.
+* **Forma de pago:** El adjudicatario tendrá derecho al abono del precio de los bienes efectivamente entregados y formalmente recibidos por el CEE.
+* **Riesgo y ventura:** La ejecución del contrato se realizará a riesgo y ventura del contratista.
+* **Responsabilidad del contratista:** El contratista será responsable de todos los daños y perjuicios directos e indirectos que se causen a terceros como consecuencia de las operaciones que requiera la ejecución del contrato.
+
+**Criterios de Adjudicación:**
+
+* **Oferta económica:** 100 PUNTOS.
+* **Fórmula de puntuación:** P = PM x (OMB/O), donde:
+    * **P:** puntuación de cada oferta.
+    * **PM:** puntuación máxima.
+    * **OMB:** cantidad a que asciende la oferta más baja.
+    * **O:** oferta a puntuar.
+* **Criterios de ofertas anormales o desproporcionadas:** Se dará audiencia al licitador que haya presentado una oferta desproporcionada o anormal (baja sobre el tipo superior al 20%) para que justifique la valoración de la oferta. 
+* **Criterios de Desempate:** Se resolverá por el sistema establecido en el artículo 147.2 LCSP. 
+
+**ANEXO I:**
+
+* **Descripción del objeto del contrato:** "CONTRATO MIXTO DE PLANTAS Y SERVICIO DE DECORCIÓN FLORAL Y ADRONOS DE NAVIDAD PARA EL EMBELLECIMIENTO DE ZONAS DEL CENTRO DE JAEN."
+* **CPV:** 03121100 77330000
+* **División en lotes:** Sí. 
+* **Ampliación a un número mayor de unidades por la baja de adjudicación:** Sí.
+* **Órgano de Contratación:** Presidencia del CEE MUNICIPAL "JARDINES Y NATURALEZA" DE JAEN.
+* **Duración del contrato:** Hasta fin de 2024.
+* **Valor Estimado del Contrato:** 10.400,00 EUR.
+* **Presupuesto Base de Licitación:** 11.880,00 EUR.
+* **Criterios de adjudicación:** Oferta económica con 100 puntos. 
+* **Subcontratación:** Los licitadores deberán indicar expresamente el porcentaje del contrato que se proponen subcontratar.
+* **Cesión:** Se podrá ceder a otro empresario.
+* **Unidad encargada del seguimiento y ejecución ordinaria del contrato:** Centro Especial de Empleo.
+* **Responsable del contrato:** José Luis Berrios Martos.
+* **Penalidades:**
+    * Por cada día de demora en la entrega del suministro: 100 EUR.
+    * Por cada día de demora en la sustitución del suministro devuelto: 100 EUR.
+* **Modelo de oferta a presentar por el licitador:** Deberá indicar el porcentaje de baja y desglosar la aplicación de dicho porcentaje al precio unitario de cada producto.
+
+**ANEXO II:**
+
+* **Modelo de Declaración Responsable:** Deberá ser firmada por el licitador, incluyendo datos personales y de la empresa.
+* **Contenido de la Declaración:**
+    * Acreditación de la representación legal de la empresa.
+    * Confirmación de la personalidad, capacidad de obrar, habilitación empresarial y solvencia.
+    * Declaración de no estar comprendido en ninguna de las circunstancias del artículo 71 LCSP.
+    * Aceptación incondicional de los pliegos.
+    * Compromiso a aportar la documentación acreditativa de los requisitos.
+    * Sometimiento al Derecho Español y la jurisdicción de los Juzgados y Tribunales de Jaén.
+    * Datos de contacto para notificaciones.
+
+**ANEXO III:**
+
+* **Modelo de Proposición Económica:** Se deberá ajustar al esquema establecido en el Anexo I, incluyendo una descripción de cada producto, cantidad, precio unitario (IVA no incluido), porcentaje de baja, precio ofertado unitario (IVA no incluido) y precio ofertado unitario (IVA incluido).
+
+**ANEXO IV:**
+
+* **Modelo de Declaración Responsable relativa a la obligación de contar con un 2% de trabajadores con discapacidad o medidas alternativas, cumplimiento de obligaciones laborales, sociales e igualdad efectiva:** Deberá ser firmada por el licitador.
+
+
+**Importante:** Esta información se ha extraído de los documentos proporcionados. Se recomienda consultar los documentos originales para obtener información más detallada y actualizada. 
+...
+2025-03-04 09:21:38,477 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-04 09:21:38,477 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741076467.md...
+2025-03-04 09:32:23,513 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-04 09:32:23,516 - __main__ - INFO - Processing 6 missing documents
+2025-03-04 09:32:23,516 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:32:25,419 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC_CN2024-001193585.pdf
+2025-03-04 09:32:25,420 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:32:29,523 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf
+2025-03-04 09:32:29,524 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:32:35,345 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf
+2025-03-04 09:32:35,346 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:32:36,621 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094338ANEXO_I.pdf
+2025-03-04 09:32:36,621 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:32:40,877 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094425ANEXO_II.pdf
+2025-03-04 09:32:40,878 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:32:44,748 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741077161.pdf
+2025-03-04 09:32:44,750 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC_CN2024-001193585.pdf to Marker API...
+2025-03-04 09:32:46,136 - document_conversion_service - INFO - Processing request MzW3nbH1uBOXBc9hsdmaqg...
+2025-03-04 09:32:50,713 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC_CN2024-001193585.pdf to data/markdown/DOC_CN2024-001193585.md
+2025-03-04 09:32:50,714 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to Marker API...
+2025-03-04 09:32:52,960 - document_conversion_service - INFO - Processing request 9IF8NekJySjvPJ1u5YRqtg...
+2025-03-04 09:32:56,163 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md
+2025-03-04 09:32:56,165 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to Marker API...
+2025-03-04 09:32:58,082 - document_conversion_service - INFO - Processing request pEVFsWN5wriOt6V6K8jjBw...
+2025-03-04 09:33:08,393 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md
+2025-03-04 09:33:08,394 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to Marker API...
+2025-03-04 09:33:10,384 - document_conversion_service - INFO - Processing request u3CtuY8APy3rmOzUbtk8wQ...
+2025-03-04 09:33:12,830 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to data/markdown/DOC20241111094338ANEXO_I.md
+2025-03-04 09:33:12,831 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to Marker API...
+2025-03-04 09:33:14,875 - document_conversion_service - INFO - Processing request Fd8DWmTuHWmZInF39oNqLQ...
+2025-03-04 09:33:16,516 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to data/markdown/DOC20241111094425ANEXO_II.md
+2025-03-04 09:33:16,517 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741077161.pdf to Marker API...
+2025-03-04 09:33:18,561 - document_conversion_service - INFO - Processing request 3GnH6BW7zWIVErXCn5x-Yw...
+2025-03-04 09:33:19,596 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741077161.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741077161.md
+2025-03-04 09:33:19,597 - ai_document_generator_service - INFO - Generating AI summary...
+2025-03-04 09:33:19,597 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 09:33:20,986 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/6fyyc4bid22k
+2025-03-04 09:33:20,986 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 09:33:22,064 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/w433r1xhwri9
+2025-03-04 09:33:22,065 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 09:33:23,318 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/6y8z061fu651
+2025-03-04 09:33:23,318 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 09:33:24,508 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/zgt8bpyll33i
+2025-03-04 09:33:24,509 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 09:33:25,595 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/7kihjuz8wftp
+2025-03-04 09:33:25,595 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741077161.md...
+2025-03-04 09:33:26,703 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/nypxxafy1yf3
+2025-03-04 09:33:34,134 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:33:43,959 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:33:43,960 - ai_document_generator_service - INFO - 
+Token Usage:
+2025-03-04 09:33:43,960 - ai_document_generator_service - INFO - Prompt tokens: 37518
+2025-03-04 09:33:43,960 - ai_document_generator_service - INFO - Cached content tokens: 37384
+2025-03-04 09:33:43,960 - ai_document_generator_service - INFO - Response tokens: 1314
+2025-03-04 09:33:43,961 - ai_document_generator_service - INFO - Total tokens: 38832
+2025-03-04 09:33:43,962 - ai_document_generator_service - INFO - Generating AI documents sequentially...
+2025-03-04 09:33:43,962 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 09:33:45,606 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/ooqutxrg3ciw
+2025-03-04 09:33:45,607 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 09:33:47,030 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/h2undv9rfttv
+2025-03-04 09:33:47,030 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 09:33:48,134 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/hn591ef71hr9
+2025-03-04 09:33:48,134 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 09:33:49,485 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/olt22p1r4uxu
+2025-03-04 09:33:49,486 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 09:33:51,123 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/7qulc44dn49o
+2025-03-04 09:33:51,123 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741077161.md...
+2025-03-04 09:33:52,557 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/bd0bs569704f
+2025-03-04 09:33:58,084 - ai_document_generator_service - INFO - Processing section 1/2: 
+PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACI...
+2025-03-04 09:33:58,085 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:34:06,084 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:34:06,085 - ai_document_generator_service - INFO - 
+Section 1 completed in 8.00 seconds
+2025-03-04 09:34:06,086 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:34:06,086 - ai_document_generator_service - INFO -   Prompt tokens: 37930
+2025-03-04 09:34:06,086 - ai_document_generator_service - INFO -   Cached content tokens: 37384
+2025-03-04 09:34:06,086 - ai_document_generator_service - INFO -   Response tokens: 1050
+2025-03-04 09:34:06,086 - ai_document_generator_service - INFO -   Section total: 38980
+2025-03-04 09:34:06,088 - ai_document_generator_service - INFO - Processing section 2/2: 
+4. CONDICIONES CONTRACTUALES
+Condiciones de Ejecu...
+2025-03-04 09:34:06,088 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:34:15,850 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:34:15,851 - ai_document_generator_service - INFO - 
+Section 2 completed in 9.76 seconds
+2025-03-04 09:34:15,851 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:34:15,851 - ai_document_generator_service - INFO -   Prompt tokens: 38877
+2025-03-04 09:34:15,851 - ai_document_generator_service - INFO -   Cached content tokens: 37384
+2025-03-04 09:34:15,851 - ai_document_generator_service - INFO -   Response tokens: 1689
+2025-03-04 09:34:15,851 - ai_document_generator_service - INFO -   Section total: 40566
+2025-03-04 09:34:15,855 - ai_document_generator_service - INFO - AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741077223.md
+2025-03-04 09:34:15,855 - __main__ - INFO - Tender processing completed in 112.34 seconds
+2025-03-04 09:34:15,856 - __main__ - INFO - === Processing Results ===
+2025-03-04 09:34:15,856 - __main__ - INFO - AI Summary generated: True
+2025-03-04 09:34:15,856 - __main__ - INFO - AI Document generated: True
+2025-03-04 09:34:15,856 - __main__ - INFO - Processing time: 112.34 seconds
+2025-03-04 09:34:15,856 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-04 09:34:15,856 - __main__ - INFO - ## Resumen Detallado de los Documentos de Licitación
+
+**Información General:**
+
+* **Nombre del Contrato:** Suministro de plantas y servicio de decoración con adornos de navidad para el embellecimiento de zonas del centro de Jaén.
+* **Número de Expediente:** 10/2024/CONM-CEE
+* **Fecha de Publicación:** 11-11-2024
+* **Entidad Adjudicadora:** Presidencia del Centro Especial de Empleo Municipal Jardines y Naturaleza.
+* **Tipo de Administración:** Autoridad local
+* **Actividad Principal:** Protección del medio ambiente
+* **Tipo de Entidad Adjudicadora:** Órgano de Contratación
+* **Proceso de Licitación:** Procedimiento Abierto simplificado, Tramitación Ordinaria, Presentación de la oferta Manual
+* **Número de Lotes:** 2
+
+**Aspectos Económicos:**
+
+* **Valor Estimado del Contrato:** 10.400 EUR
+* **Presupuesto Base de Licitación:** 11.880 EUR (IVA incluido)
+* **Precio del Contrato:** No se especifica en el pliego de cláusulas administrativas particulares, pero se establece que el importe de adjudicación coincidirá con el presupuesto base de licitación, revirtiendo la baja ofertada a los precios unitarios de los productos, para el suministro de un mayor número de unidades.
+* **IVA:** No se aplica IVA (Art. 20.1.16 de la Ley 37/1992, del Impuesto sobre el Valor Añadido).
+* **Garantía Provisional:** No procede
+* **Garantía Definitiva:** No procede
+
+**Aspectos Técnicos:**
+
+* **Lote 1:** Suministro de planta navideña CPV 03121100 (Plantas vivas) 
+    * **Especies:**  Las plantas de flor se deberán ceñir a las características generales señaladas en el presente pliego de condiciones técnicas, y las especies estarán dentro de las contenidas en el **Anexo I**. 
+    * **Características:** Las plantas deberán estar en perfectas condiciones, sin presentar ninguna malformación o enfermedad, sin sufrir recortes o poda alguna y teniendo un sistema radicular desarrollado correctamente en relación con la especie, la medida de la parte aérea y la edad de la planta.
+    * **Certificado Fitosanitario:** La empresa adjudicataria deberá presentar el Certificado Fitosanitario correspondiente con cada uno de los albaranes de entrega.
+    * **Medidas:** Las dimensiones de estas plantas flor serán como mínimo las especificadas en el presente Pliego de Prescripciones Técnicas, entendiéndose estas por la de la planta sin sufrir recortes o poda alguna.
+    * **Garantía del Producto:** 30 días de garantía desde la entrega.
+* **Lote 2:** Servicio de decoración floral y suministro de adornos típicos navideños CPV 77330000
+    * **Materiales:**  Se suministrarán los materiales incluidos en la relación del **Anexo II**, o aquellos que de calidad y características similares se consideren más oportunos.
+    * **Decoración:** El adjudicatario está obligado a suministrar y realizar la decoración de 15 maceteros grandes, 25 pequeños y dos torres de 2m de altura con árboles, pascueros y adornos navideños. 
+    * **Vandalismo/Sustracción:** Si alguno de los maceteros decorados sufre vandalismo o sustracción de material deberá reponerlo en las siguientes 24 h hasta la fecha fin del contrato.
+
+**Condiciones Contractuales:**
+
+* **Plazo de Ejecución:** Del 26/11/2024 al 31/12/2024
+* **Lugar de Entrega:** Las zonas designadas por el CEE dentro del término municipal de Jaén.
+* **Forma de Pago:** Se utilizará el pago electrónico
+* **Facturación Electrónica:** Se aceptará factura electrónica
+* **Subcontratación:** Permitida hasta un 100% del contrato.
+* **Modificación:** No se contemplan modificaciones en el contrato.
+* **Cesión:** El contrato podrá ser cedido a otro empresario, con cumplimiento de los requisitos establecidos en el artículo 214.2 LCSP.
+* **Riesgo y Ventura:** La ejecución del contrato se realizará a riesgo y ventura del contratista.
+
+**Criterios de Adjudicación:**
+
+* **Oferta Económica:** 100 puntos. Se dará la puntuación máxima a la oferta más baja. 
+    * **Fórmula de Cálculo:** P = PM x (OMB/O)
+
+        * P = puntuación de cada oferta
+        * PM = puntuación máxima
+        * OMB = cantidad a que asciende la oferta más baja
+        * O = oferta a puntuar
+
+**Otros Aspectos:**
+
+* **Control de Calidad:** El técnico responsable del seguimiento del suministro podrá exigir que se realicen los ensayos necesarios del material suministrado o pedir la documentación necesaria.
+* **Transporte:** Los gastos de transporte, embalajes, pallets, descarga y en general, todos aquellos gastos que pudieran derivarse de la ejecución material del mismo, están incluidos en el precio del contrato.
+* **Obligaciones Laborales y Sociales:** El contratista está obligado al cumplimiento de la normativa vigente en materia laboral, de seguridad social, igualdad efectiva entre mujeres y hombres y discapacidad, según la Ley 39/2015 y Ley Orgánica 3/2007.
+* **Confidencialidad:** El contratista deberá respetar el carácter confidencial de la información a la que tenga acceso con ocasión de la ejecución del contrato, según el artículo 133 LCSP.
+* **Protección de Datos:** El adjudicatario deberá formar e informar a su personal de las obligaciones que en materia de protección de datos estén obligados a cumplir, según la Ley Orgánica 15/1999. 
+
+**Nota:** Se ha incluido información específica para cada lote (1 y 2) en los aspectos técnicos, pero no en los económicos, ya que la información económica se proporciona para el contrato completo. 
+...
+2025-03-04 09:34:15,856 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-04 09:34:15,857 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741077223.md...
+2025-03-04 09:44:15,455 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-04 09:44:15,458 - __main__ - INFO - Processing 6 missing documents
+2025-03-04 09:44:15,458 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:44:15,963 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC_CN2024-001193585.pdf
+2025-03-04 09:44:15,964 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:44:16,942 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf
+2025-03-04 09:44:16,943 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:44:18,511 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf
+2025-03-04 09:44:18,512 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:44:20,757 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094338ANEXO_I.pdf
+2025-03-04 09:44:20,758 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:44:22,078 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094425ANEXO_II.pdf
+2025-03-04 09:44:22,079 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 09:44:23,115 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741077862.pdf
+2025-03-04 09:44:23,117 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC_CN2024-001193585.pdf to Marker API...
+2025-03-04 09:44:24,567 - document_conversion_service - INFO - Processing request nyYcLVabdGSMh3OSaDm6Gg...
+2025-03-04 09:44:24,979 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC_CN2024-001193585.pdf to data/markdown/DOC_CN2024-001193585.md
+2025-03-04 09:44:24,980 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to Marker API...
+2025-03-04 09:44:26,738 - document_conversion_service - INFO - Processing request GN4uA01daB8fiEQVC_wH5w...
+2025-03-04 09:44:27,182 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md
+2025-03-04 09:44:27,183 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to Marker API...
+2025-03-04 09:44:29,072 - document_conversion_service - INFO - Processing request X5VOoBPA_KsrDw6tk44rKw...
+2025-03-04 09:44:29,688 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md
+2025-03-04 09:44:29,689 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to Marker API...
+2025-03-04 09:44:31,528 - document_conversion_service - INFO - Processing request ws2s4VlibFkDvDFIC7nJ4Q...
+2025-03-04 09:44:31,914 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to data/markdown/DOC20241111094338ANEXO_I.md
+2025-03-04 09:44:31,915 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to Marker API...
+2025-03-04 09:44:33,988 - document_conversion_service - INFO - Processing request RjranxeM6sP4V8x2Z-uVzg...
+2025-03-04 09:44:34,399 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to data/markdown/DOC20241111094425ANEXO_II.md
+2025-03-04 09:44:34,400 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741077862.pdf to Marker API...
+2025-03-04 09:44:36,240 - document_conversion_service - INFO - Processing request 9nRWb_xh5pVJhD_S122u6Q...
+2025-03-04 09:44:36,652 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741077862.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741077862.md
+2025-03-04 09:44:36,653 - ai_document_generator_service - INFO - Generating AI summary...
+2025-03-04 09:44:36,653 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 09:44:38,084 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/kgnow7fcx9ru
+2025-03-04 09:44:38,085 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 09:44:39,524 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/hz4spavk907
+2025-03-04 09:44:39,525 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 09:44:40,951 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/uwbelzztxbo2
+2025-03-04 09:44:40,951 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 09:44:42,589 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/ptap4en3yrmw
+2025-03-04 09:44:42,589 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 09:44:43,816 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/f42n1zc2qjum
+2025-03-04 09:44:43,817 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741077862.md...
+2025-03-04 09:44:45,252 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/34pfnnyfgtc5
+2025-03-04 09:44:55,092 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:45:06,402 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:45:06,404 - ai_document_generator_service - INFO - 
+Token Usage:
+2025-03-04 09:45:06,404 - ai_document_generator_service - INFO - Prompt tokens: 37518
+2025-03-04 09:45:06,404 - ai_document_generator_service - INFO - Cached content tokens: 37384
+2025-03-04 09:45:06,404 - ai_document_generator_service - INFO - Response tokens: 1581
+2025-03-04 09:45:06,404 - ai_document_generator_service - INFO - Total tokens: 39099
+2025-03-04 09:45:06,405 - ai_document_generator_service - INFO - Generating AI documents sequentially...
+2025-03-04 09:45:06,405 - ai_document_generator_service - INFO - Processing data/markdown/DOC_CN2024-001193585.md...
+2025-03-04 09:45:07,533 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/i7ru2bb3g25n
+2025-03-04 09:45:07,534 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md...
+2025-03-04 09:45:08,586 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/5qzu04tieue4
+2025-03-04 09:45:08,587 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md...
+2025-03-04 09:45:09,725 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/ikboq08f9jd9
+2025-03-04 09:45:09,726 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094338ANEXO_I.md...
+2025-03-04 09:45:10,839 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/1d7hkdx6r1i1
+2025-03-04 09:45:10,841 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111094425ANEXO_II.md...
+2025-03-04 09:45:11,993 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/iriyvajf65pz
+2025-03-04 09:45:11,993 - ai_document_generator_service - INFO - Processing data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741077862.md...
+2025-03-04 09:45:13,039 - ai_document_generator_service - INFO - Document processed: https://generativelanguage.googleapis.com/v1beta/files/ympf4wzwmch3
+2025-03-04 09:45:23,342 - ai_document_generator_service - INFO - Processing section 1/2: 
+PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACI...
+2025-03-04 09:45:23,343 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:45:30,597 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:45:30,597 - ai_document_generator_service - INFO - 
+Section 1 completed in 7.26 seconds
+2025-03-04 09:45:30,597 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:45:30,597 - ai_document_generator_service - INFO -   Prompt tokens: 37930
+2025-03-04 09:45:30,598 - ai_document_generator_service - INFO -   Cached content tokens: 37384
+2025-03-04 09:45:30,598 - ai_document_generator_service - INFO -   Response tokens: 1146
+2025-03-04 09:45:30,598 - ai_document_generator_service - INFO -   Section total: 39076
+2025-03-04 09:45:30,599 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-04 09:45:30,599 - ai_document_generator_service - INFO - Processing section 2/2: 
+4. CONDICIONES CONTRACTUALES
+Condiciones de Ejecu...
+2025-03-04 09:45:30,599 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 09:45:40,412 - root - INFO - AFC remote call 1 is done.
+2025-03-04 09:45:40,413 - ai_document_generator_service - INFO - 
+Section 2 completed in 9.81 seconds
+2025-03-04 09:45:40,413 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 09:45:40,413 - ai_document_generator_service - INFO -   Prompt tokens: 38953
+2025-03-04 09:45:40,413 - ai_document_generator_service - INFO -   Cached content tokens: 37384
+2025-03-04 09:45:40,414 - ai_document_generator_service - INFO -   Response tokens: 1903
+2025-03-04 09:45:40,414 - ai_document_generator_service - INFO -   Section total: 40856
+2025-03-04 09:45:40,415 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-04 09:45:40,416 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741077906.md
+2025-03-04 09:45:40,416 - __main__ - INFO - Tender processing completed in 84.96 seconds
+2025-03-04 09:45:40,416 - __main__ - INFO - === Processing Results ===
+2025-03-04 09:45:40,416 - __main__ - INFO - AI Summary generated: True
+2025-03-04 09:45:40,416 - __main__ - INFO - AI Document generated: True
+2025-03-04 09:45:40,416 - __main__ - INFO - Processing time: 84.96 seconds
+2025-03-04 09:45:40,416 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-04 09:45:40,416 - __main__ - INFO - ## Resumen Detallado de los Documentos de Licitación
+
+**Información General:**
+
+* **Expediente:** 10/2024/CONM-CEE
+* **Fecha de Publicación:** 11-11-2024
+* **Entidad Adjudicadora:** Presidencia del Centro Especial de Empleo Municipal Jardines y Naturaleza (CEE)
+* **Tipo de Administración:** Autoridad local
+* **Actividad Principal:** 5 Protección del medio ambiente
+* **Tipo de Entidad Adjudicadora:** Órgano de Contratación
+* **Objeto del Contrato:** "Suministro de plantas y servicio de decoración con adornos de navidad para el embellecimiento de zonas del centro de Jaén."
+* **Clasificación CPV:** 
+    * 03121100 Plantas vivas, bulbos, raíces y esquejes.
+    * 77330000 Servicios de exposición floral.
+* **Tipo de Contrato:** Suministros, Adquisición, Contrato Mixto
+* **Procedimiento:** Abierto simplificado
+* **Tramitación:** Ordinaria
+* **Presentación de Ofertas:** Manual
+* **Número de Lotes:** 2 
+    * Se debe ofertar a uno o varios lotes.
+    * Número máximo de lotes a los que se puede presentar: 2
+    * Número máximo de lotes que se puede adjudicar a un licitador: 2
+
+**Aspectos Económicos:**
+
+* **Valor Estimado del Contrato:** 10.400 EUR 
+* **Presupuesto Base de Licitación:** 11.880 EUR (IVA incluido)
+* **Importe (sin impuestos):** 10.400 EUR
+* **IVA:** No se aplica (exento en virtud de lo establecido en el artículo 20.1.16 de la Ley 37/1992, del Impuesto sobre el Valor Añadido).
+* **Precio:** El precio se calcula en base a las necesidades demandadas por el CEE y a los precios habituales del mercado.
+* **Revisión de Precios:** No se contempla la revisión de precios.
+* **Garantía Provisional:** No procede.
+* **Garantía Definitiva:** No procede. 
+
+**Aspectos Técnicos:**
+
+* **LOTE 1: SUMINISTRO DE PLANTA NAVIDEÑA CPV 03121100 (Plantas vivas)**
+    * Descripción del lote: Suministro de planta navideña
+    * Valor Estimado (sin IVA): 6.400 EUR 
+    * Presupuesto Base de Licitación (IVA incluido): 7.040 EUR 
+    * Especies Seleccionadas: Se especifican en el **ANEXO I** del Pliego de Prescripciones Técnicas Particulares.
+    * Características de las Plantas:
+        * Deben estar en perfectas condiciones, sin malformaciones o enfermedades.
+        * No deben presentar recortes o poda alguna.
+        * El sistema radicular debe estar totalmente contenido en la maceta.
+        * No se permiten plantas invadidas por malas hierbas.
+        * Las plantas de flor deben estar floridas al menos el 80% y el resto con presencia de yemas florales.
+    * Certificado Fitosanitario: La empresa adjudicataria deberá presentar el certificado Fitosanitario correspondiente con cada albarán de entrega.
+    * Garantía del Producto: 30 días de garantía contra plagas y enfermedades. 
+* **LOTE 2: SERVICIO DE DECORACION FLORAL Y SUMINISTRO DE ADORNOS TIPICOS NAVIDEÑOS CPV 77330000**
+    * Descripción del lote: Servicio de decoración floral y suministro de adornos típicos navideños.
+    * Valor Estimado (sin IVA): 4.000 EUR 
+    * Presupuesto Base de Licitación (IVA incluido): 4.840 EUR 
+    * Materiales: Se incluyen en la relación del **ANEXO II** al pliego de prescripciones técnicas particulares. 
+    * Decoración: El adjudicatario debe suministrar y realizar la decoración de 15 maceteros grandes, 25 pequeños y dos torres de 2m de altura con árboles, pascueros y adornos navideños.
+    * Reposición por Vandalismo: El adjudicatario debe reponer en 24h el material sustraído o vandalizado hasta la fecha fin del contrato.
+
+**Condiciones Contractuales:**
+
+* **Plazo de Ejecución:** Del 26/11/2024 al 31/12/2024
+* **Lugar de Ejecución:** Centro de Jaén
+* **Entrega de Suministros:** El adjudicatario debe entregar los suministros en el plazo máximo indicado en la tabla (**Pliego de Prescripciones Técnicas Particulares, apartado 5)**. 
+* **Transporte y Carga/Descarga:** Los gastos de transporte y carga/descarga corren por cuenta del adjudicatario.
+* **Control de Calidad:** El CEE podrá exigir ensayos y documentación para controlar la calidad del material suministrado.
+* **Facturación:** Se aceptará factura electrónica.
+* **Pago:** Se utilizará el pago electrónico.
+* **Subcontratación:** Permitida hasta el 100%.
+* **Cesión del Contrato:** Se permite la cesión del contrato con cumplimiento de los requisitos establecidos en el **apartado 20 del Anexo I** al presente pliego.
+* **Riesgo y Ventura:** La ejecución del contrato se realizará a riesgo y ventura del contratista. 
+* **Resolución del Contrato:** Se especifican las causas de resolución del contrato en el **artículo 211 y 306 LCSP**.
+
+**Criterios de Adjudicación:**
+
+* El único criterio de adjudicación es la **oferta económica más ventajosa**, con una ponderación del 100%.
+* Se utilizará la siguiente fórmula para la baremación de la oferta económica:
+    ```
+    P = PM x (OMB/O)
+    ```
+    Donde:
+        * P = puntuación de cada oferta.
+        * PM = puntuación máxima.
+        * OMB = cantidad a que asciende la oferta más baja entre las que se consideren en este apartado.
+        * O = oferta a puntuar.
+
+**Documentación:**
+
+* **Anexo I:** Características del Contrato
+* **Anexo II:** Modelo de Declaración Responsable
+* **Anexo III:** Proposición Económica
+* **Anexo IV:** Modelo de Declaración Responsable relativa a trabajadores con discapacidad, normativa laboral, social y de igualdad efectiva entre mujeres y hombres.
+
+**Información adicional:**
+
+* La información detallada sobre el suministro de plantas y adornos de Navidad se encuentra en el **Pliego de Prescripciones Técnicas Particulares**. 
+* Las empresas que presenten ofertas deben incluir el porcentaje de baja y desglosar de manera específica su aplicación al precio unitario de cada producto (**Anexo I, apartado 26**). 
+
+**Recuerda:** Esta información se ha extraído del texto proporcionado. La información completa se encuentra en el **Pliego de Prescripciones Técnicas Particulares** y el **Pliego de Cláusulas Administrativas Particulares** que acompañan al anuncio de licitación. 
+...
+2025-03-04 09:45:40,417 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-04 09:45:40,417 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741077906.md...

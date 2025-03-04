@@ -516,7 +516,7 @@ Para su acreditación, el adjudicatario del contrato deberá aportar, con carác
 
 ### **Sección cuarta: De la confidencialidad y protección de datos de carácter personal**
 
-## **Cláusula 27. Deber de confidencialidad.**
+### **Cláusula 27. Deber de confidencialidad.**
 
 En relación con la confidencialidad será de aplicación lo dispuesto en el artículo 133 LCSP.
 
@@ -542,7 +542,7 @@ También será la Administración responsable de los daños que se causen a terc
 
 Código Seguro de Verificación - CSV. Permite la verificación de la integridad de este documento. URL DE VERIFICACIÓN https://sede.aytojaen.es/verificacion CSV **15247072476452714376** PÁGINA 17/22
 
-## **CAPÍTULO II. De la cesión y subcontratación.**
+### **CAPÍTULO II. De la cesión y subcontratación.**
 
 ### **Cláusula 30. Cesión del contrato.**
 
@@ -612,7 +612,7 @@ En lo concerniente a su régimen se estará a lo dispuesto en la Subsección 4 �
 
 La modificación no podrá suponer el establecimiento de nuevos precios unitarios no previstos en el contrato
 
-# **Cláusula 36. Suspensión del contrato.**
+## **Cláusula 36. Suspensión del contrato.**
 
 La Administración, por razones de interés público, podrá acordar la suspensión de la ejecución del contrato. Igualmente, procederá la suspensión del contrato si se diese la circunstancia señalada en el artículo 198.5 LCSP. A efectos de la suspensión del contrato se estará a lo dispuesto en el artículo 208 LCSP, así como en los preceptos concordantes del RGLCAP.
 
@@ -636,7 +636,7 @@ Cuando el contrato se resuelva por incumplimiento culpable del contratista deber
 
 Para la aplicación de las causas de resolución se estará a lo dispuesto en el artículo 212 de la LCSP y para sus efectos a lo dispuesto en los artículos 213 y 307 de la LCSP, así como en su caso, a lo dispuesto en el desarrollo reglamentario.
 
-#### **Sección segunda. De la terminación del contrato**
+### **Sección segunda. De la terminación del contrato**
 
 ### **Cláusula 38. Terminación del contrato.**
 
@@ -675,13 +675,13 @@ Los actos que se dicten en los procedimientos de adjudicación de contratos de l
 |  | ---      |
 |  | ---<br>" |
 |  | ---      |
-|  | "<br>"   |
-|  | ---      |
+|  | "        |
 |  | "<br>--- |
 |  | "        |
+|  | ---<br>" |
 |  | ---      |
-|  | :<br>"   |
-|  | ---      |
+|  | :        |
+|  | "<br>--- |
 |  | "        |
 
 | Código Seguro de Verificación - CSV. Permite la verificación de la integridad de este documento. |                      |  |        |  |

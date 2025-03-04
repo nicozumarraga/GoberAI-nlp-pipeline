@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 import asyncio
 import logging
 from datetime import datetime
@@ -21,6 +22,7 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+load_dotenv()
 
 async def main():
     # Load environment variables
@@ -65,7 +67,8 @@ async def main():
             'doc2': "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
             'doc3': "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
             'doc4': "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-            'doc5': "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D"
+            'doc5': "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+            'doc6': "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D"
         },
         'markdown_paths': {},
         'ai_summary': None,
@@ -74,37 +77,9 @@ async def main():
     }
 
     # Process the tender
-    custom_questions = [
-        """
-PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACIONES PÚBLICAS
-1. INFORMACIÓN GENERAL DEL PROYECTO
-Nombre del proyecto: [Nombre completo de la licitación]
-Código o referencia de licitación: [Código de identificación]
-Entidad convocante: [Organismo que publica la licitación]
-Objeto de la licitación: [Descripción breve del servicio/producto a contratar]
-Plazo de presentación de ofertas: [Fecha límite de presentación]
-""",
-        """
-2. ASPECTOS ECONÓMICOS Y FINANCIEROS
-Solvencia Económica y Financiera
-Requisitos básicos: [Especificar si se exige solvencia económica y financiera o si está eximida]
-Documentación necesaria: [Declaraciones, certificados u otros documentos requeridos]
-Otros comentarios relevantes: [Ejemplo: Se requiere/no se requiere garantía provisional o definitiva]
-Presupuesto Base de Licitación
-Importe total: [Monto total, especificando si incluye impuestos]
-Condiciones económicas: [Forma de distribución del presupuesto]
-Desglose por lotes:
-Lote 1: [Descripción + Importe]
-Lote 2: [Descripción + Importe]
-Modificaciones presupuestarias: [Condiciones bajo las cuales se puede modificar el presupuesto]
-Garantía Definitiva
-Importe de la garantía: [Monto requerido o exención]
-Condiciones de devolución: [Si aplica]
-Documentación requerida: [Si aplica]
-"""
-    ]
+    from custom_questions import QUESTIONS
 
-    result = await workflow.process_tender(tender_id, client_id, regenerate=True, questions=custom_questions)
+    result = await workflow.process_tender(tender_id, client_id, regenerate=True, questions=QUESTIONS)
 
     # Print the results
     logger.info("=== Processing Results ===")
@@ -114,8 +89,8 @@ Documentación requerida: [Si aplica]
 
     # Sample of the AI summary
     if result.get('ai_summary'):
-        logger.info("\nAI Summary Sample (first 200 chars):")
-        logger.info(result['ai_summary'][:200] + "...")
+        logger.info("\nAI Summary Sample:")
+        logger.info(result['ai_summary'] + "...")
 
     if result.get('ai_doc_path'):
         logger.info("\nAI Document Sample (first 200 chars):")

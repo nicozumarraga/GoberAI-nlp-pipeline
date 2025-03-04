@@ -215,7 +215,7 @@ class AIDocumentGeneratorService:
                         model=self.model_name,
                         contents=[
                             {
-                                "role": "system",
+                                "role": "user",
                                 "parts": [{"text": system_prompt}]
                             },
                             {
@@ -275,7 +275,12 @@ class AIDocumentGeneratorService:
         self.logger.info("Generating AI documents sequentially...")
 
         # Create output directory if it doesn't exist
-        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        output_dir = os.path.dirname(output_file)
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Create a directory for individual section responses
+        sections_dir = os.path.join(output_dir, "sections")
+        os.makedirs(sections_dir, exist_ok=True)
 
         # Process documents
         cache_result = self.process_markdown_documents(markdown_paths)
@@ -289,10 +294,12 @@ class AIDocumentGeneratorService:
 
         full_response = ""
         accumulated_context = ""
+        section_files = []
 
         for i, question in enumerate(questions):
             section_start_time = time.time()
-            self.logger.info(f"Processing section {i+1}/{len(questions)}: {question[:50]}...")
+            section_number = i + 1
+            self.logger.info(f"Processing section {section_number}/{len(questions)}: {question[:50]}...")
 
             # Build a prompt that incorporates previous context
             if accumulated_context:
@@ -324,85 +331,99 @@ class AIDocumentGeneratorService:
                 Nunca respondas con "se especifica en el apartado...", siempre responde con la información final.
                 """
 
-            # Retry with exponential backoff
-            retry_count = 0
-            initial_delay = 1.0
-            delay = initial_delay
-            section_response = None
+            # Process the section with retries
+            section_response = await self._process_section_with_retries(
+                prompt, system_prompt, cache_result, section_number,
+                len(questions), section_start_time, max_retries
+            )
 
-            while retry_count <= max_retries:
-                try:
-                    if cache_result.get("use_cache", False):
-                        # Use cache if available
-                        response = self.client.models.generate_content(
-                            model=self.model_name,
-                            contents=prompt,
-                            config=types.GenerateContentConfig(cached_content=cache_result["cache"].name)
-                        )
-                    else:
-                        # Fallback to direct query with document content in system prompt
-                        response = self.client.models.generate_content(
-                            model=self.model_name,
-                            contents=[
-                                {
-                                    "role": "system",
-                                    "parts": [{"text": system_prompt}]
-                                },
-                                {
-                                    "role": "user",
-                                    "parts": [{"text": prompt}]
-                                }
-                            ]
-                        )
+            if not section_response:
+                self.logger.error(f"Failed to generate section {section_number}")
+                continue
 
-                    # Log token usage if available
-                    if hasattr(response, 'usage_metadata'):
-                        section_time = time.time() - section_start_time
-                        self.logger.info(f"\nSection {i+1} completed in {section_time:.2f} seconds")
-                        self.logger.info(f"Token Usage:")
-                        self.logger.info(f"  Prompt tokens: {response.usage_metadata.prompt_token_count}")
-                        if hasattr(response.usage_metadata, 'cached_content_token_count'):
-                            self.logger.info(f"  Cached content tokens: {response.usage_metadata.cached_content_token_count}")
-                        self.logger.info(f"  Response tokens: {response.usage_metadata.candidates_token_count}")
-                        self.logger.info(f"  Section total: {response.usage_metadata.total_token_count}")
+            # Save this section to a separate file for logging
+            section_file = os.path.join(sections_dir, f"section_{section_number}.md")
+            with open(section_file, 'w', encoding='utf-8') as f:
+                f.write(section_response)
+            section_files.append(section_file)
 
-                    section_response = response.text
-                    break  # Success, exit retry loop
+            self.logger.info(f"Section {section_number} saved to {section_file}")
 
-                except Exception as e:
-                    retry_count += 1
-                    self.logger.error(f"Error processing section {i+1} (attempt {retry_count}/{max_retries}): {e}")
+            # Add to accumulated context and full response
+            accumulated_context += section_response
+            full_response += section_response + "\n\n"
 
-                    if retry_count > max_retries:
-                        self.logger.error(f"Failed to process section {i+1} after {max_retries} retries")
-                        return None
-
-                    # Add jitter to avoid thundering herd
-                    jitter = random.uniform(0.8, 1.2)
-                    actual_delay = delay * jitter
-                    self.logger.info(f"Retrying in {actual_delay:.2f} seconds...")
-                    time.sleep(actual_delay)
-
-                    # Exponential backoff
-                    delay *= 2
-
-            if section_response:
-                # Append to result
-                full_response += section_response + "\n\n"
-
-                # Update the accumulated context
-                accumulated_context += section_response
-
-                # Write current progress to file (in case of interruptions)
-                with open(output_file, 'w', encoding='utf-8') as f:
-                    f.write(full_response)
-
-        # If we have a response, make sure it's properly saved
+        # Only write the final document if we have content
         if full_response:
             with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(full_response)
-
-            self.logger.info(f"AI document written to {output_file}")
+            self.logger.info(f"Complete AI document written to {output_file}")
             return output_file
 
-        return None  # Return None if no content was generated
+        return None
+
+    async def _process_section_with_retries(
+        self, prompt, system_prompt, cache_result,
+        section_number, total_sections, section_start_time, max_retries
+    ) -> Optional[str]:
+        """Process a single section with retry logic"""
+        retry_count = 0
+        initial_delay = 1.0
+        delay = initial_delay
+
+        while retry_count <= max_retries:
+            try:
+                if cache_result.get("use_cache", False):
+                    # Use cache if available
+                    response = self.client.models.generate_content(
+                        model=self.model_name,
+                        contents=prompt,
+                        config=types.GenerateContentConfig(cached_content=cache_result["cache"].name)
+                    )
+                else:
+                    # Fallback to direct query with document content in system prompt
+                    response = self.client.models.generate_content(
+                        model=self.model_name,
+                        contents=[
+                            {
+                                "role": "user",
+                                "parts": [{"text": system_prompt}]
+                            },
+                            {
+                                "role": "user",
+                                "parts": [{"text": prompt}]
+                            }
+                        ]
+                    )
+
+                # Log token usage if available
+                if hasattr(response, 'usage_metadata'):
+                    section_time = time.time() - section_start_time
+                    self.logger.info(f"\nSection {section_number} completed in {section_time:.2f} seconds")
+                    self.logger.info(f"Token Usage:")
+                    self.logger.info(f"  Prompt tokens: {response.usage_metadata.prompt_token_count}")
+                    if hasattr(response.usage_metadata, 'cached_content_token_count'):
+                        self.logger.info(f"  Cached content tokens: {response.usage_metadata.cached_content_token_count}")
+                    self.logger.info(f"  Response tokens: {response.usage_metadata.candidates_token_count}")
+                    self.logger.info(f"  Section total: {response.usage_metadata.total_token_count}")
+
+                return response.text
+
+            except Exception as e:
+                retry_count += 1
+                self.logger.error(f"Error processing section {section_number} (attempt {retry_count}/{max_retries}): {e}")
+
+                if retry_count > max_retries:
+                    self.logger.error(f"Failed to process section {section_number} after {max_retries} retries")
+                    return None
+
+                # Add jitter to avoid thundering herd
+                jitter = random.uniform(0.8, 1.2)
+                actual_delay = delay * jitter
+                self.logger.info(f"Retrying in {actual_delay:.2f} seconds...")
+                time.sleep(actual_delay)
+
+                # Exponential backoff
+                delay *= 2
+
+        return None
