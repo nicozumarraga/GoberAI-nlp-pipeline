@@ -36,7 +36,7 @@ class AIDocumentGeneratorService:
         self,
         markdown_paths: List[str],
         cache_name: str = "tender_documents"
-    ) -> Any:
+    ) -> Dict[str, Any]:
         """
         Upload and process markdown documents to create a query cache
 
@@ -45,19 +45,25 @@ class AIDocumentGeneratorService:
             cache_name: Name for the document cache
 
         Returns:
-            Cache object that can be used for querying
+            Dictionary with cache information and document contents for direct use
         """
         # Upload all documents
         uploaded_files = []
         total_tokens = 0
+        document_contents = []
 
         for file_path in markdown_paths:
             self.logger.info(f"Processing {file_path}...")
 
             try:
-                # Check file size/tokens first
+                # Read the file content
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
+                    # Store content for direct use if needed
+                    document_contents.append({
+                        "path": file_path,
+                        "content": content
+                    })
 
                 # Roughly estimate token count
                 file_tokens = self._calculate_tokens(content)
@@ -91,7 +97,12 @@ class AIDocumentGeneratorService:
                 f"Total tokens ({total_tokens}) is below minimum required for caching "
                 f"({self.min_token_count}). Will process without caching."
             )
-            return {"files": uploaded_files, "use_cache": False, "total_tokens": total_tokens}
+            return {
+                "files": uploaded_files,
+                "use_cache": False,
+                "total_tokens": total_tokens,
+                "document_contents": document_contents
+            }
 
         # Create cache
         try:
@@ -107,10 +118,45 @@ class AIDocumentGeneratorService:
                     ttl=self.cache_ttl,
                 )
             )
-            return {"cache": cache, "use_cache": True, "total_tokens": total_tokens}
+            return {
+                "cache": cache,
+                "use_cache": True,
+                "total_tokens": total_tokens,
+                "document_contents": document_contents
+            }
         except Exception as e:
             self.logger.error(f"Error creating cache: {e}")
-            return {"files": uploaded_files, "use_cache": False, "total_tokens": total_tokens}
+            return {
+                "files": uploaded_files,
+                "use_cache": False,
+                "total_tokens": total_tokens,
+                "document_contents": document_contents
+            }
+
+    def _build_system_prompt_with_documents(self, document_contents: List[Dict[str, str]]) -> str:
+        """
+        Build a system prompt that includes relevant document content
+
+        Args:
+            document_contents: List of dictionaries with document path and content
+
+        Returns:
+            System prompt with embedded document content
+        """
+        system_prompt = "Eres un asistente experto en licitaciones públicas españolas. Aquí están los documentos relevantes:\n\n"
+
+        for i, doc in enumerate(document_contents):
+            # Extract filename from path for better context
+            filename = os.path.basename(doc["path"])
+            # Limit document size to avoid exceeding token limits
+            content_preview = doc["content"][:10000]
+            if len(doc["content"]) > 10000:
+                content_preview += "\n... [Contenido truncado por límite de tamaño]"
+
+            system_prompt += f"--- DOCUMENTO {i+1}: {filename} ---\n{content_preview}\n\n"
+
+        system_prompt += "Analiza estos documentos y proporciona información precisa basándote en ellos."
+        return system_prompt
 
     async def generate_summary(
         self,
@@ -153,16 +199,25 @@ class AIDocumentGeneratorService:
         while retry_count <= max_retries:
             try:
                 if cache_result.get("use_cache", False):
+                    # Use cache if available
                     response = self.client.models.generate_content(
                         model=self.model_name,
                         contents=prompt,
                         config=types.GenerateContentConfig(cached_content=cache_result["cache"].name)
                     )
                 else:
-                    # Fallback to direct query without caching
+                    # Fallback to direct query with document content in system prompt
+                    system_prompt = self._build_system_prompt_with_documents(
+                        cache_result.get("document_contents", [])
+                    )
+
                     response = self.client.models.generate_content(
                         model=self.model_name,
                         contents=[
+                            {
+                                "role": "system",
+                                "parts": [{"text": system_prompt}]
+                            },
                             {
                                 "role": "user",
                                 "parts": [{"text": prompt}]
@@ -225,6 +280,13 @@ class AIDocumentGeneratorService:
         # Process documents
         cache_result = self.process_markdown_documents(markdown_paths)
 
+        # Prepare system prompt if not using cache
+        system_prompt = None
+        if not cache_result.get("use_cache", False):
+            system_prompt = self._build_system_prompt_with_documents(
+                cache_result.get("document_contents", [])
+            )
+
         full_response = ""
         accumulated_context = ""
 
@@ -271,16 +333,21 @@ class AIDocumentGeneratorService:
             while retry_count <= max_retries:
                 try:
                     if cache_result.get("use_cache", False):
+                        # Use cache if available
                         response = self.client.models.generate_content(
                             model=self.model_name,
                             contents=prompt,
                             config=types.GenerateContentConfig(cached_content=cache_result["cache"].name)
                         )
                     else:
-                        # Fallback to direct query without caching
+                        # Fallback to direct query with document content in system prompt
                         response = self.client.models.generate_content(
                             model=self.model_name,
                             contents=[
+                                {
+                                    "role": "system",
+                                    "parts": [{"text": system_prompt}]
+                                },
                                 {
                                     "role": "user",
                                     "parts": [{"text": prompt}]
@@ -319,14 +386,23 @@ class AIDocumentGeneratorService:
                     # Exponential backoff
                     delay *= 2
 
-            # Write to file when successful
-            if full_response:
-                os.makedirs(os.path.dirname(output_file), exist_ok=True)
+            if section_response:
+                # Append to result
+                full_response += section_response + "\n\n"
+
+                # Update the accumulated context
+                accumulated_context += section_response
+
+                # Write current progress to file (in case of interruptions)
                 with open(output_file, 'w', encoding='utf-8') as f:
                     f.write(full_response)
 
-                self.logger.info(f"AI document written to {output_file}")
-                return output_file
+        # If we have a response, make sure it's properly saved
+        if full_response:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(full_response)
 
+            self.logger.info(f"AI document written to {output_file}")
+            return output_file
 
-        return full_response
+        return None  # Return None if no content was generated
