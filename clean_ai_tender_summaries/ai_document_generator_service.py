@@ -306,14 +306,14 @@ class AIDocumentGeneratorService:
             if accumulated_context:
                 prompt = f"""Por favor, continúa completando la plantilla con la siguiente sección.
 
-                Lo que ya has respondido anteriormente:
+                Lo que ya has respondido anteriormente (NO REPETIR ESTE CONTENIDO):
                 {accumulated_context}
 
-                Ahora completa la siguiente sección:
+                Ahora completa SOLO la siguiente sección sin repetir lo anterior:
                 {question}
 
                 IMPORTANTE:
-                1. Continúa donde lo dejaste sin repetir información
+                1. Continúa donde lo dejaste sin repetir información.
                 2. Responde siempre con la información extraida del texto
                 3. Asume que el usuario final no tiene acceso al documento
                 4. Cita textualmente el texto cuando sea relevante
@@ -408,6 +408,7 @@ class AIDocumentGeneratorService:
                     self.logger.info(f"  Response tokens: {response.usage_metadata.candidates_token_count}")
                     self.logger.info(f"  Section total: {response.usage_metadata.total_token_count}")
 
+                print(f"AI GENERATED RESPONSE FOR SECTION {section_number}: {response.text}")
                 return response.text
 
             except Exception as e:

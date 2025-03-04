@@ -40,8 +40,7 @@ Normativas o estándares a cumplir: [Normas específicas aplicables]
 Plazos de entrega y transporte:
 Suministro normal: [Días hábiles]
 Suministro urgente: [Horas o días, si aplica]
-""",
-"""
+
 4. CONDICIONES CONTRACTUALES
 Condiciones de Ejecución Especiales
 Requisitos adicionales durante la ejecución: [Ejemplo: garantías de calidad, plazos de sustitución de productos defectuosos]
