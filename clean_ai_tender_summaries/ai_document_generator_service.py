@@ -14,124 +14,14 @@ class AIDocumentGeneratorService:
     def __init__(
         self,
         api_key: str,
-        model_name: str = 'models/gemini-1.5-flash-001',
-        cache_ttl: str = "360s",  # 6 minute cache for testing
-        min_token_count: int = 32768  # Minimum tokens needed for caching
+        model_name: str = 'models/gemini-1.5-flash-001'
     ):
         self.api_key = api_key
         self.model_name = model_name
-        self.cache_ttl = cache_ttl
-        self.min_token_count = min_token_count
         self.logger = logging.getLogger(__name__)
 
         # Initialize the Gemini client
         self.client = genai.Client(api_key=api_key)
-
-    def _calculate_tokens(self, text: str) -> int:
-        """Rough estimation of token count (actual tokenization is more complex)"""
-        # Very rough approximation: ~4 chars per token for English text
-        return len(text) // 4
-
-    def process_markdown_documents(
-        self,
-        markdown_paths: List[str],
-        cache_name: str = "tender_documents"
-    ) -> Dict[str, Any]:
-        """
-        Upload and process markdown documents to create a query cache
-
-        Args:
-            markdown_paths: List of paths to markdown files
-            cache_name: Name for the document cache
-
-        Returns:
-            Dictionary with cache information and document contents for direct use
-        """
-        # Upload all documents
-        uploaded_files = []
-        total_tokens = 0
-        document_contents = []
-
-        for file_path in markdown_paths:
-            self.logger.info(f"Processing {file_path}...")
-
-            try:
-                # Read the file content
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    # Store content for direct use if needed
-                    document_contents.append({
-                        "path": file_path,
-                        "content": content
-                    })
-
-                # Roughly estimate token count
-                file_tokens = self._calculate_tokens(content)
-                total_tokens += file_tokens
-
-                # Upload the file
-                doc_file = self.client.files.upload(
-                    file=Path(file_path),
-                    config=dict(mime_type='text/markdown')
-                )
-
-                # Wait for processing
-                while doc_file.state.name == 'PROCESSING':
-                    self.logger.info('Waiting for document to be processed...')
-                    time.sleep(2)
-                    doc_file = self.client.files.get(name=doc_file.name)
-
-                uploaded_files.append(doc_file)
-                self.logger.info(f'Document processed: {doc_file.uri}')
-
-            except Exception as e:
-                self.logger.error(f"Error processing markdown file {file_path}: {e}")
-                continue
-
-        if not uploaded_files:
-            raise ValueError("No documents were successfully processed")
-
-        # Check if total tokens meet minimum requirement
-        if total_tokens < self.min_token_count:
-            self.logger.warning(
-                f"Total tokens ({total_tokens}) is below minimum required for caching "
-                f"({self.min_token_count}). Will process without caching."
-            )
-            return {
-                "files": uploaded_files,
-                "use_cache": False,
-                "total_tokens": total_tokens,
-                "document_contents": document_contents
-            }
-
-        # Create cache
-        try:
-            cache = self.client.caches.create(
-                model=self.model_name,
-                config=types.CreateCachedContentConfig(
-                    display_name=cache_name,
-                    system_instruction=(
-                        'Eres un asistente experto en licitaciones públicas españolas. '
-                        'Responde basándote en los documentos proporcionados.'
-                    ),
-                    contents=uploaded_files,
-                    ttl=self.cache_ttl,
-                )
-            )
-            return {
-                "cache": cache,
-                "use_cache": True,
-                "total_tokens": total_tokens,
-                "document_contents": document_contents
-            }
-        except Exception as e:
-            self.logger.error(f"Error creating cache: {e}")
-            return {
-                "files": uploaded_files,
-                "use_cache": False,
-                "total_tokens": total_tokens,
-                "document_contents": document_contents
-            }
 
     def _build_system_prompt_with_documents(self, document_contents: List[Dict[str, str]]) -> str:
         """
@@ -155,36 +45,35 @@ class AIDocumentGeneratorService:
         system_prompt += "Analiza estos documentos y proporciona información precisa basándote en ellos."
         return system_prompt
 
-    def estimate_total_tokens(self, markdown_paths: List[str]) -> int:
+    def _prepare_document_contents(self, markdown_paths: List[str]) -> List[Dict[str, str]]:
         """
-        Estimate the total token count from markdown files without API calls
+        Read the content of markdown files
 
         Args:
             markdown_paths: List of paths to markdown files
 
         Returns:
-            Estimated total token count
+            List of dictionaries with document path and content
         """
-        total_tokens = 0
+        document_contents = []
 
-        for path in markdown_paths:
+        for file_path in markdown_paths:
             try:
                 # Read the file content
-                with open(path, 'r', encoding='utf-8') as f:
+                with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
 
-                # Roughly estimate token count
-                file_tokens = self._calculate_tokens(content)
-                total_tokens += file_tokens
+                document_contents.append({
+                    "path": file_path,
+                    "content": content
+                })
 
-                self.logger.debug(f"Estimated tokens for {path}: {file_tokens}")
+                self.logger.debug(f"Successfully read content from {file_path}")
 
             except Exception as e:
-                self.logger.error(f"Error estimating tokens for {path}: {e}")
-                continue
+                self.logger.error(f"Error reading markdown file {file_path}: {e}")
 
-        self.logger.info(f"Total estimated tokens: {total_tokens}")
-        return total_tokens
+        return document_contents
 
     async def generate_ai_documents(
         self,
@@ -215,43 +104,15 @@ class AIDocumentGeneratorService:
         sections_dir = os.path.join(output_dir, "sections")
         os.makedirs(sections_dir, exist_ok=True)
 
-        # Estimate token count before processing
-        estimated_tokens = self.estimate_total_tokens(markdown_paths)
+        # Read document contents directly (no caching)
+        document_contents = self._prepare_document_contents(markdown_paths)
 
-        # Check if total tokens meet minimum requirement for caching
-        use_cache = estimated_tokens >= self.min_token_count
-        cache_result = {"use_cache": use_cache}
+        if not document_contents:
+            self.logger.error("No document contents could be loaded")
+            return None
 
-        if use_cache:
-            # Only process documents if we'll be using caching
-            self.logger.info(f"Estimated tokens ({estimated_tokens}) exceed minimum for caching. Processing documents...")
-
-            # Process documents
-            cache_result = await self.process_markdown_documents(markdown_paths)
-        else:
-            self.logger.warning(
-                f"Estimated tokens ({estimated_tokens}) is below minimum required for caching "
-                f"({self.min_token_count}). Will process without caching."
-            )
-            # Add document contents for direct use if needed
-            cache_result["document_contents"] = []
-            for file_path in markdown_paths:
-                try:
-                    with open(file_path, 'r', encoding='utf-8') as f:
-                        content = f.read()
-                    cache_result["document_contents"].append({
-                        "path": file_path,
-                        "content": content
-                    })
-                except Exception as e:
-                    self.logger.error(f"Error reading markdown file {file_path}: {e}")
-
-        # Prepare system prompt if not using cache
-        system_prompt = None
-        if not cache_result.get("use_cache", False):
-            system_prompt = self._build_system_prompt_with_documents(
-                cache_result.get("document_contents", [])
-            )
+        # Build system prompt with all documents
+        system_prompt = self._build_system_prompt_with_documents(document_contents)
 
         full_response = ""
         accumulated_context = ""
@@ -291,7 +152,7 @@ class AIDocumentGeneratorService:
 
             # Process the section with retries
             section_response = await self._process_section_with_retries(
-                prompt, system_prompt, cache_result, section_number,
+                prompt, system_prompt, section_number,
                 len(questions), section_start_time, max_retries
             )
 
@@ -321,8 +182,8 @@ class AIDocumentGeneratorService:
         return None
 
     async def _process_section_with_retries(
-        self, prompt, system_prompt, cache_result,
-        section_number, total_sections, section_start_time, max_retries
+        self, prompt, system_prompt, section_number,
+        total_sections, section_start_time, max_retries
     ) -> Optional[str]:
         """Process a single section with retry logic"""
         retry_count = 0
@@ -331,28 +192,20 @@ class AIDocumentGeneratorService:
 
         while retry_count <= max_retries:
             try:
-                if cache_result.get("use_cache", False):
-                    # Use cache if available
-                    response = self.client.models.generate_content(
-                        model=self.model_name,
-                        contents=prompt,
-                        config=types.GenerateContentConfig(cached_content=cache_result["cache"].name)
-                    )
-                else:
-                    # Fallback to direct query with document content in system prompt
-                    response = self.client.models.generate_content(
-                        model=self.model_name,
-                        contents=[
-                            {
-                                "role": "user",
-                                "parts": [{"text": system_prompt}]
-                            },
-                            {
-                                "role": "user",
-                                "parts": [{"text": prompt}]
-                            }
-                        ]
-                    )
+                # Use direct query with document content in system prompt
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=[
+                        {
+                            "role": "user",
+                            "parts": [{"text": system_prompt}]
+                        },
+                        {
+                            "role": "user",
+                            "parts": [{"text": prompt}]
+                        }
+                    ]
+                )
 
                 # Log token usage if available
                 if hasattr(response, 'usage_metadata'):
@@ -360,12 +213,10 @@ class AIDocumentGeneratorService:
                     self.logger.info(f"\nSection {section_number} completed in {section_time:.2f} seconds")
                     self.logger.info(f"Token Usage:")
                     self.logger.info(f"  Prompt tokens: {response.usage_metadata.prompt_token_count}")
-                    if hasattr(response.usage_metadata, 'cached_content_token_count'):
-                        self.logger.info(f"  Cached content tokens: {response.usage_metadata.cached_content_token_count}")
                     self.logger.info(f"  Response tokens: {response.usage_metadata.candidates_token_count}")
                     self.logger.info(f"  Section total: {response.usage_metadata.total_token_count}")
 
-                print(f"AI GENERATED RESPONSE FOR SECTION {section_number}: {response.text}")
+                self.logger.debug(f"AI GENERATED RESPONSE FOR SECTION {section_number}: {response.text[:100]}...")
                 return response.text
 
             except Exception as e:
