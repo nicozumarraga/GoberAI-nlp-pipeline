@@ -1,0 +1,173 @@
+{
+  "document_path": "data/processed/ai_document_with_references.md",
+  "references": [
+    {
+      "chunk_id": "chunk_1_3_suministro_de_plantas_y_servic",
+      "matched_id": "chunk_1_3_suministro_de_plantas_y_servic",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Suministro de plantas y servicio de decoración con adornos de navidad para el embellecimiento de zonas del centro de Jaén.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585.md",
+      "matched_id": "doc_DOC_CN2024-001193585.md",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585.md",
+      "matched_id": "doc_DOC_CN2024-001193585.md",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585.md",
+      "matched_id": "doc_DOC_CN2024-001193585.md",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585.md",
+      "matched_id": "doc_DOC_CN2024-001193585.md",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "chunk_100_4_cláusula_16_garantía_provision",
+      "matched_id": "chunk_100_4_cláusula_40_recursos",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 40. Recursos.**",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_4_4_clasificación_cpv",
+      "matched_id": "chunk_4_4_clasificación_cpv",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "Clasificación CPV",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_12_4_presupuesto_base_de_licitación",
+      "matched_id": "chunk_12_4_presupuesto_base_de_licitación",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "Presupuesto base de licitación. (IVA INCLUIDO)= 11.880,00 €",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_24_4_lote_1_suministro_de_planta_na",
+      "matched_id": "chunk_24_4_14_revisión_de_precios_artícul",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 3,
+      "title": "14.- REVISIÓN DE PRECIOS. (Artículo 103 LCSP)",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_25_4_lote_2_servicio_de_decoración_",
+      "matched_id": "chunk_25_4_lote_1_suministro_de_planta_na",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Lote 1: Suministro de planta navideña cpv 03121100 (plantas vivas)**",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_4_4_clasificación_cpv",
+      "matched_id": "chunk_4_4_clasificación_cpv",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "Clasificación CPV",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_24_4_lote_1_suministro_de_planta_na",
+      "matched_id": "chunk_24_4_14_revisión_de_precios_artícul",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 3,
+      "title": "14.- REVISIÓN DE PRECIOS. (Artículo 103 LCSP)",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_25_4_lote_2_servicio_de_decoración_",
+      "matched_id": "chunk_25_4_lote_1_suministro_de_planta_na",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Lote 1: Suministro de planta navideña cpv 03121100 (plantas vivas)**",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_26_3_cláusula_26_obligaciones_labor",
+      "matched_id": "chunk_26_3_sección_segunda_de_la_terminac",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección segunda. De la terminación del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_26_3_cláusula_26_obligaciones_labor",
+      "matched_id": "chunk_26_3_sección_segunda_de_la_terminac",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección segunda. De la terminación del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_35_2_sección_cuarta_de_la_modificac",
+      "matched_id": "chunk_35_2_capitulo_iii_del_contrato",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**CAPITULO III. Del contrato**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_35_2_sección_cuarta_de_la_modificac",
+      "matched_id": "chunk_35_2_capitulo_iii_del_contrato",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**CAPITULO III. Del contrato**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_35_2_sección_cuarta_de_la_modificac",
+      "matched_id": "chunk_35_2_capitulo_iii_del_contrato",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**CAPITULO III. Del contrato**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
+      "matched_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 24. Pago del precio del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
+      "matched_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 24. Pago del precio del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
+      "matched_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 24. Pago del precio del contrato.**",
+      "level": 3
+    }
+  ]
+}

@@ -20,6 +20,7 @@ def parse_pdf_with_marker(pdf_path, output_dir="data/markdown"):
     if not os.path.exists(pdf_path):
         print(f"Error: File not found - {pdf_path}")
         return None
+    print("Parsing started")
 
     # Check if markdown file already exists
     output_filename = os.path.basename(pdf_path).replace('.pdf', '.md')

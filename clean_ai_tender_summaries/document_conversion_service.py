@@ -52,8 +52,8 @@ class DocumentConversionService:
                 data = {
                     'output_format': 'markdown',
                     'disable_image_extraction': 'true',
-                    'paginate': 'false',
-                    'skip_cache': 'false'
+                    'paginate': 'true',
+                    'skip_cache': 'false',
                 }
 
                 # Submit the PDF for processing

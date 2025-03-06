@@ -72,7 +72,7 @@ async def main():
         'doc1': "data/markdown/DOC_CN2024-001193585.md",
         'doc2': "data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md",
         'doc3': "data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md",
-        'doc4': "data/markdown/DOC20241111094338ANEXO_I.md",
+        #'doc4': "data/markdown/DOC20241111094338ANEXO_I.md",
         'doc5': "data/markdown/DOC20241111094425ANEXO_II.md"
     }
 

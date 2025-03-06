@@ -3,6 +3,7 @@ import time
 import random
 import os
 import asyncio
+import json
 from typing import List, Dict, Any, Optional
 from pathlib import Path
 
@@ -46,6 +47,44 @@ class AIDocumentGeneratorService:
         system_prompt += "Analiza estos documentos y proporciona información precisa basándote en ellos."
         return system_prompt
 
+    def _build_system_prompt_with_chunks(self, chunks: List[Dict[str, Any]]) -> str:
+        """
+        Build a system prompt that includes relevant document chunks with their metadata
+
+        Args:
+            chunks: List of dictionaries with chunk text and metadata
+
+        Returns:
+            System prompt with embedded chunk content
+        """
+        system_prompt = "Eres un asistente experto en licitaciones públicas españolas que SIEMPRE referencia sus fuentes. Aquí están los fragmentos relevantes de los documentos:\n\n"
+
+        for i, chunk in enumerate(chunks):
+            # Extract filename from path for better context
+            pdf_path = chunk["metadata"]["pdf_path"]
+            filename = os.path.basename(pdf_path) if pdf_path else "unknown"
+            page = chunk["metadata"]["page_number"] if chunk["metadata"]["page_number"] else "unknown"
+            chunk_id = chunk["metadata"]["chunk_id"]
+            title = chunk["metadata"]["title"]
+
+            # Include the chunk content with its metadata
+            system_prompt += f"--- FRAGMENTO {i+1}: [chunk_id: {chunk_id}] ---\n"
+            system_prompt += f"Título: {title}\n"
+            system_prompt += f"Documento: {filename}\n"
+            system_prompt += f"Página: {page}\n"
+            system_prompt += f"Contenido:\n{chunk['text']}\n\n"
+
+        system_prompt += "INSTRUCCIONES IMPORTANTES:\n"
+        system_prompt += "1. Analiza estos fragmentos y proporciona información precisa basándote en ellos.\n"
+        system_prompt += "2. Cuando cites información de un fragmento, DEBES incluir su ID entre corchetes [chunk_id: XXX] al final de cada afirmación importante.\n"
+        system_prompt += "3. COPIA EXACTAMENTE los IDs de los fragmentos tal como aparecen. NO modifiques, abrevies o alteres los IDs en absoluto.\n"
+        system_prompt += "4. No inventes información que no esté en los fragmentos proporcionados.\n"
+        system_prompt += "5. Tu respuesta será mostrada al usuario con enlaces a las fuentes originales, por lo que es crucial que cites correctamente los IDs de fragmentos.\n"
+        system_prompt += "6. SIEMPRE usa este formato exacto para citar: [chunk_id: chunk_id_exacto] donde chunk_id_exacto es el ID completo del fragmento."
+        system_prompt += "7. Estructura tu respuesta en formato markdown!."
+
+        return system_prompt
+
     def _prepare_document_contents(self, markdown_paths: List[str]) -> List[Dict[str, str]]:
         """
         Read the content of markdown files
@@ -75,6 +114,24 @@ class AIDocumentGeneratorService:
                 self.logger.error(f"Error reading markdown file {file_path}: {e}")
 
         return document_contents
+
+    def _load_chunks_from_json(self, chunks_path: str) -> List[Dict[str, Any]]:
+        """
+        Load chunks from a JSON file
+
+        Args:
+            chunks_path: Path to the JSON file with chunks
+
+        Returns:
+            List of dictionaries with chunk text and metadata
+        """
+        try:
+            with open(chunks_path, 'r', encoding='utf-8') as f:
+                chunks = json.load(f)
+            return chunks
+        except Exception as e:
+            self.logger.error(f"Error loading chunks from {chunks_path}: {e}")
+            return []
 
     async def generate_ai_documents(
         self,
@@ -168,6 +225,106 @@ class AIDocumentGeneratorService:
 
         return None
 
+    async def generate_ai_documents_with_chunks(
+        self,
+        markdown_paths: List[str],
+        chunks_path: str,
+        questions: List[str],
+        output_file: str,
+        max_retries: int = 5
+    ) -> Optional[str]:
+        """
+        Generate client-specific AI documents using hierarchical chunks and processing questions in parallel
+
+        Args:
+            markdown_paths: List of paths to markdown files (for fallback)
+            chunks_path: Path to the JSON file with chunks
+            questions: List of questions/sections to process
+            output_file: File to write the results to
+            max_retries: Maximum number of retries for API calls
+
+        Returns:
+            Path to the generated document if successful, None otherwise
+        """
+        self.logger.info("Generating AI documents using chunks...")
+
+        # Create output directory if it doesn't exist
+        output_dir = os.path.dirname(output_file)
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Create a directory for individual section responses
+        sections_dir = os.path.join(output_dir, "sections")
+        os.makedirs(sections_dir, exist_ok=True)
+
+        # Load chunks from JSON
+        chunks = self._load_chunks_from_json(chunks_path)
+
+        if not chunks:
+            self.logger.warning("No chunks found, falling back to full document processing")
+            return await self.generate_ai_documents(markdown_paths, questions, output_file, max_retries)
+
+        # Build system prompt with chunks
+        system_prompt = self._build_system_prompt_with_chunks(chunks)
+
+        # Create tasks for processing each section in parallel
+        tasks = []
+        for i, question in enumerate(questions):
+            section_number = i + 1
+            prompt = f"""Por favor, busca en los fragmentos de documentos proporcionados y completa de manera
+            específica y detallada la siguiente plantilla.
+
+            Plantilla: {question}
+
+            IMPORTANTE:
+            1. Responde siempre con la información extraída del texto.
+            2. Asume que el usuario final no tiene acceso al documento y debemos darle toda la información necesaria.
+            3. Cita textualmente el texto cuando sea relevante.
+            4. DEBES incluir el ID del fragmento [chunk_id: __________] después de cada sección importante que extraigas.
+                ejemplo: [chunk_id: chunk_0_2_anexo_i]
+                NO referencies más de un chunk en una misma lista.
+                NO inventes chunks ID que no estén en la lista de chunks.
+                Tus chunks serán procesados por una función regex que extraerá el ID del chunk re.compile(r'\[chunk_id:\s*([^\]]+)\]')
+                y mapeará a un JSON por el chunk ID.
+            """
+
+            task = self._process_section_with_retries(
+                prompt, system_prompt, section_number,
+                len(questions), time.time(), max_retries
+            )
+            tasks.append(task)
+
+        # Wait for all sections to complete
+        section_responses = await asyncio.gather(*tasks)
+
+        # Process results and save sections
+        full_response = ""
+        section_files = []
+
+        for i, section_response in enumerate(section_responses):
+            section_number = i + 1
+
+            if not section_response:
+                self.logger.error(f"Failed to generate section {section_number}")
+                continue
+
+            # Save this section to a separate file for logging
+            section_file = os.path.join(sections_dir, f"section_{section_number}.md")
+            with open(section_file, 'w', encoding='utf-8') as f:
+                f.write(section_response)
+            section_files.append(section_file)
+
+            self.logger.info(f"Section {section_number} saved to {section_file}")
+            full_response += section_response + "\n\n"
+
+        # Only write the final document if we have content
+        if full_response:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(full_response)
+            self.logger.info(f"Complete AI document with chunk references written to {output_file}")
+            return output_file
+
+        return None
+
     async def _process_section_with_retries(
         self, prompt, system_prompt, section_number,
         total_sections, section_start_time, max_retries
@@ -179,7 +336,7 @@ class AIDocumentGeneratorService:
 
         # Define generation config using the proper types.GenerateContentConfig
         generate_content_config = types.GenerateContentConfig(
-            temperature=1,
+            temperature=0.1,
             top_p=0.95,
             top_k=40,
             max_output_tokens=8192,

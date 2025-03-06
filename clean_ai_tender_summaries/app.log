@@ -2169,3 +2169,96 @@ AI Summary Sample:
 2025-03-06 12:01:00,846 - __main__ - INFO - 
 AI Document Sample (first 200 chars):
 2025-03-06 12:01:00,846 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741258851.md...
+2025-03-06 13:12:45,193 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-06 13:12:45,204 - __main__ - INFO - All documents already have markdown versions, skipping download and conversion
+2025-03-06 13:12:45,204 - ai_document_generator_service - INFO - Generating AI documents in parallel...
+2025-03-06 13:12:45,205 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 13:12:45,206 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 13:12:45,206 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 13:12:45,208 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 13:12:51,651 - root - INFO - AFC remote call 1 is done.
+2025-03-06 13:12:51,652 - ai_document_generator_service - INFO - 
+Section 1 completed in 6.45 seconds
+2025-03-06 13:12:51,652 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 13:12:51,652 - ai_document_generator_service - INFO -   Prompt tokens: 24562
+2025-03-06 13:12:51,652 - ai_document_generator_service - INFO -   Response tokens: 1074
+2025-03-06 13:12:51,652 - ai_document_generator_service - INFO -   Section total: 25636
+2025-03-06 13:12:52,920 - root - INFO - AFC remote call 1 is done.
+2025-03-06 13:12:52,921 - ai_document_generator_service - INFO - 
+Section 2 completed in 7.72 seconds
+2025-03-06 13:12:52,921 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 13:12:52,921 - ai_document_generator_service - INFO -   Prompt tokens: 24423
+2025-03-06 13:12:52,921 - ai_document_generator_service - INFO -   Response tokens: 1256
+2025-03-06 13:12:52,921 - ai_document_generator_service - INFO -   Section total: 25679
+2025-03-06 13:12:52,923 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-06 13:12:52,924 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-06 13:12:52,924 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741263165.md
+2025-03-06 13:12:52,925 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-06 13:12:52,925 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 13:12:54,471 - root - INFO - AFC remote call 1 is done.
+2025-03-06 13:12:54,472 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-06 13:12:54,472 - ai_document_generator_service - INFO - Prompt tokens: 2676
+2025-03-06 13:12:54,472 - ai_document_generator_service - INFO - Response tokens: 200
+2025-03-06 13:12:54,472 - ai_document_generator_service - INFO - Total tokens: 2876
+2025-03-06 13:12:54,473 - __main__ - INFO - Tender processing completed in 9.28 seconds
+2025-03-06 13:12:54,473 - __main__ - INFO - === Processing Results ===
+2025-03-06 13:12:54,473 - __main__ - INFO - AI Summary generated: True
+2025-03-06 13:12:54,473 - __main__ - INFO - AI Document generated: True
+2025-03-06 13:12:54,473 - __main__ - INFO - Processing time: 9.28 seconds
+2025-03-06 13:12:54,473 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-06 13:12:54,473 - __main__ - INFO - La licitación 10/2024/CONM-CEE busca un proveedor para el suministro de plantas y decoración floral navideña en el centro de Jaén. El proyecto, con un presupuesto total de 11.880€ + IVA, se divide en dos lotes: Suministro de plantas (7.040€ + IVA) y servicio de decoración (4.840€ + IVA). No se exige solvencia económica o técnica,  el plazo de presentación de ofertas termina el 25/11/2024 a las 14:00. La adjudicación se realiza a la oferta económica más baja. El contrato se extiende hasta fin de 2024 y requiere una declaración responsable sobre medidas de igualdad de género. Se deben cumplir las normas de protección medioambiental y la normativa laboral vigente. Los licitadores deben revisar los anexos para detalles específicos sobre las plantas, materiales y plazos de entrega. 
+...
+2025-03-06 13:12:54,473 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-06 13:12:54,473 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741263165.md...
+2025-03-06 19:12:17,501 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-06 19:12:17,510 - __main__ - INFO - Processing 1 missing documents
+2025-03-06 19:12:17,510 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-06 19:12:18,633 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094338ANEXO_I_1741284737.pdf
+2025-03-06 19:12:18,634 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094338ANEXO_I_1741284737.pdf to Marker API...
+2025-03-06 19:12:20,860 - document_conversion_service - INFO - Processing request 6-RbJlyjNDZWz_ah_C2DMQ...
+2025-03-06 19:12:23,046 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094338ANEXO_I_1741284737.pdf to data/markdown/DOC20241111094338ANEXO_I_1741284737.md
+2025-03-06 19:12:23,047 - ai_document_generator_service - INFO - Generating AI documents in parallel...
+2025-03-06 19:12:23,053 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 19:12:23,056 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 19:12:23,056 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 19:12:23,059 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 19:12:29,355 - root - INFO - AFC remote call 1 is done.
+2025-03-06 19:12:29,357 - ai_document_generator_service - INFO - 
+Section 1 completed in 6.30 seconds
+2025-03-06 19:12:29,357 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 19:12:29,357 - ai_document_generator_service - INFO -   Prompt tokens: 24615
+2025-03-06 19:12:29,357 - ai_document_generator_service - INFO -   Response tokens: 1187
+2025-03-06 19:12:29,357 - ai_document_generator_service - INFO -   Section total: 25802
+2025-03-06 19:12:29,627 - root - INFO - AFC remote call 1 is done.
+2025-03-06 19:12:29,627 - ai_document_generator_service - INFO - 
+Section 2 completed in 6.57 seconds
+2025-03-06 19:12:29,627 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 19:12:29,627 - ai_document_generator_service - INFO -   Prompt tokens: 24476
+2025-03-06 19:12:29,628 - ai_document_generator_service - INFO -   Response tokens: 1184
+2025-03-06 19:12:29,628 - ai_document_generator_service - INFO -   Section total: 25660
+2025-03-06 19:12:29,629 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-06 19:12:29,630 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-06 19:12:29,630 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741284743.md
+2025-03-06 19:12:29,630 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-06 19:12:29,630 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 19:12:30,798 - root - INFO - AFC remote call 1 is done.
+2025-03-06 19:12:30,798 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-06 19:12:30,798 - ai_document_generator_service - INFO - Prompt tokens: 2717
+2025-03-06 19:12:30,798 - ai_document_generator_service - INFO - Response tokens: 203
+2025-03-06 19:12:30,799 - ai_document_generator_service - INFO - Total tokens: 2920
+2025-03-06 19:12:30,799 - __main__ - INFO - Tender processing completed in 13.30 seconds
+2025-03-06 19:12:30,799 - __main__ - INFO - === Processing Results ===
+2025-03-06 19:12:30,799 - __main__ - INFO - AI Summary generated: True
+2025-03-06 19:12:30,799 - __main__ - INFO - AI Document generated: True
+2025-03-06 19:12:30,799 - __main__ - INFO - Processing time: 13.30 seconds
+2025-03-06 19:12:30,799 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-06 19:12:30,799 - __main__ - INFO - La licitación 10/2024/CONM-CEE busca un proveedor para el suministro de plantas y decoración floral navideña en el centro de Jaén. El proyecto se divide en dos lotes: Suministro de plantas (7.040€ + IVA) y servicio de decoración (4.840€ + IVA), con un presupuesto total de 11.880€ + IVA.  No se exige solvencia económica o técnica. El plazo de presentación de ofertas finaliza el 25/11/2024 a las 14:00.  Se adjudica a la oferta económica más baja. El contrato se extiende hasta fin de 2024. Los licitadores deben presentar una declaración responsable sobre medidas de igualdad de género en el mercado laboral y cumplir las normas de protección medioambiental y la normativa vigente en materia laboral. Se debe revisar los anexos para detalles sobre plantas, materiales y plazos de entrega. 
+...
+2025-03-06 19:12:30,799 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-06 19:12:30,799 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741284743.md...
