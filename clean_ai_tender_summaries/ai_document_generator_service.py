@@ -2,6 +2,7 @@ import logging
 import time
 import random
 import os
+import asyncio
 from typing import List, Dict, Any, Optional
 from pathlib import Path
 
@@ -14,7 +15,7 @@ class AIDocumentGeneratorService:
     def __init__(
         self,
         api_key: str,
-        model_name: str = 'models/gemini-1.5-flash-001'
+        model_name: str = 'models/gemini-2.0-flash-lite'
     ):
         self.api_key = api_key
         self.model_name = model_name
@@ -83,7 +84,7 @@ class AIDocumentGeneratorService:
         max_retries: int = 5
     ) -> Optional[str]:
         """
-        Generate client-specific AI documents by processing questions sequentially
+        Generate client-specific AI documents by processing questions in parallel
 
         Args:
             markdown_paths: List of paths to markdown files
@@ -94,7 +95,7 @@ class AIDocumentGeneratorService:
         Returns:
             Path to the generated document if successful, None otherwise
         """
-        self.logger.info("Generating AI documents sequentially...")
+        self.logger.info("Generating AI documents in parallel...")
 
         # Create output directory if it doesn't exist
         output_dir = os.path.dirname(output_file)
@@ -114,47 +115,36 @@ class AIDocumentGeneratorService:
         # Build system prompt with all documents
         system_prompt = self._build_system_prompt_with_documents(document_contents)
 
+        # Create tasks for processing each section in parallel
+        tasks = []
+        for i, question in enumerate(questions):
+            section_number = i + 1
+            prompt = f"""Por favor, busca en los documentos proporcionados y completa de manera
+            específica y detallada la siguiente plantilla.
+
+            Plantilla: {question}
+
+            IMPORTANTE: Responde siempre con la información extraida del texto, asume que el usuario
+            final no tiene acceso al documento y debemos darle toda la información necesaria en nuestra
+            respuesta. Cita textualmente el texto cuando sea relevante.
+            Nunca respondas con "se especifica en el apartado...", siempre responde con la información final.
+            """
+
+            task = self._process_section_with_retries(
+                prompt, system_prompt, section_number,
+                len(questions), time.time(), max_retries
+            )
+            tasks.append(task)
+
+        # Wait for all sections to complete
+        section_responses = await asyncio.gather(*tasks)
+
+        # Process results and save sections
         full_response = ""
-        accumulated_context = ""
         section_files = []
 
-        for i, question in enumerate(questions):
-            section_start_time = time.time()
+        for i, section_response in enumerate(section_responses):
             section_number = i + 1
-            self.logger.info(f"Processing section {section_number}/{len(questions)}: {question[:50]}...")
-
-            # Build a prompt that incorporates previous context
-            if accumulated_context:
-                prompt = f"""Por favor, busca en los documentos proporcionados y completa de manera
-                específica y detallada la siguiente plantilla.
-
-                Plantilla: {question}
-
-                IMPORTANTE:
-                1. Continúa donde lo dejaste sin repetir información.
-                2. Responde siempre con la información extraida del texto
-                3. Asume que el usuario final no tiene acceso al documento
-                4. Cita textualmente el texto cuando sea relevante
-                5. Nunca respondas con "se especifica en el apartado...", siempre responde con la información final
-                """
-            else:
-                # First question, no context yet
-                prompt = f"""Por favor, busca en los documentos proporcionados y completa de manera
-                específica y detallada la siguiente plantilla.
-
-                Plantilla: {question}
-
-                IMPORTANTE: Responde siempre con la información extraida del texto, asume que el usuario
-                final no tiene acceso al documento y debemos darle toda la información necesaria en nuestra
-                respuesta. Cita textualmente el texto cuando sea relevante.
-                Nunca respondas con "se especifica en el apartado...", siempre responde con la información final.
-                """
-
-            # Process the section with retries
-            section_response = await self._process_section_with_retries(
-                prompt, system_prompt, section_number,
-                len(questions), section_start_time, max_retries
-            )
 
             if not section_response:
                 self.logger.error(f"Failed to generate section {section_number}")
@@ -167,9 +157,6 @@ class AIDocumentGeneratorService:
             section_files.append(section_file)
 
             self.logger.info(f"Section {section_number} saved to {section_file}")
-
-            # Add to accumulated context and full response
-            accumulated_context += section_response
             full_response += section_response + "\n\n"
 
         # Only write the final document if we have content
@@ -190,21 +177,37 @@ class AIDocumentGeneratorService:
         initial_delay = 1.0
         delay = initial_delay
 
+        # Define generation config using the proper types.GenerateContentConfig
+        generate_content_config = types.GenerateContentConfig(
+            temperature=1,
+            top_p=0.95,
+            top_k=40,
+            max_output_tokens=8192,
+            response_mime_type="text/plain",
+        )
+
         while retry_count <= max_retries:
             try:
-                # Use direct query with document content in system prompt
-                response = self.client.models.generate_content(
-                    model=self.model_name,
-                    contents=[
-                        {
-                            "role": "user",
-                            "parts": [{"text": system_prompt}]
-                        },
-                        {
-                            "role": "user",
-                            "parts": [{"text": prompt}]
-                        }
-                    ]
+                self.logger.info(f"Processing section {section_number}/{total_sections}...")
+
+                # Use loop.run_in_executor to run the synchronous method in a thread pool
+                loop = asyncio.get_event_loop()
+                response = await loop.run_in_executor(
+                    None,
+                    lambda: self.client.models.generate_content(
+                        model=self.model_name,
+                        contents=[
+                            {
+                                "role": "user",
+                                "parts": [{"text": system_prompt}]
+                            },
+                            {
+                                "role": "user",
+                                "parts": [{"text": prompt}]
+                            }
+                        ],
+                        config=generate_content_config
+                    )
                 )
 
                 # Log token usage if available
@@ -231,7 +234,7 @@ class AIDocumentGeneratorService:
                 jitter = random.uniform(0.8, 1.2)
                 actual_delay = delay * jitter
                 self.logger.info(f"Retrying in {actual_delay:.2f} seconds...")
-                time.sleep(actual_delay)
+                await asyncio.sleep(actual_delay)  # Use asyncio.sleep instead of time.sleep
 
                 # Exponential backoff
                 delay *= 2
@@ -256,6 +259,15 @@ class AIDocumentGeneratorService:
             Conversational summary if successful, None otherwise
         """
         self.logger.info("Generating conversational summary from AI document...")
+
+        # Define generation config using the proper types.GenerateContentConfig
+        generate_content_config = types.GenerateContentConfig(
+            temperature=1,
+            top_p=0.95,
+            top_k=40,
+            max_output_tokens=1200,
+            response_mime_type="text/plain",
+        )
 
         prompt = f"""
         Eres un asistente experto en licitaciones públicas. A continuación, te presento un documento detallado
@@ -289,7 +301,8 @@ class AIDocumentGeneratorService:
                     contents=[{
                         "role": "user",
                         "parts": [{"text": prompt}]
-                    }]
+                    }],
+                    config=generate_content_config
                 )
 
                 # Log token usage if available

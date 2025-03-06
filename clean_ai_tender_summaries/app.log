@@ -1759,3 +1759,413 @@ AI Summary Sample:
 2025-03-04 14:02:50,394 - __main__ - INFO - 
 AI Document Sample (first 200 chars):
 2025-03-04 14:02:50,394 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741093356.md...
+2025-03-04 14:13:24,463 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-04 14:13:24,471 - __main__ - INFO - Processing 5 missing documents
+2025-03-04 14:13:24,471 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 14:13:24,981 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC_CN2024-001193585.pdf
+2025-03-04 14:13:24,981 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 14:13:26,004 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf
+2025-03-04 14:13:26,005 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 14:13:28,238 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf
+2025-03-04 14:13:28,239 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 14:13:29,263 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094338ANEXO_I.pdf
+2025-03-04 14:13:29,264 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-04 14:13:32,761 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094425ANEXO_II.pdf
+2025-03-04 14:13:32,763 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC_CN2024-001193585.pdf to Marker API...
+2025-03-04 14:13:34,363 - document_conversion_service - INFO - Processing request Czs4LkxGJ2ozH_ChHr5m0w...
+2025-03-04 14:13:34,740 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC_CN2024-001193585.pdf to data/markdown/DOC_CN2024-001193585.md
+2025-03-04 14:13:34,741 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to Marker API...
+2025-03-04 14:13:36,597 - document_conversion_service - INFO - Processing request p1PPznTUCEjMoxHO3jK-Qg...
+2025-03-04 14:13:40,900 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas.pdf to data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md
+2025-03-04 14:13:40,901 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to Marker API...
+2025-03-04 14:13:43,081 - document_conversion_service - INFO - Processing request hqHeUm8PE6qFkkbf_leGUg...
+2025-03-04 14:13:47,319 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md
+2025-03-04 14:13:47,321 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to Marker API...
+2025-03-04 14:13:49,293 - document_conversion_service - INFO - Processing request V-CpY26alKwWmYa-i1d7EQ...
+2025-03-04 14:13:51,819 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094338ANEXO_I.pdf to data/markdown/DOC20241111094338ANEXO_I.md
+2025-03-04 14:13:51,820 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to Marker API...
+2025-03-04 14:13:53,800 - document_conversion_service - INFO - Processing request f2oD1r9KFYMRSJpAFL4bbA...
+2025-03-04 14:13:55,108 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094425ANEXO_II.pdf to data/markdown/DOC20241111094425ANEXO_II.md
+2025-03-04 14:13:55,108 - ai_document_generator_service - INFO - Generating AI documents sequentially...
+2025-03-04 14:13:55,110 - ai_document_generator_service - INFO - Processing section 1/2: 
+PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACI...
+2025-03-04 14:13:55,110 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 14:14:00,770 - root - INFO - AFC remote call 1 is done.
+2025-03-04 14:14:00,772 - ai_document_generator_service - INFO - 
+Section 1 completed in 5.66 seconds
+2025-03-04 14:14:00,772 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 14:14:00,772 - ai_document_generator_service - INFO -   Prompt tokens: 24562
+2025-03-04 14:14:00,772 - ai_document_generator_service - INFO -   Response tokens: 1074
+2025-03-04 14:14:00,772 - ai_document_generator_service - INFO -   Section total: 25636
+2025-03-04 14:14:00,776 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-04 14:14:00,776 - ai_document_generator_service - INFO - Processing section 2/2: 
+4. CONDICIONES CONTRACTUALES
+Condiciones de Ejecu...
+2025-03-04 14:14:00,776 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 14:14:07,286 - root - INFO - AFC remote call 1 is done.
+2025-03-04 14:14:07,287 - ai_document_generator_service - INFO - 
+Section 2 completed in 6.51 seconds
+2025-03-04 14:14:07,287 - ai_document_generator_service - INFO - Token Usage:
+2025-03-04 14:14:07,287 - ai_document_generator_service - INFO -   Prompt tokens: 24434
+2025-03-04 14:14:07,287 - ai_document_generator_service - INFO -   Response tokens: 1307
+2025-03-04 14:14:07,287 - ai_document_generator_service - INFO -   Section total: 25741
+2025-03-04 14:14:07,290 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-04 14:14:07,291 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741094035.md
+2025-03-04 14:14:07,291 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-04 14:14:07,291 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-04 14:14:08,531 - root - INFO - AFC remote call 1 is done.
+2025-03-04 14:14:08,532 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-04 14:14:08,532 - ai_document_generator_service - INFO - Prompt tokens: 2727
+2025-03-04 14:14:08,532 - ai_document_generator_service - INFO - Response tokens: 243
+2025-03-04 14:14:08,532 - ai_document_generator_service - INFO - Total tokens: 2970
+2025-03-04 14:14:08,532 - __main__ - INFO - Tender processing completed in 44.07 seconds
+2025-03-04 14:14:08,532 - __main__ - INFO - === Processing Results ===
+2025-03-04 14:14:08,532 - __main__ - INFO - AI Summary generated: True
+2025-03-04 14:14:08,532 - __main__ - INFO - AI Document generated: True
+2025-03-04 14:14:08,532 - __main__ - INFO - Processing time: 44.07 seconds
+2025-03-04 14:14:08,532 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-04 14:14:08,532 - __main__ - INFO - La licitación 10/2024/CONM-CEE busca un proveedor para el suministro de plantas y decoración floral navideña en el centro de Jaén. El proyecto se divide en dos lotes: Suministro de plantas (7.040€ + IVA) y servicio de decoración (4.840€ + IVA), con un presupuesto total de 11.880€ + IVA. No se exige solvencia económica o técnica y el plazo de presentación de ofertas finaliza el 25/11/2024 a las 14:00. La adjudicación se realiza a la oferta económica más baja.  El contrato se extiende hasta fin de 2024. El adjudicatario debe presentar una declaración responsable sobre medidas de igualdad de género en el mercado laboral y cumplir las normas de protección medioambiental y la normativa vigente en materia laboral. Los licitadores deben revisar los anexos para detalles específicos sobre las plantas, materiales y plazos de entrega. Se debe garantizar la salud de las plantas y su sustitución en caso de defecto, y el adjudicatario estará sujeto a un control de calidad por parte del CEE.  
+...
+2025-03-04 14:14:08,533 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-04 14:14:08,533 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741094035.md...
+2025-03-05 13:06:58,150 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-05 13:06:58,159 - __main__ - INFO - Processing 5 missing documents
+2025-03-05 13:06:58,159 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-05 13:06:58,766 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC_CN2024-001193585_1741176418.pdf
+2025-03-05 13:06:58,767 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-05 13:06:59,913 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741176419.pdf
+2025-03-05 13:06:59,914 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-05 13:07:02,572 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741176420.pdf
+2025-03-05 13:07:02,573 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-05 13:07:05,552 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094338ANEXO_I_1741176422.pdf
+2025-03-05 13:07:05,554 - document_retrieval_service - INFO - Downloading PDF from https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D...
+2025-03-05 13:07:11,050 - document_retrieval_service - INFO - PDF downloaded to data/raw_pdfs/DOC20241111094425ANEXO_II_1741176426.pdf
+2025-03-05 13:07:11,053 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC_CN2024-001193585_1741176418.pdf to Marker API...
+2025-03-05 13:07:12,318 - document_conversion_service - INFO - Processing request tR6T7wECTmqEtgPYLLpWmw...
+2025-03-05 13:07:14,516 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC_CN2024-001193585_1741176418.pdf to data/markdown/DOC_CN2024-001193585_1741176418.md
+2025-03-05 13:07:14,518 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741176419.pdf to Marker API...
+2025-03-05 13:07:16,221 - document_conversion_service - INFO - Processing request RYfdMJUn8THvuigjTThaiA...
+2025-03-05 13:07:19,118 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741176419.pdf to data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas_1741176419.md
+2025-03-05 13:07:19,120 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741176420.pdf to Marker API...
+2025-03-05 13:07:22,527 - document_conversion_service - INFO - Processing request Hsfk3Q_ZbPLFZ7puhdqGYA...
+2025-03-05 13:07:25,560 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111092201Pliego_de_clausulas_administrativas_1741176420.pdf to data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas_1741176420.md
+2025-03-05 13:07:25,561 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094338ANEXO_I_1741176422.pdf to Marker API...
+2025-03-05 13:07:27,512 - document_conversion_service - INFO - Processing request 4wE4VAgZvnhUvWxxZlGPOA...
+2025-03-05 13:07:30,117 - document_conversion_service - INFO - Successfully converted data/raw_pdfs/DOC20241111094338ANEXO_I_1741176422.pdf to data/markdown/DOC20241111094338ANEXO_I_1741176422.md
+2025-03-05 13:07:30,118 - document_conversion_service - INFO - Submitting data/raw_pdfs/DOC20241111094425ANEXO_II_1741176426.pdf to Marker API...
+2025-03-05 13:07:30,295 - document_conversion_service - ERROR - Error converting PDF to markdown: HTTPSConnectionPool(host='www.datalab.to', port=443): Max retries exceeded with url: /api/v1/marker (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2559)')))
+2025-03-05 13:07:30,297 - ai_document_generator_service - INFO - Generating AI documents sequentially...
+2025-03-05 13:07:30,298 - ai_document_generator_service - INFO - Processing section 1/2: 
+PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACI...
+2025-03-05 13:07:30,298 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-05 13:07:35,782 - root - INFO - AFC remote call 1 is done.
+2025-03-05 13:07:35,783 - ai_document_generator_service - INFO - 
+Section 1 completed in 5.48 seconds
+2025-03-05 13:07:35,783 - ai_document_generator_service - INFO - Token Usage:
+2025-03-05 13:07:35,783 - ai_document_generator_service - INFO -   Prompt tokens: 23778
+2025-03-05 13:07:35,783 - ai_document_generator_service - INFO -   Response tokens: 1076
+2025-03-05 13:07:35,784 - ai_document_generator_service - INFO -   Section total: 24854
+2025-03-05 13:07:35,786 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-05 13:07:35,787 - ai_document_generator_service - INFO - Processing section 2/2: 
+4. CONDICIONES CONTRACTUALES
+Condiciones de Ejecu...
+2025-03-05 13:07:35,787 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-05 13:07:41,110 - root - INFO - AFC remote call 1 is done.
+2025-03-05 13:07:41,110 - ai_document_generator_service - INFO - 
+Section 2 completed in 5.32 seconds
+2025-03-05 13:07:41,111 - ai_document_generator_service - INFO - Token Usage:
+2025-03-05 13:07:41,111 - ai_document_generator_service - INFO -   Prompt tokens: 23650
+2025-03-05 13:07:41,111 - ai_document_generator_service - INFO -   Response tokens: 1003
+2025-03-05 13:07:41,111 - ai_document_generator_service - INFO -   Section total: 24653
+2025-03-05 13:07:41,113 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-05 13:07:41,114 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741176450.md
+2025-03-05 13:07:41,132 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-05 13:07:41,132 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-05 13:07:42,422 - root - INFO - AFC remote call 1 is done.
+2025-03-05 13:07:42,422 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-05 13:07:42,422 - ai_document_generator_service - INFO - Prompt tokens: 2424
+2025-03-05 13:07:42,422 - ai_document_generator_service - INFO - Response tokens: 185
+2025-03-05 13:07:42,423 - ai_document_generator_service - INFO - Total tokens: 2609
+2025-03-05 13:07:42,423 - __main__ - INFO - Tender processing completed in 44.27 seconds
+2025-03-05 13:07:42,423 - __main__ - INFO - === Processing Results ===
+2025-03-05 13:07:42,423 - __main__ - INFO - AI Summary generated: True
+2025-03-05 13:07:42,423 - __main__ - INFO - AI Document generated: True
+2025-03-05 13:07:42,423 - __main__ - INFO - Processing time: 44.27 seconds
+2025-03-05 13:07:42,423 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-05 13:07:42,423 - __main__ - INFO - La licitación 10/2024/CONM-CEE busca proveedor para suministro de plantas y decoración floral navideña en el centro de Jaén, por un presupuesto total de 11.880€ + IVA (7.040€ + IVA para plantas y 4.840€ + IVA para decoración). No se exige solvencia económica o técnica. Plazo de presentación de ofertas: 25/11/2024 a las 14:00. Adjudicación a la oferta económica más baja. El contrato se extiende hasta fin de 2024 y exige certificado fitosanitario y cumplimiento de normativa laboral y medioambiental.  Los licitadores deben revisar los anexos para detalles específicos sobre las plantas, materiales y plazos de entrega.  Se debe presentar declaración responsable sobre medidas de igualdad de género en el mercado laboral. 
+...
+2025-03-05 13:07:42,423 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-05 13:07:42,423 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741176450.md...
+2025-03-05 13:09:01,369 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-05 13:09:01,376 - __main__ - INFO - All documents already have markdown versions, skipping download and conversion
+2025-03-05 13:09:01,376 - ai_document_generator_service - INFO - Generating AI documents sequentially...
+2025-03-05 13:09:01,378 - ai_document_generator_service - INFO - Processing section 1/2: 
+PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACI...
+2025-03-05 13:09:01,378 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-05 13:09:06,951 - root - INFO - AFC remote call 1 is done.
+2025-03-05 13:09:06,952 - ai_document_generator_service - INFO - 
+Section 1 completed in 5.57 seconds
+2025-03-05 13:09:06,952 - ai_document_generator_service - INFO - Token Usage:
+2025-03-05 13:09:06,952 - ai_document_generator_service - INFO -   Prompt tokens: 24562
+2025-03-05 13:09:06,952 - ai_document_generator_service - INFO -   Response tokens: 976
+2025-03-05 13:09:06,952 - ai_document_generator_service - INFO -   Section total: 25538
+2025-03-05 13:09:06,954 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-05 13:09:06,954 - ai_document_generator_service - INFO - Processing section 2/2: 
+4. CONDICIONES CONTRACTUALES
+Condiciones de Ejecu...
+2025-03-05 13:09:06,954 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-05 13:09:12,781 - root - INFO - AFC remote call 1 is done.
+2025-03-05 13:09:12,784 - ai_document_generator_service - INFO - 
+Section 2 completed in 5.83 seconds
+2025-03-05 13:09:12,784 - ai_document_generator_service - INFO - Token Usage:
+2025-03-05 13:09:12,784 - ai_document_generator_service - INFO -   Prompt tokens: 24434
+2025-03-05 13:09:12,784 - ai_document_generator_service - INFO -   Response tokens: 1023
+2025-03-05 13:09:12,784 - ai_document_generator_service - INFO -   Section total: 25457
+2025-03-05 13:09:12,786 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-05 13:09:12,787 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741176541.md
+2025-03-05 13:09:12,787 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-05 13:09:12,787 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-05 13:09:14,001 - root - INFO - AFC remote call 1 is done.
+2025-03-05 13:09:14,002 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-05 13:09:14,002 - ai_document_generator_service - INFO - Prompt tokens: 2344
+2025-03-05 13:09:14,002 - ai_document_generator_service - INFO - Response tokens: 213
+2025-03-05 13:09:14,002 - ai_document_generator_service - INFO - Total tokens: 2557
+2025-03-05 13:09:14,002 - __main__ - INFO - Tender processing completed in 12.63 seconds
+2025-03-05 13:09:14,002 - __main__ - INFO - === Processing Results ===
+2025-03-05 13:09:14,002 - __main__ - INFO - AI Summary generated: True
+2025-03-05 13:09:14,002 - __main__ - INFO - AI Document generated: True
+2025-03-05 13:09:14,002 - __main__ - INFO - Processing time: 12.63 seconds
+2025-03-05 13:09:14,003 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-05 13:09:14,003 - __main__ - INFO - La licitación 10/2024/CONM-CEE busca un proveedor para el suministro de plantas y decoración floral navideña en el centro de Jaén. El proyecto se divide en dos lotes: Suministro de plantas (7.040€ + IVA) y servicio de decoración (4.840€ + IVA), con un presupuesto total de 11.880€ + IVA. No se exige solvencia económica o técnica y el plazo de presentación de ofertas finaliza el 25/11/2024 a las 14:00. La adjudicación se realiza a la oferta económica más baja.  El contrato se extiende hasta fin de 2024. Se deben cumplir las normas de protección medioambiental y la normativa vigente en materia laboral. Los licitadores deben revisar los anexos para detalles específicos sobre las plantas, materiales y plazos de entrega.  Es importante destacar la necesidad de presentar una declaración responsable sobre medidas de igualdad de género en el mercado laboral. 
+...
+2025-03-05 13:09:14,003 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-05 13:09:14,003 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741176541.md...
+2025-03-06 11:36:07,737 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-06 11:36:07,747 - __main__ - INFO - All documents already have markdown versions, skipping download and conversion
+2025-03-06 11:36:07,747 - ai_document_generator_service - INFO - Generating AI documents in parallel...
+2025-03-06 11:36:07,748 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:36:07,748 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 1/5): 'Models' object has no attribute 'generate_content_async'
+2025-03-06 11:36:07,748 - ai_document_generator_service - INFO - Retrying in 1.14 seconds...
+2025-03-06 11:36:07,748 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:36:07,748 - ai_document_generator_service - ERROR - Error processing section 2 (attempt 1/5): 'Models' object has no attribute 'generate_content_async'
+2025-03-06 11:36:07,748 - ai_document_generator_service - INFO - Retrying in 1.07 seconds...
+2025-03-06 11:36:08,819 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:36:08,820 - ai_document_generator_service - ERROR - Error processing section 2 (attempt 2/5): 'Models' object has no attribute 'generate_content_async'
+2025-03-06 11:36:08,820 - ai_document_generator_service - INFO - Retrying in 1.66 seconds...
+2025-03-06 11:36:08,890 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:36:08,891 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 2/5): 'Models' object has no attribute 'generate_content_async'
+2025-03-06 11:36:08,891 - ai_document_generator_service - INFO - Retrying in 1.86 seconds...
+2025-03-06 11:36:10,482 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:36:10,483 - ai_document_generator_service - ERROR - Error processing section 2 (attempt 3/5): 'Models' object has no attribute 'generate_content_async'
+2025-03-06 11:36:10,483 - ai_document_generator_service - INFO - Retrying in 3.57 seconds...
+2025-03-06 11:36:10,752 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:36:10,753 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 3/5): 'Models' object has no attribute 'generate_content_async'
+2025-03-06 11:36:10,753 - ai_document_generator_service - INFO - Retrying in 3.79 seconds...
+2025-03-06 11:36:14,059 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:36:14,060 - ai_document_generator_service - ERROR - Error processing section 2 (attempt 4/5): 'Models' object has no attribute 'generate_content_async'
+2025-03-06 11:36:14,060 - ai_document_generator_service - INFO - Retrying in 6.44 seconds...
+2025-03-06 11:36:14,540 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:36:14,541 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 4/5): 'Models' object has no attribute 'generate_content_async'
+2025-03-06 11:36:14,541 - ai_document_generator_service - INFO - Retrying in 8.88 seconds...
+2025-03-06 11:55:08,472 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-06 11:55:08,481 - __main__ - INFO - All documents already have markdown versions, skipping download and conversion
+2025-03-06 11:55:08,482 - ai_document_generator_service - INFO - Generating AI documents in parallel...
+2025-03-06 11:55:08,483 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:55:08,484 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:55:08,484 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 1/5): Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-03-06 11:55:08,484 - ai_document_generator_service - INFO - Retrying in 0.90 seconds...
+2025-03-06 11:55:08,484 - ai_document_generator_service - ERROR - Error processing section 2 (attempt 1/5): Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-03-06 11:55:08,484 - ai_document_generator_service - INFO - Retrying in 1.13 seconds...
+2025-03-06 11:55:09,387 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:55:09,388 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 2/5): Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-03-06 11:55:09,388 - ai_document_generator_service - INFO - Retrying in 1.97 seconds...
+2025-03-06 11:55:09,618 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:55:09,620 - ai_document_generator_service - ERROR - Error processing section 2 (attempt 2/5): Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-03-06 11:55:09,620 - ai_document_generator_service - INFO - Retrying in 2.30 seconds...
+2025-03-06 11:55:11,357 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:55:11,358 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 3/5): Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-03-06 11:55:11,358 - ai_document_generator_service - INFO - Retrying in 3.45 seconds...
+2025-03-06 11:55:11,920 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:55:11,922 - ai_document_generator_service - ERROR - Error processing section 2 (attempt 3/5): Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-03-06 11:55:11,922 - ai_document_generator_service - INFO - Retrying in 3.26 seconds...
+2025-03-06 11:55:14,808 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:55:14,809 - ai_document_generator_service - ERROR - Error processing section 1 (attempt 4/5): Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-03-06 11:55:14,810 - ai_document_generator_service - INFO - Retrying in 6.85 seconds...
+2025-03-06 11:55:15,182 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:55:15,184 - ai_document_generator_service - ERROR - Error processing section 2 (attempt 4/5): Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-03-06 11:55:15,184 - ai_document_generator_service - INFO - Retrying in 8.76 seconds...
+2025-03-06 11:57:07,365 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-06 11:57:07,372 - __main__ - INFO - All documents already have markdown versions, skipping download and conversion
+2025-03-06 11:57:07,372 - ai_document_generator_service - INFO - Generating AI documents in parallel...
+2025-03-06 11:57:07,373 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:57:07,374 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 11:57:07,374 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:57:07,376 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 11:57:13,722 - root - INFO - AFC remote call 1 is done.
+2025-03-06 11:57:13,723 - ai_document_generator_service - INFO - 
+Section 2 completed in 6.35 seconds
+2025-03-06 11:57:13,723 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 11:57:13,723 - ai_document_generator_service - INFO -   Prompt tokens: 24423
+2025-03-06 11:57:13,723 - ai_document_generator_service - INFO -   Response tokens: 1038
+2025-03-06 11:57:13,723 - ai_document_generator_service - INFO -   Section total: 25461
+2025-03-06 11:57:13,756 - root - INFO - AFC remote call 1 is done.
+2025-03-06 11:57:13,756 - ai_document_generator_service - INFO - 
+Section 1 completed in 6.38 seconds
+2025-03-06 11:57:13,756 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 11:57:13,756 - ai_document_generator_service - INFO -   Prompt tokens: 24562
+2025-03-06 11:57:13,756 - ai_document_generator_service - INFO -   Response tokens: 1364
+2025-03-06 11:57:13,757 - ai_document_generator_service - INFO -   Section total: 25926
+2025-03-06 11:57:13,760 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-06 11:57:13,761 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-06 11:57:13,761 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741258627.md
+2025-03-06 11:57:13,761 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-06 11:57:13,762 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 11:57:14,947 - root - INFO - AFC remote call 1 is done.
+2025-03-06 11:57:14,948 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-06 11:57:14,949 - ai_document_generator_service - INFO - Prompt tokens: 2746
+2025-03-06 11:57:14,949 - ai_document_generator_service - INFO - Response tokens: 211
+2025-03-06 11:57:14,949 - ai_document_generator_service - INFO - Total tokens: 2957
+2025-03-06 11:57:14,949 - __main__ - INFO - Tender processing completed in 7.58 seconds
+2025-03-06 11:57:14,949 - __main__ - INFO - === Processing Results ===
+2025-03-06 11:57:14,949 - __main__ - INFO - AI Summary generated: True
+2025-03-06 11:57:14,949 - __main__ - INFO - AI Document generated: True
+2025-03-06 11:57:14,949 - __main__ - INFO - Processing time: 7.58 seconds
+2025-03-06 11:57:14,949 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-06 11:57:14,949 - __main__ - INFO - La licitación 10/2024/CONM-CEE busca un proveedor para el suministro de plantas y decoración floral navideña en el centro de Jaén. El proyecto se divide en dos lotes: Suministro de plantas (7.040€ + IVA) y servicio de decoración (4.840€ + IVA), con un presupuesto total de 11.880€ + IVA. No se exige solvencia económica o técnica. El plazo de presentación de ofertas finaliza el 25/11/2024 a las 14:00. Se adjudica a la oferta económica más baja. El contrato se extiende hasta fin de 2024.  El adjudicatario debe presentar una declaración responsable sobre medidas de igualdad de género en el mercado laboral.  Se deben cumplir las normas de protección medioambiental y la normativa vigente en materia laboral.  Los licitadores deben revisar los anexos para detalles específicos sobre las plantas, materiales y plazos de entrega. 
+...
+2025-03-06 11:57:14,949 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-06 11:57:14,949 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741258627.md...
+2025-03-06 11:58:14,503 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-06 11:58:14,512 - __main__ - INFO - All documents already have markdown versions, skipping download and conversion
+2025-03-06 11:58:14,512 - ai_document_generator_service - INFO - Generating AI documents in parallel...
+2025-03-06 11:58:14,513 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:58:14,514 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 11:58:14,514 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:58:14,516 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 11:58:19,668 - root - INFO - AFC remote call 1 is done.
+2025-03-06 11:58:19,668 - ai_document_generator_service - INFO - 
+Section 1 completed in 5.16 seconds
+2025-03-06 11:58:19,668 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 11:58:19,668 - ai_document_generator_service - INFO -   Prompt tokens: 24562
+2025-03-06 11:58:19,668 - ai_document_generator_service - INFO -   Response tokens: 967
+2025-03-06 11:58:19,668 - ai_document_generator_service - INFO -   Section total: 25529
+2025-03-06 11:58:21,376 - root - INFO - AFC remote call 1 is done.
+2025-03-06 11:58:21,376 - ai_document_generator_service - INFO - 
+Section 2 completed in 6.86 seconds
+2025-03-06 11:58:21,376 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 11:58:21,377 - ai_document_generator_service - INFO -   Prompt tokens: 24423
+2025-03-06 11:58:21,377 - ai_document_generator_service - INFO -   Response tokens: 1167
+2025-03-06 11:58:21,377 - ai_document_generator_service - INFO -   Section total: 25590
+2025-03-06 11:58:21,379 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-06 11:58:21,380 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-06 11:58:21,381 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741258694.md
+2025-03-06 11:58:21,381 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-06 11:58:21,381 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 11:58:22,737 - root - INFO - AFC remote call 1 is done.
+2025-03-06 11:58:22,738 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-06 11:58:22,738 - ai_document_generator_service - INFO - Prompt tokens: 2480
+2025-03-06 11:58:22,738 - ai_document_generator_service - INFO - Response tokens: 173
+2025-03-06 11:58:22,738 - ai_document_generator_service - INFO - Total tokens: 2653
+2025-03-06 11:58:22,738 - __main__ - INFO - Tender processing completed in 8.24 seconds
+2025-03-06 11:58:22,738 - __main__ - INFO - === Processing Results ===
+2025-03-06 11:58:22,738 - __main__ - INFO - AI Summary generated: True
+2025-03-06 11:58:22,738 - __main__ - INFO - AI Document generated: True
+2025-03-06 11:58:22,738 - __main__ - INFO - Processing time: 8.24 seconds
+2025-03-06 11:58:22,738 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-06 11:58:22,738 - __main__ - INFO - La licitación 10/2024/CONM-CEE busca proveedor para el suministro de plantas y decoración navideña en Jaén, con dos lotes: plantas (7.040€ + IVA) y decoración (4.840€ + IVA), totalizando 11.880€ + IVA. El plazo de presentación de ofertas termina el 25/11/2024 a las 14:00. No se exige solvencia económica o técnica. La adjudicación se basa en la oferta económica más baja. El contrato se extiende hasta fin de 2024. Se requiere presentar una declaración responsable sobre medidas de igualdad de género y cumplir la normativa laboral y ambiental. Los licitadores deben revisar los anexos para detalles específicos sobre plantas, materiales y plazos de entrega. 
+...
+2025-03-06 11:58:22,739 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-06 11:58:22,739 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741258694.md...
+2025-03-06 11:59:45,487 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-06 11:59:45,497 - __main__ - INFO - All documents already have markdown versions, skipping download and conversion
+2025-03-06 11:59:45,497 - ai_document_generator_service - INFO - Generating AI documents in parallel...
+2025-03-06 11:59:45,498 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-06 11:59:45,499 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 11:59:45,499 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-06 11:59:45,501 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 11:59:51,087 - root - INFO - AFC remote call 1 is done.
+2025-03-06 11:59:51,088 - ai_document_generator_service - INFO - 
+Section 1 completed in 5.59 seconds
+2025-03-06 11:59:51,088 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 11:59:51,088 - ai_document_generator_service - INFO -   Prompt tokens: 24562
+2025-03-06 11:59:51,088 - ai_document_generator_service - INFO -   Response tokens: 1210
+2025-03-06 11:59:51,088 - ai_document_generator_service - INFO -   Section total: 25772
+2025-03-06 11:59:51,623 - root - INFO - AFC remote call 1 is done.
+2025-03-06 11:59:51,624 - ai_document_generator_service - INFO - 
+Section 2 completed in 6.13 seconds
+2025-03-06 11:59:51,624 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 11:59:51,625 - ai_document_generator_service - INFO -   Prompt tokens: 24423
+2025-03-06 11:59:51,625 - ai_document_generator_service - INFO -   Response tokens: 1073
+2025-03-06 11:59:51,625 - ai_document_generator_service - INFO -   Section total: 25496
+2025-03-06 11:59:51,626 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-06 11:59:51,627 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-06 11:59:51,627 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741258785.md
+2025-03-06 11:59:51,628 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-06 11:59:51,628 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 11:59:52,979 - root - INFO - AFC remote call 1 is done.
+2025-03-06 11:59:52,979 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-06 11:59:52,979 - ai_document_generator_service - INFO - Prompt tokens: 2628
+2025-03-06 11:59:52,979 - ai_document_generator_service - INFO - Response tokens: 216
+2025-03-06 11:59:52,980 - ai_document_generator_service - INFO - Total tokens: 2844
+2025-03-06 11:59:52,980 - __main__ - INFO - Tender processing completed in 7.49 seconds
+2025-03-06 11:59:52,980 - __main__ - INFO - === Processing Results ===
+2025-03-06 11:59:52,980 - __main__ - INFO - AI Summary generated: True
+2025-03-06 11:59:52,980 - __main__ - INFO - AI Document generated: True
+2025-03-06 11:59:52,980 - __main__ - INFO - Processing time: 7.49 seconds
+2025-03-06 11:59:52,980 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-06 11:59:52,980 - __main__ - INFO - La licitación 10/2024/CONM-CEE del Centro Especial de Empleo Municipal Jardines y Naturaleza busca un proveedor para el suministro de plantas y servicio de decoración floral navideña para embellecer el centro de Jaén. El presupuesto total es de 11.880€ + IVA, dividido en dos lotes: Suministro de plantas (7.040€ + IVA) y decoración floral (4.840€ + IVA). No se exige solvencia económica ni técnica. El plazo de presentación de ofertas termina el 25/11/2024 a las 14:00. La adjudicación se realiza a la oferta económica más baja. El contrato se extiende hasta finales de 2024. El adjudicatario debe presentar una declaración responsable sobre medidas de igualdad de género en el mercado laboral y cumplir las normas de protección medioambiental y normativa laboral. Los licitadores deben revisar los anexos para detalles específicos sobre las plantas, materiales y plazos de entrega. 
+...
+2025-03-06 11:59:52,980 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-06 11:59:52,980 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741258785.md...
+2025-03-06 12:00:51,043 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-06 12:00:51,052 - __main__ - INFO - All documents already have markdown versions, skipping download and conversion
+2025-03-06 12:00:51,052 - ai_document_generator_service - INFO - Generating AI documents in parallel...
+2025-03-06 12:00:51,054 - ai_document_generator_service - INFO - Processing section 1/1...
+2025-03-06 12:00:51,054 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 12:00:59,582 - root - INFO - AFC remote call 1 is done.
+2025-03-06 12:00:59,583 - ai_document_generator_service - INFO - 
+Section 1 completed in 8.53 seconds
+2025-03-06 12:00:59,583 - ai_document_generator_service - INFO - Token Usage:
+2025-03-06 12:00:59,583 - ai_document_generator_service - INFO -   Prompt tokens: 24866
+2025-03-06 12:00:59,583 - ai_document_generator_service - INFO -   Response tokens: 1781
+2025-03-06 12:00:59,583 - ai_document_generator_service - INFO -   Section total: 26647
+2025-03-06 12:00:59,585 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-06 12:00:59,586 - ai_document_generator_service - INFO - Complete AI document written to data/client_docs/client123_10/2024/CONM-CEE_1741258851.md
+2025-03-06 12:00:59,586 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-06 12:00:59,587 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-06 12:01:00,845 - root - INFO - AFC remote call 1 is done.
+2025-03-06 12:01:00,845 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-06 12:01:00,845 - ai_document_generator_service - INFO - Prompt tokens: 2125
+2025-03-06 12:01:00,845 - ai_document_generator_service - INFO - Response tokens: 190
+2025-03-06 12:01:00,846 - ai_document_generator_service - INFO - Total tokens: 2315
+2025-03-06 12:01:00,846 - __main__ - INFO - Tender processing completed in 9.80 seconds
+2025-03-06 12:01:00,846 - __main__ - INFO - === Processing Results ===
+2025-03-06 12:01:00,846 - __main__ - INFO - AI Summary generated: True
+2025-03-06 12:01:00,846 - __main__ - INFO - AI Document generated: True
+2025-03-06 12:01:00,846 - __main__ - INFO - Processing time: 9.80 seconds
+2025-03-06 12:01:00,846 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-06 12:01:00,846 - __main__ - INFO - La licitación 10/2024/CONM-CEE busca un proveedor para el suministro de plantas y decoración floral navideña en el centro de Jaén. El proyecto se divide en dos lotes: Suministro de plantas (7.040€ + IVA) y servicio de decoración (4.840€ + IVA), con un presupuesto total de 11.880€ + IVA. No se exige solvencia económica o técnica y el plazo de presentación de ofertas finaliza el 25/11/2024 a las 14:00. La adjudicación se realiza a la oferta económica más baja. El contrato se extiende hasta fin de 2024. Se deben cumplir las normas de protección medioambiental y la normativa vigente en materia laboral. Los licitadores deben revisar los anexos para detalles específicos sobre las plantas, materiales y plazos de entrega. 
+...
+2025-03-06 12:01:00,846 - __main__ - INFO - 
+AI Document Sample (first 200 chars):
+2025-03-06 12:01:00,846 - __main__ - INFO - data/client_docs/client123_10/2024/CONM-CEE_1741258851.md...
