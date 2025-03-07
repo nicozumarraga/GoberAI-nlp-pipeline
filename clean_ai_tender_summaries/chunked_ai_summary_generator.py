@@ -89,7 +89,8 @@ async def main():
         'doc5': "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=FfZj3XI6OlOTOzDyKek0lnaI3ORlarheXliAsx0JVVCd5gsL7ycTWihmq01TkQC8e9oC1wwahAymbwR1EgIyQ86irt%2BO9F0D/Qe6kMPxUA%2B1aXEvq3KHa/AEHgtDrQw0&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D"
     }
 
-    # Markdown paths for already converted documents (if any)
+    """
+    # Markdown paths for already converted documents
     markdown_paths = {
         'doc1': "data/markdown/DOC_CN2024-001193585.md",
         'doc2': "data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md",
@@ -97,6 +98,8 @@ async def main():
         'doc4': "data/markdown/DOC20241111094338ANEXO_I_1741284737.md",
         'doc5': "data/markdown/DOC20241111094425ANEXO_II.md"
     }
+    """
+    markdown_paths = {}
 
     # Create or update the tender with these documents
     tender_repo.create_or_update_tender(

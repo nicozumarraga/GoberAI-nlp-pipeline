@@ -1,7 +1,5 @@
 QUESTIONS = [
     """
-# PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACIONES PÚBLICAS
-
 ## 1. INFORMACIÓN GENERAL DEL PROYECTO
 - **Nombre del proyecto:** [Nombre completo de la licitación]
 - **Código o referencia de licitación:** [Código de identificación]
@@ -64,11 +62,12 @@ QUESTIONS = [
 - **Criterios de valoración de las ofertas:** [Criterios principales: económicos, técnicos, sociales, etc.]
 - **Ponderación de los criterios:** [Distribución de puntos o porcentaje]
 - **Comentarios adicionales sobre la evaluación:** [Criterios de desempate u otros factores]
+(incluye un máximo de 3 observaciones)
 
 ## 6. OTROS COMENTARIOS Y RECOMENDACIONES
 - **Comentarios generales sobre la licitación:** [Consideraciones clave, restricciones o aspectos legales relevantes]
 - **Observaciones sobre otros apartados del pliego:** [Detalles adicionales que deben tener en cuenta los licitadores]
-
+(incluye un máximo de 3 observaciones)
 ## 7. DOCUMENTACIÓN ADICIONAL NECESARIA
 **Lista de documentos requeridos para la presentación de la oferta:**
 - [Documento 1]
