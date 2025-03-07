@@ -616,3 +616,188 @@ Section 1 completed in 7.27 seconds
 2025-03-06 20:51:31,403 - __main__ - INFO - Reference metadata saved to data/processed/reference_metadata.json
 2025-03-06 20:51:31,403 - __main__ - INFO - Document contains 21 references to source chunks
 2025-03-06 20:51:31,403 - __main__ - INFO - Test completed successfully
+2025-03-07 10:12:48,096 - __main__ - INFO - Directories created
+2025-03-07 10:12:48,100 - __main__ - INFO - Processing document: data/markdown/DOC_CN2024-001193585.md
+2025-03-07 10:12:48,100 - __main__ - INFO - Performing hierarchical chunking for DOC1...
+2025-03-07 10:12:48,102 - __main__ - INFO - Saved chunk hierarchy to data/chunks/DOC1_chunks.json
+2025-03-07 10:12:48,102 - __main__ - INFO - Hierarchical chunks saved to data/chunks/DOC1_chunks.json
+2025-03-07 10:12:48,102 - __main__ - INFO - Extracted 28 chunks from DOC1
+2025-03-07 10:12:48,102 - __main__ - INFO - Processing document: data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md
+2025-03-07 10:12:48,102 - __main__ - INFO - Performing hierarchical chunking for PPT...
+2025-03-07 10:12:48,104 - __main__ - INFO - Saved chunk hierarchy to data/chunks/PPT_chunks.json
+2025-03-07 10:12:48,104 - __main__ - INFO - Hierarchical chunks saved to data/chunks/PPT_chunks.json
+2025-03-07 10:12:48,105 - __main__ - INFO - Extracted 19 chunks from PPT
+2025-03-07 10:12:48,105 - __main__ - INFO - Processing document: data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md
+2025-03-07 10:12:48,105 - __main__ - INFO - Performing hierarchical chunking for PCA...
+2025-03-07 10:12:48,110 - __main__ - INFO - Saved chunk hierarchy to data/chunks/PCA_chunks.json
+2025-03-07 10:12:48,110 - __main__ - INFO - Hierarchical chunks saved to data/chunks/PCA_chunks.json
+2025-03-07 10:12:48,112 - __main__ - INFO - Extracted 102 chunks from PCA
+2025-03-07 10:12:48,112 - __main__ - INFO - Processing document: data/markdown/DOC20241111094338ANEXO_I_1741284737.md
+2025-03-07 10:12:48,112 - __main__ - INFO - Performing hierarchical chunking for ANEXO_I...
+2025-03-07 10:12:48,114 - __main__ - INFO - Saved chunk hierarchy to data/chunks/ANEXO_I_chunks.json
+2025-03-07 10:12:48,115 - __main__ - INFO - Hierarchical chunks saved to data/chunks/ANEXO_I_chunks.json
+2025-03-07 10:12:48,116 - __main__ - INFO - Extracted 36 chunks from ANEXO_I
+2025-03-07 10:12:48,116 - __main__ - INFO - Processing document: data/markdown/DOC20241111094425ANEXO_II.md
+2025-03-07 10:12:48,116 - __main__ - INFO - Performing hierarchical chunking for ANEXO_II...
+2025-03-07 10:12:48,117 - __main__ - INFO - Saved chunk hierarchy to data/chunks/ANEXO_II_chunks.json
+2025-03-07 10:12:48,117 - __main__ - INFO - Hierarchical chunks saved to data/chunks/ANEXO_II_chunks.json
+2025-03-07 10:12:48,117 - __main__ - INFO - Extracted 4 chunks from ANEXO_II
+2025-03-07 10:12:48,122 - __main__ - INFO - Combined 189 chunks from all documents
+2025-03-07 10:12:48,122 - __main__ - INFO - Generating AI document with all chunk references...
+2025-03-07 10:12:48,122 - ai_document_generator_service - INFO - Generating AI documents using chunks...
+2025-03-07 10:12:48,125 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-07 10:12:48,125 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-07 10:12:48,126 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-07 10:12:48,129 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-07 10:12:54,780 - root - INFO - AFC remote call 1 is done.
+2025-03-07 10:12:54,781 - ai_document_generator_service - INFO - 
+Section 2 completed in 6.66 seconds
+2025-03-07 10:12:54,781 - ai_document_generator_service - INFO - Token Usage:
+2025-03-07 10:12:54,782 - ai_document_generator_service - INFO -   Prompt tokens: 79312
+2025-03-07 10:12:54,782 - ai_document_generator_service - INFO -   Response tokens: 1667
+2025-03-07 10:12:54,782 - ai_document_generator_service - INFO -   Section total: 80979
+2025-03-07 10:12:56,133 - root - INFO - AFC remote call 1 is done.
+2025-03-07 10:12:56,134 - ai_document_generator_service - INFO - 
+Section 1 completed in 8.01 seconds
+2025-03-07 10:12:56,134 - ai_document_generator_service - INFO - Token Usage:
+2025-03-07 10:12:56,134 - ai_document_generator_service - INFO -   Prompt tokens: 79451
+2025-03-07 10:12:56,134 - ai_document_generator_service - INFO -   Response tokens: 1771
+2025-03-07 10:12:56,134 - ai_document_generator_service - INFO -   Section total: 81222
+2025-03-07 10:12:56,137 - ai_document_generator_service - INFO - Section 1 saved to data/processed/sections/section_1.md
+2025-03-07 10:12:56,137 - ai_document_generator_service - INFO - Section 2 saved to data/processed/sections/section_2.md
+2025-03-07 10:12:56,138 - ai_document_generator_service - INFO - Complete AI document with chunk references written to data/processed/ai_document_with_references.md
+2025-03-07 10:12:56,138 - __main__ - INFO - AI document generated: data/processed/ai_document_with_references.md
+2025-03-07 10:12:56,138 - __main__ - INFO - Processing references in the generated document...
+2025-03-07 10:12:56,138 - __main__ - INFO - Found 26 chunk references in the document
+2025-03-07 10:12:56,142 - __main__ - INFO - Reference statistics: 26 exact matches (100.0%), 0 doc+page matches (0.0%), 0 doc-only matches (0.0%), 0 legacy fuzzy matches (0.0%), 0 no matches (0.0%)
+2025-03-07 10:12:56,143 - __main__ - INFO - Processed document saved to data/processed/processed_ai_document.md
+2025-03-07 10:12:56,143 - __main__ - INFO - Processed document saved to data/processed/processed_ai_document.md
+2025-03-07 10:12:56,146 - __main__ - INFO - Reference metadata statistics: 26 exact matches (100.0%), 0 doc+page matches (0.0%), 0 doc-only matches (0.0%), 0 legacy fuzzy matches (0.0%), 0 no matches (0.0%)
+2025-03-07 10:12:56,146 - __main__ - INFO - Reference metadata saved to data/processed/reference_metadata.json
+2025-03-07 10:12:56,146 - __main__ - INFO - Reference metadata saved to data/processed/reference_metadata.json
+2025-03-07 10:12:56,147 - __main__ - INFO - Document contains 26 references to source chunks
+2025-03-07 10:12:56,147 - __main__ - INFO - Test completed successfully
+2025-03-07 10:17:24,986 - __main__ - INFO - Directories created
+2025-03-07 10:17:24,991 - __main__ - INFO - Processing document: data/markdown/DOC_CN2024-001193585.md
+2025-03-07 10:17:24,991 - __main__ - INFO - Performing hierarchical chunking for DOC1...
+2025-03-07 10:17:24,994 - __main__ - INFO - Saved chunk hierarchy to data/chunks/DOC1_chunks.json
+2025-03-07 10:17:24,994 - __main__ - INFO - Hierarchical chunks saved to data/chunks/DOC1_chunks.json
+2025-03-07 10:17:24,995 - __main__ - INFO - Extracted 28 chunks from DOC1
+2025-03-07 10:17:24,995 - __main__ - INFO - Processing document: data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md
+2025-03-07 10:17:24,995 - __main__ - INFO - Performing hierarchical chunking for PPT...
+2025-03-07 10:17:24,997 - __main__ - INFO - Saved chunk hierarchy to data/chunks/PPT_chunks.json
+2025-03-07 10:17:24,997 - __main__ - INFO - Hierarchical chunks saved to data/chunks/PPT_chunks.json
+2025-03-07 10:17:24,998 - __main__ - INFO - Extracted 19 chunks from PPT
+2025-03-07 10:17:24,998 - __main__ - INFO - Processing document: data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md
+2025-03-07 10:17:24,998 - __main__ - INFO - Performing hierarchical chunking for PCA...
+2025-03-07 10:17:25,003 - __main__ - INFO - Saved chunk hierarchy to data/chunks/PCA_chunks.json
+2025-03-07 10:17:25,003 - __main__ - INFO - Hierarchical chunks saved to data/chunks/PCA_chunks.json
+2025-03-07 10:17:25,005 - __main__ - INFO - Extracted 102 chunks from PCA
+2025-03-07 10:17:25,005 - __main__ - INFO - Processing document: data/markdown/DOC20241111094338ANEXO_I_1741284737.md
+2025-03-07 10:17:25,005 - __main__ - INFO - Performing hierarchical chunking for ANEXO_I...
+2025-03-07 10:17:25,008 - __main__ - INFO - Saved chunk hierarchy to data/chunks/ANEXO_I_chunks.json
+2025-03-07 10:17:25,008 - __main__ - INFO - Hierarchical chunks saved to data/chunks/ANEXO_I_chunks.json
+2025-03-07 10:17:25,009 - __main__ - INFO - Extracted 36 chunks from ANEXO_I
+2025-03-07 10:17:25,009 - __main__ - INFO - Processing document: data/markdown/DOC20241111094425ANEXO_II.md
+2025-03-07 10:17:25,009 - __main__ - INFO - Performing hierarchical chunking for ANEXO_II...
+2025-03-07 10:17:25,010 - __main__ - INFO - Saved chunk hierarchy to data/chunks/ANEXO_II_chunks.json
+2025-03-07 10:17:25,010 - __main__ - INFO - Hierarchical chunks saved to data/chunks/ANEXO_II_chunks.json
+2025-03-07 10:17:25,011 - __main__ - INFO - Extracted 4 chunks from ANEXO_II
+2025-03-07 10:17:25,014 - __main__ - INFO - Combined 189 chunks from all documents
+2025-03-07 10:17:25,014 - __main__ - INFO - Generating AI document with all chunk references...
+2025-03-07 10:17:25,014 - ai_document_generator_service - INFO - Generating AI documents using chunks...
+2025-03-07 10:17:25,017 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-07 10:17:25,017 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-07 10:17:25,018 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-07 10:17:25,020 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-07 10:17:31,383 - root - INFO - AFC remote call 1 is done.
+2025-03-07 10:17:31,384 - ai_document_generator_service - INFO - 
+Section 2 completed in 6.37 seconds
+2025-03-07 10:17:31,384 - ai_document_generator_service - INFO - Token Usage:
+2025-03-07 10:17:31,384 - ai_document_generator_service - INFO -   Prompt tokens: 79312
+2025-03-07 10:17:31,384 - ai_document_generator_service - INFO -   Response tokens: 1488
+2025-03-07 10:17:31,384 - ai_document_generator_service - INFO -   Section total: 80800
+2025-03-07 10:17:32,007 - root - INFO - AFC remote call 1 is done.
+2025-03-07 10:17:32,008 - ai_document_generator_service - INFO - 
+Section 1 completed in 6.99 seconds
+2025-03-07 10:17:32,008 - ai_document_generator_service - INFO - Token Usage:
+2025-03-07 10:17:32,008 - ai_document_generator_service - INFO -   Prompt tokens: 79451
+2025-03-07 10:17:32,008 - ai_document_generator_service - INFO -   Response tokens: 1771
+2025-03-07 10:17:32,008 - ai_document_generator_service - INFO -   Section total: 81222
+2025-03-07 10:17:32,010 - ai_document_generator_service - INFO - Section 1 saved to data/processed/sections/section_1.md
+2025-03-07 10:17:32,011 - ai_document_generator_service - INFO - Section 2 saved to data/processed/sections/section_2.md
+2025-03-07 10:17:32,012 - ai_document_generator_service - INFO - Complete AI document with chunk references written to data/processed/ai_document_with_references.md
+2025-03-07 10:17:32,012 - __main__ - INFO - AI document generated: data/processed/ai_document_with_references.md
+2025-03-07 10:17:32,012 - __main__ - INFO - Processing references in the generated document...
+2025-03-07 10:17:32,012 - __main__ - INFO - Found 43 chunk references in the document
+2025-03-07 10:17:32,015 - __main__ - INFO - Reference statistics: 43 exact matches (100.0%), 0 doc+page matches (0.0%), 0 doc-only matches (0.0%), 0 legacy fuzzy matches (0.0%), 0 no matches (0.0%)
+2025-03-07 10:17:32,017 - __main__ - INFO - Processed document saved to data/processed/processed_ai_document.md
+2025-03-07 10:17:32,017 - __main__ - INFO - Processed document saved to data/processed/processed_ai_document.md
+2025-03-07 10:17:32,020 - __main__ - INFO - Reference metadata statistics: 43 exact matches (100.0%), 0 doc+page matches (0.0%), 0 doc-only matches (0.0%), 0 legacy fuzzy matches (0.0%), 0 no matches (0.0%)
+2025-03-07 10:17:32,021 - __main__ - INFO - Reference metadata saved to data/processed/reference_metadata.json
+2025-03-07 10:17:32,021 - __main__ - INFO - Reference metadata saved to data/processed/reference_metadata.json
+2025-03-07 10:17:32,021 - __main__ - INFO - Document contains 43 references to source chunks
+2025-03-07 10:17:32,021 - __main__ - INFO - Test completed successfully
+2025-03-07 10:22:01,852 - __main__ - INFO - Directories created
+2025-03-07 10:22:01,857 - __main__ - INFO - Processing document: data/markdown/DOC_CN2024-001193585.md
+2025-03-07 10:22:01,857 - __main__ - INFO - Performing hierarchical chunking for DOC1...
+2025-03-07 10:22:01,859 - __main__ - INFO - Saved chunk hierarchy to data/chunks/DOC1_chunks.json
+2025-03-07 10:22:01,859 - __main__ - INFO - Hierarchical chunks saved to data/chunks/DOC1_chunks.json
+2025-03-07 10:22:01,861 - __main__ - INFO - Extracted 28 chunks from DOC1
+2025-03-07 10:22:01,861 - __main__ - INFO - Processing document: data/markdown/DOC20241111091415Pliego_de_prescripciones_tecnicas.md
+2025-03-07 10:22:01,861 - __main__ - INFO - Performing hierarchical chunking for PPT...
+2025-03-07 10:22:01,863 - __main__ - INFO - Saved chunk hierarchy to data/chunks/PPT_chunks.json
+2025-03-07 10:22:01,863 - __main__ - INFO - Hierarchical chunks saved to data/chunks/PPT_chunks.json
+2025-03-07 10:22:01,864 - __main__ - INFO - Extracted 19 chunks from PPT
+2025-03-07 10:22:01,864 - __main__ - INFO - Processing document: data/markdown/DOC20241111092201Pliego_de_clausulas_administrativas.md
+2025-03-07 10:22:01,864 - __main__ - INFO - Performing hierarchical chunking for PCA...
+2025-03-07 10:22:01,869 - __main__ - INFO - Saved chunk hierarchy to data/chunks/PCA_chunks.json
+2025-03-07 10:22:01,869 - __main__ - INFO - Hierarchical chunks saved to data/chunks/PCA_chunks.json
+2025-03-07 10:22:01,873 - __main__ - INFO - Extracted 102 chunks from PCA
+2025-03-07 10:22:01,873 - __main__ - INFO - Processing document: data/markdown/DOC20241111094338ANEXO_I_1741284737.md
+2025-03-07 10:22:01,873 - __main__ - INFO - Performing hierarchical chunking for ANEXO_I...
+2025-03-07 10:22:01,875 - __main__ - INFO - Saved chunk hierarchy to data/chunks/ANEXO_I_chunks.json
+2025-03-07 10:22:01,875 - __main__ - INFO - Hierarchical chunks saved to data/chunks/ANEXO_I_chunks.json
+2025-03-07 10:22:01,876 - __main__ - INFO - Extracted 36 chunks from ANEXO_I
+2025-03-07 10:22:01,876 - __main__ - INFO - Processing document: data/markdown/DOC20241111094425ANEXO_II.md
+2025-03-07 10:22:01,876 - __main__ - INFO - Performing hierarchical chunking for ANEXO_II...
+2025-03-07 10:22:01,877 - __main__ - INFO - Saved chunk hierarchy to data/chunks/ANEXO_II_chunks.json
+2025-03-07 10:22:01,877 - __main__ - INFO - Hierarchical chunks saved to data/chunks/ANEXO_II_chunks.json
+2025-03-07 10:22:01,877 - __main__ - INFO - Extracted 4 chunks from ANEXO_II
+2025-03-07 10:22:01,882 - __main__ - INFO - Combined 189 chunks from all documents
+2025-03-07 10:22:01,882 - __main__ - INFO - Generating AI document with all chunk references...
+2025-03-07 10:22:01,882 - ai_document_generator_service - INFO - Generating AI documents using chunks...
+2025-03-07 10:22:01,885 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-07 10:22:01,886 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-07 10:22:01,886 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-07 10:22:01,889 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-07 10:22:10,135 - root - INFO - AFC remote call 1 is done.
+2025-03-07 10:22:10,136 - ai_document_generator_service - INFO - 
+Section 1 completed in 8.25 seconds
+2025-03-07 10:22:10,136 - ai_document_generator_service - INFO - Token Usage:
+2025-03-07 10:22:10,136 - ai_document_generator_service - INFO -   Prompt tokens: 79525
+2025-03-07 10:22:10,136 - ai_document_generator_service - INFO -   Response tokens: 2169
+2025-03-07 10:22:10,136 - ai_document_generator_service - INFO -   Section total: 81694
+2025-03-07 10:22:11,360 - root - INFO - AFC remote call 1 is done.
+2025-03-07 10:22:11,361 - ai_document_generator_service - INFO - 
+Section 2 completed in 9.48 seconds
+2025-03-07 10:22:11,361 - ai_document_generator_service - INFO - Token Usage:
+2025-03-07 10:22:11,361 - ai_document_generator_service - INFO -   Prompt tokens: 79351
+2025-03-07 10:22:11,361 - ai_document_generator_service - INFO -   Response tokens: 2564
+2025-03-07 10:22:11,361 - ai_document_generator_service - INFO -   Section total: 81915
+2025-03-07 10:22:11,363 - ai_document_generator_service - INFO - Section 1 saved to data/processed/sections/section_1.md
+2025-03-07 10:22:11,364 - ai_document_generator_service - INFO - Section 2 saved to data/processed/sections/section_2.md
+2025-03-07 10:22:11,365 - ai_document_generator_service - INFO - Complete AI document with chunk references written to data/processed/ai_document_with_references.md
+2025-03-07 10:22:11,365 - __main__ - INFO - AI document generated: data/processed/ai_document_with_references.md
+2025-03-07 10:22:11,365 - __main__ - INFO - Processing references in the generated document...
+2025-03-07 10:22:11,365 - __main__ - INFO - Found 62 chunk references in the document
+2025-03-07 10:22:11,369 - __main__ - INFO - Reference statistics: 61 exact matches (98.4%), 1 doc+page matches (1.6%), 0 doc-only matches (0.0%), 0 legacy fuzzy matches (0.0%), 0 no matches (0.0%)
+2025-03-07 10:22:11,369 - __main__ - INFO - Document+page match: 'chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.8.1' to 'chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s4_1'
+2025-03-07 10:22:11,370 - __main__ - INFO - Processed document saved to data/processed/processed_ai_document.md
+2025-03-07 10:22:11,370 - __main__ - INFO - Processed document saved to data/processed/processed_ai_document.md
+2025-03-07 10:22:11,373 - __main__ - INFO - Document+page match: 'chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.8.1' to 'chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s4_1' for metadata
+2025-03-07 10:22:11,374 - __main__ - INFO - Reference metadata statistics: 61 exact matches (98.4%), 1 doc+page matches (1.6%), 0 doc-only matches (0.0%), 0 legacy fuzzy matches (0.0%), 0 no matches (0.0%)
+2025-03-07 10:22:11,375 - __main__ - INFO - Reference metadata saved to data/processed/reference_metadata.json
+2025-03-07 10:22:11,375 - __main__ - INFO - Reference metadata saved to data/processed/reference_metadata.json
+2025-03-07 10:22:11,375 - __main__ - INFO - Document contains 62 references to source chunks
+2025-03-07 10:22:11,375 - __main__ - INFO - Test completed successfully

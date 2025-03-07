@@ -93,39 +93,69 @@ class MarkdownChunkingService:
 
     def _process_markdown_content(self, content: str, markdown_path: str, pdf_path: str) -> DocumentChunk:
         """
-        Process markdown content to extract hierarchical structure.
+        Process markdown content and extract hierarchical chunks
 
         Args:
             content: Markdown content
             markdown_path: Path to the markdown file
-            pdf_path: Path to the original PDF
+            pdf_path: Path to the original PDF file
 
         Returns:
-            Root document chunk with hierarchical structure
+            Root document chunk containing all other chunks as children
         """
-        # Create the root chunk for the entire document
+        # Create a root chunk for the entire document
         filename = os.path.basename(markdown_path)
-        root_metadata = ChunkMetadata(
-            chunk_id=f"doc_{filename}",
-            level=0,
-            title=filename,
-            parent_id=None,
-            pdf_path=pdf_path,
-            page_number=None,
-            start_line=1,
-            end_line=len(content.splitlines())
-        )
+        doc_id = filename.split('.')[0]  # Use filename without extension as document ID
 
         root_chunk = DocumentChunk(
             text=content,
-            metadata=root_metadata
+            metadata=ChunkMetadata(
+                chunk_id=f"doc_{doc_id}",
+                level=0,
+                title=filename,
+                parent_id=None,
+                pdf_path=pdf_path,
+                page_number=None,
+                start_line=0,
+                end_line=len(content.split('\n'))
+            )
         )
 
-        # Extract chunks based on headers and page markers
+        # Extract hierarchical chunks
         chunks = self._extract_hierarchical_chunks(content, pdf_path)
 
-        # Build the hierarchy
+        # Build chunk hierarchy - this must be done before assigning section IDs
         self._build_chunk_hierarchy(chunks, root_chunk)
+
+        # Now assign structured chunk IDs with document_ID,page_number,section_id format
+        section_counters = {}
+
+        def assign_structured_ids(chunk, parent_section_id=None):
+            # Determine section ID based on hierarchy
+            if parent_section_id is None:
+                # Top-level sections
+                section_counter = section_counters.get(chunk.metadata.level, 0) + 1
+                section_counters[chunk.metadata.level] = section_counter
+                section_id = f"s{chunk.metadata.level}_{section_counter}"
+            else:
+                # Subsections - attach to parent section ID
+                section_counter = section_counters.get((parent_section_id, chunk.metadata.level), 0) + 1
+                section_counters[(parent_section_id, chunk.metadata.level)] = section_counter
+                section_id = f"{parent_section_id}.{section_counter}"
+
+            # Ensure page number is always set (default to 1 if not available)
+            page_number = chunk.metadata.page_number if chunk.metadata.page_number is not None else 1
+
+            # Create the structured chunk ID: document_ID,page_number,section_id
+            chunk.metadata.chunk_id = f"chunk_{doc_id},{page_number},{section_id}"
+
+            # Recursively assign IDs to children
+            for child in chunk.children:
+                assign_structured_ids(child, section_id)
+
+        # Assign structured IDs to all chunks (except root)
+        for chunk in root_chunk.children:
+            assign_structured_ids(chunk)
 
         return root_chunk
 

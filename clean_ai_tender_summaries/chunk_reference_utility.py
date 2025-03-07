@@ -79,24 +79,76 @@ class ChunkReferenceUtility:
         """
         def replace_reference(match):
             chunk_id = match.group(1).strip()
+            match_type = "none"
 
-            # Try exact match first
+            # Try exact match first (Level 1 - best match)
             if chunk_id in chunk_metadata:
                 metadata = chunk_metadata[chunk_id]
+                match_type = "exact"
+            else:
+                # If not exact match, try to parse the structured ID
+                # Expected format: chunk_document,page,section
+                if chunk_id.startswith('chunk_') and ',' in chunk_id:
+                    parts = chunk_id[6:].split(',', 2)
+
+                    if len(parts) >= 2:
+                        doc_id = parts[0]
+                        page_str = parts[1]
+
+                        # Try document+page match (Level 2)
+                        doc_page_candidates = []
+
+                        for existing_id, meta in chunk_metadata.items():
+                            if existing_id.startswith(f'chunk_{doc_id},'):
+                                existing_parts = existing_id[6:].split(',', 2)
+                                if len(existing_parts) >= 2 and existing_parts[1] == page_str:
+                                    doc_page_candidates.append(existing_id)
+
+                        if doc_page_candidates:
+                            # Use the first document+page match
+                            matched_id = doc_page_candidates[0]
+                            metadata = chunk_metadata[matched_id]
+                            match_type = "doc_page"
+                            self.logger.info(f"Document+page match: '{chunk_id}' to '{matched_id}'")
+                        else:
+                            # Try document-only match (Level 3)
+                            doc_candidates = []
+
+                            for existing_id, meta in chunk_metadata.items():
+                                if existing_id.startswith(f'chunk_{doc_id},'):
+                                    doc_candidates.append(existing_id)
+
+                            if doc_candidates:
+                                # Use the first document match
+                                matched_id = doc_candidates[0]
+                                metadata = chunk_metadata[matched_id]
+                                match_type = "doc_only"
+                                self.logger.info(f"Document-only match: '{chunk_id}' to '{matched_id}'")
+
+            # If any match was found, create the link
+            if match_type != "none":
                 pdf_path = metadata.get('pdf_path', '')
                 page_number = metadata.get('page_number', 1)
 
                 # Create a link to the PDF
                 link = link_format.replace('pdf_path', pdf_path)
                 link = link.replace('page_number', str(page_number))
-                link = link.replace('chunk_id', chunk_id)
 
-                # Return the link with the original reference
+                # For data-chunk-id, use the original ID for exact matches, matched ID otherwise
+                if match_type == "exact":
+                    link = link.replace('chunk_id', chunk_id)
+                else:
+                    # For non-exact matches, include both IDs for debugging
+                    actual_id = metadata.get('chunk_id', '')
+                    link = link.replace('chunk_id', actual_id)
+                    # Add match type data attribute for potential UI indication of match quality
+                    link = link.replace('class="chunk-reference"', f'class="chunk-reference" data-match-type="{match_type}"')
+
                 return link
 
-            # If exact match fails, try fuzzy matching based on chunk ID components
+            # Fallback to old-style chunk ID matching for backward compatibility
             if '_' in chunk_id:
-                # Parse components of the chunk ID (e.g., chunk_4_2_título)
+                # Try to find a matching ID with the old format
                 components = chunk_id.split('_')
                 if len(components) >= 3:
                     # Extract the numerical part (e.g., 4_2)
@@ -111,7 +163,7 @@ class ChunkReferenceUtility:
                     # If we found candidates, use the first one
                     if candidates:
                         best_match = candidates[0]
-                        self.logger.info(f"Fuzzy matched chunk ID '{chunk_id}' to '{best_match}'")
+                        self.logger.info(f"Legacy fuzzy match: '{chunk_id}' to '{best_match}'")
 
                         metadata = chunk_metadata[best_match]
                         pdf_path = metadata.get('pdf_path', '')
@@ -120,7 +172,8 @@ class ChunkReferenceUtility:
                         # Create a link to the PDF
                         link = link_format.replace('pdf_path', pdf_path)
                         link = link.replace('page_number', str(page_number))
-                        link = link.replace('chunk_id', best_match)  # Use the matched ID for data attribute
+                        link = link.replace('chunk_id', best_match)
+                        link = link.replace('class="chunk-reference"', 'class="chunk-reference" data-match-type="legacy_fuzzy"')
 
                         # Return the link with the original reference
                         return link
@@ -167,36 +220,75 @@ class ChunkReferenceUtility:
                 self.logger.warning(f"No chunk metadata found in {chunks_path}")
                 return document_text
 
-            # Count exact vs. fuzzy matches for reporting
+            # Count match types for reporting
             exact_matches = 0
-            fuzzy_matches = 0
+            doc_page_matches = 0
+            doc_only_matches = 0
+            legacy_fuzzy_matches = 0
             no_matches = 0
 
             for chunk_id in chunk_ids:
+                # Try exact match first (Level 1 - best match)
                 if chunk_id in chunk_metadata:
                     exact_matches += 1
                 else:
-                    # Check if fuzzy matching would work
-                    if '_' in chunk_id:
+                    # If not exact match, try to parse the structured ID
+                    # Expected format: chunk_document,page,section
+                    is_matched = False
+                    if chunk_id.startswith('chunk_') and ',' in chunk_id:
+                        parts = chunk_id[6:].split(',', 2)
+
+                        if len(parts) >= 2:
+                            doc_id = parts[0]
+                            page_str = parts[1]
+
+                            # Try document+page match (Level 2)
+                            doc_page_candidates = []
+
+                            for existing_id in chunk_metadata.keys():
+                                if existing_id.startswith(f'chunk_{doc_id},'):
+                                    existing_parts = existing_id[6:].split(',', 2)
+                                    if len(existing_parts) >= 2 and existing_parts[1] == page_str:
+                                        doc_page_candidates.append(existing_id)
+
+                            if doc_page_candidates:
+                                doc_page_matches += 1
+                                is_matched = True
+                            else:
+                                # Try document-only match (Level 3)
+                                doc_candidates = []
+
+                                for existing_id in chunk_metadata.keys():
+                                    if existing_id.startswith(f'chunk_{doc_id},'):
+                                        doc_candidates.append(existing_id)
+
+                                if doc_candidates:
+                                    doc_only_matches += 1
+                                    is_matched = True
+
+                    # Fallback to old-style chunk ID matching
+                    if not is_matched and '_' in chunk_id:
                         components = chunk_id.split('_')
                         if len(components) >= 3:
                             chunk_prefix = '_'.join(components[:3])
                             for existing_id in chunk_metadata.keys():
                                 if existing_id.startswith(chunk_prefix):
-                                    fuzzy_matches += 1
+                                    legacy_fuzzy_matches += 1
+                                    is_matched = True
                                     break
-                            else:
-                                no_matches += 1
-                        else:
-                            no_matches += 1
-                    else:
+
+                    if not is_matched:
                         no_matches += 1
 
             # Log statistics
-            total = exact_matches + fuzzy_matches + no_matches
-            self.logger.info(f"Reference statistics: {exact_matches} exact matches ({exact_matches/total:.1%}), "
-                            f"{fuzzy_matches} fuzzy matches ({fuzzy_matches/total:.1%}), "
-                            f"{no_matches} no matches ({no_matches/total:.1%})")
+            total = len(chunk_ids)
+            if total > 0:
+                self.logger.info(f"Reference statistics: "
+                               f"{exact_matches} exact matches ({exact_matches/total:.1%}), "
+                               f"{doc_page_matches} doc+page matches ({doc_page_matches/total:.1%}), "
+                               f"{doc_only_matches} doc-only matches ({doc_only_matches/total:.1%}), "
+                               f"{legacy_fuzzy_matches} legacy fuzzy matches ({legacy_fuzzy_matches/total:.1%}), "
+                               f"{no_matches} no matches ({no_matches/total:.1%})")
 
             # Replace references with links
             processed_text = self.replace_references_with_links(document_text, chunk_metadata, link_format)
@@ -248,45 +340,112 @@ class ChunkReferenceUtility:
                 "references": []
             }
 
+            # Statistics counters
+            exact_matches = 0
+            doc_page_matches = 0
+            doc_only_matches = 0
+            legacy_fuzzy_matches = 0
+            no_matches = 0
+
             # Add information for each referenced chunk
             for chunk_id in chunk_ids:
                 metadata = None
                 matched_id = chunk_id
+                match_type = "none"
 
-                # Try exact match first
+                # Try exact match first (Level 1 - best match)
                 if chunk_id in chunk_metadata:
                     metadata = chunk_metadata[chunk_id]
-                # If exact match fails, try fuzzy matching based on chunk ID components
-                elif '_' in chunk_id:
-                    # Parse components of the chunk ID (e.g., chunk_4_2_título)
-                    components = chunk_id.split('_')
-                    if len(components) >= 3:
-                        # Extract the numerical part (e.g., 4_2)
-                        chunk_prefix = '_'.join(components[:3])
+                    match_type = "exact"
+                    exact_matches += 1
+                else:
+                    # If not exact match, try to parse the structured ID
+                    # Expected format: chunk_document,page,section
+                    if chunk_id.startswith('chunk_') and ',' in chunk_id:
+                        parts = chunk_id[6:].split(',', 2)
 
-                        # Find candidates with matching prefix
-                        candidates = []
-                        for existing_id in chunk_metadata.keys():
-                            if existing_id.startswith(chunk_prefix):
-                                candidates.append(existing_id)
+                        if len(parts) >= 2:
+                            doc_id = parts[0]
+                            page_str = parts[1]
 
-                        # If we found candidates, use the first one
-                        if candidates:
-                            matched_id = candidates[0]
-                            metadata = chunk_metadata[matched_id]
-                            self.logger.info(f"Fuzzy matched chunk ID '{chunk_id}' to '{matched_id}' for metadata")
+                            # Try document+page match (Level 2)
+                            doc_page_candidates = []
 
+                            for existing_id, meta in chunk_metadata.items():
+                                if existing_id.startswith(f'chunk_{doc_id},'):
+                                    existing_parts = existing_id[6:].split(',', 2)
+                                    if len(existing_parts) >= 2 and existing_parts[1] == page_str:
+                                        doc_page_candidates.append(existing_id)
+
+                            if doc_page_candidates:
+                                # Use the first document+page match
+                                matched_id = doc_page_candidates[0]
+                                metadata = chunk_metadata[matched_id]
+                                match_type = "doc_page"
+                                doc_page_matches += 1
+                                self.logger.info(f"Document+page match: '{chunk_id}' to '{matched_id}' for metadata")
+                            else:
+                                # Try document-only match (Level 3)
+                                doc_candidates = []
+
+                                for existing_id, meta in chunk_metadata.items():
+                                    if existing_id.startswith(f'chunk_{doc_id},'):
+                                        doc_candidates.append(existing_id)
+
+                                if doc_candidates:
+                                    # Use the first document match
+                                    matched_id = doc_candidates[0]
+                                    metadata = chunk_metadata[matched_id]
+                                    match_type = "doc_only"
+                                    doc_only_matches += 1
+                                    self.logger.info(f"Document-only match: '{chunk_id}' to '{matched_id}' for metadata")
+
+                    # Fallback to old-style chunk ID matching for backward compatibility
+                    if not metadata and '_' in chunk_id:
+                        # Try to find a matching ID with the old format
+                        components = chunk_id.split('_')
+                        if len(components) >= 3:
+                            # Extract the numerical part (e.g., 4_2)
+                            chunk_prefix = '_'.join(components[:3])
+
+                            # Find candidates with matching prefix
+                            candidates = []
+                            for existing_id in chunk_metadata.keys():
+                                if existing_id.startswith(chunk_prefix):
+                                    candidates.append(existing_id)
+
+                            # If we found candidates, use the first one
+                            if candidates:
+                                matched_id = candidates[0]
+                                metadata = chunk_metadata[matched_id]
+                                match_type = "legacy_fuzzy"
+                                legacy_fuzzy_matches += 1
+                                self.logger.info(f"Legacy fuzzy match: '{chunk_id}' to '{matched_id}' for metadata")
+
+                # Add metadata for the matched chunk
                 if metadata:
                     reference_metadata["references"].append({
                         "chunk_id": chunk_id,
                         "matched_id": matched_id,
+                        "match_type": match_type,
                         "pdf_path": metadata.get('pdf_path', ''),
                         "page_number": metadata.get('page_number', 1),
                         "title": metadata.get('title', ''),
                         "level": metadata.get('level', 0)
                     })
                 else:
+                    no_matches += 1
                     self.logger.warning(f"Chunk {chunk_id} not found in metadata")
+
+            # Log matching statistics
+            total = len(chunk_ids)
+            if total > 0:
+                self.logger.info(f"Reference metadata statistics: "
+                               f"{exact_matches} exact matches ({exact_matches/total:.1%}), "
+                               f"{doc_page_matches} doc+page matches ({doc_page_matches/total:.1%}), "
+                               f"{doc_only_matches} doc-only matches ({doc_only_matches/total:.1%}), "
+                               f"{legacy_fuzzy_matches} legacy fuzzy matches ({legacy_fuzzy_matches/total:.1%}), "
+                               f"{no_matches} no matches ({no_matches/total:.1%})")
 
             # Save reference metadata if output path is provided
             if output_path:

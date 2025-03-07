@@ -6,6 +6,7 @@ from datetime import datetime
 import json
 
 from markdown_chunking_service import MarkdownChunkingService
+from chunk_reference_utility import ChunkReferenceUtility
 
 class AIDocumentsProcessingWorkflow:
     """
@@ -28,6 +29,7 @@ class AIDocumentsProcessingWorkflow:
         self.storage_service = storage_service
         self.ai_document_generator_service = ai_document_generator_service
         self.markdown_chunking_service = MarkdownChunkingService(logger)
+        self.chunk_reference_utility = ChunkReferenceUtility(logger)
         self.logger = logger or logging.getLogger(__name__)
 
     async def process_tender(
@@ -66,6 +68,8 @@ class AIDocumentsProcessingWorkflow:
                 'ai_summary': tender['ai_summary'],
                 'ai_doc_path': client_tender['ai_doc_path'],
                 'chunks_path': client_tender.get('chunks_path'),
+                'processed_doc_path': client_tender.get('processed_doc_path'),
+                'reference_metadata_path': client_tender.get('reference_metadata_path'),
                 'regenerated': False,
                 'processing_time': processing_time
             }
@@ -185,11 +189,52 @@ class AIDocumentsProcessingWorkflow:
                     'ai_summary': None,
                     'ai_doc_path': None,
                     'chunks_path': combined_chunks_path,
+                    'processed_doc_path': None,
+                    'reference_metadata_path': None,
                     'regenerated': True,
                     'processing_time': processing_time
                 }
 
-        # 7. Generate AI summary based on the AI document
+        # 7. Process chunk references in the AI document
+        processed_doc_path = client_tender.get('processed_doc_path')
+        reference_metadata_path = client_tender.get('reference_metadata_path')
+
+        if regenerate or not processed_doc_path or not reference_metadata_path:
+            # Create paths for processed files
+            processed_dir = os.path.join("data", "processed")
+            os.makedirs(processed_dir, exist_ok=True)
+
+            processed_doc_path = os.path.join(processed_dir, f"processed_{client_id}_{tender_id}.md")
+            reference_metadata_path = os.path.join(processed_dir, f"reference_metadata_{client_id}_{tender_id}.json")
+
+            # Process the document to replace chunk references with links
+            self.logger.info(f"Processing chunk references in {ai_doc_path}")
+            try:
+                processed_text = self.chunk_reference_utility.process_document_with_references(
+                    ai_doc_path,
+                    combined_chunks_path,
+                    processed_doc_path
+                )
+
+                # Generate reference metadata for UI
+                reference_metadata = self.chunk_reference_utility.generate_reference_metadata(
+                    ai_doc_path,
+                    combined_chunks_path,
+                    reference_metadata_path
+                )
+
+                # Update client_tender with processed document and metadata paths
+                client_tender = self.tender_repository.update_processed_doc_path(
+                    tender_id, client_id, processed_doc_path, reference_metadata_path
+                )
+
+                self.logger.info(f"Processed document saved to {processed_doc_path}")
+                self.logger.info(f"Reference metadata saved to {reference_metadata_path}")
+            except Exception as e:
+                self.logger.error(f"Error processing chunk references: {e}")
+                # Continue with the workflow even if reference processing fails
+
+        # 8. Generate AI summary based on the AI document
         if regenerate or not tender.get('ai_summary'):
             # Read the AI document
             try:
@@ -218,6 +263,8 @@ class AIDocumentsProcessingWorkflow:
             'ai_summary': tender.get('ai_summary'),
             'ai_doc_path': client_tender.get('ai_doc_path'),
             'chunks_path': client_tender.get('chunks_path'),
+            'processed_doc_path': client_tender.get('processed_doc_path'),
+            'reference_metadata_path': client_tender.get('reference_metadata_path'),
             'regenerated': regenerate or not tender.get('ai_summary') or not ai_doc_path,
             'processing_time': processing_time
         }

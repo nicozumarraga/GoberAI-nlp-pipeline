@@ -60,7 +60,7 @@ class AIDocumentGeneratorService:
         system_prompt = "Eres un asistente experto en licitaciones públicas españolas que SIEMPRE referencia sus fuentes. Aquí están los fragmentos relevantes de los documentos:\n\n"
 
         for i, chunk in enumerate(chunks):
-            # Extract filename from path for better context
+            # Extract metadata from chunk
             pdf_path = chunk["metadata"]["pdf_path"]
             filename = os.path.basename(pdf_path) if pdf_path else "unknown"
             page = chunk["metadata"]["page_number"] if chunk["metadata"]["page_number"] else "unknown"
@@ -68,7 +68,8 @@ class AIDocumentGeneratorService:
             title = chunk["metadata"]["title"]
 
             # Include the chunk content with its metadata
-            system_prompt += f"--- FRAGMENTO {i+1}: [chunk_id: {chunk_id}] ---\n"
+            system_prompt += f"--- FRAGMENTO {i+1} ---\n"
+            system_prompt += f"ID: {chunk_id}\n"
             system_prompt += f"Título: {title}\n"
             system_prompt += f"Documento: {filename}\n"
             system_prompt += f"Página: {page}\n"
@@ -76,12 +77,13 @@ class AIDocumentGeneratorService:
 
         system_prompt += "INSTRUCCIONES IMPORTANTES:\n"
         system_prompt += "1. Analiza estos fragmentos y proporciona información precisa basándote en ellos.\n"
-        system_prompt += "2. Cuando cites información de un fragmento, DEBES incluir su ID entre corchetes [chunk_id: XXX] al final de cada afirmación importante.\n"
-        system_prompt += "3. COPIA EXACTAMENTE los IDs de los fragmentos tal como aparecen. NO modifiques, abrevies o alteres los IDs en absoluto.\n"
-        system_prompt += "4. No inventes información que no esté en los fragmentos proporcionados.\n"
-        system_prompt += "5. Tu respuesta será mostrada al usuario con enlaces a las fuentes originales, por lo que es crucial que cites correctamente los IDs de fragmentos.\n"
-        system_prompt += "6. SIEMPRE usa este formato exacto para citar: [chunk_id: chunk_id_exacto] donde chunk_id_exacto es el ID completo del fragmento."
-        system_prompt += "7. Estructura tu respuesta en formato markdown!."
+        system_prompt += "2. Cuando cites información de un fragmento, DEBES incluir su ID exacto entre corchetes [chunk_id: XXX] al final de cada afirmación importante.\n"
+        system_prompt += "3. COPIA EXACTAMENTE los IDs de los fragmentos tal como aparecen. No abrevies ni cambies el formato.\n"
+        system_prompt += "4. Los IDs tienen el formato chunk_documento,página,sección (por ejemplo: chunk_DOC20241111094338ANEXO_I,1,s2_3) - cópialos completos.\n"
+        system_prompt += "5. No inventes información que no esté en los fragmentos proporcionados.\n"
+        system_prompt += "6. Tu respuesta será mostrada al usuario con enlaces a las fuentes originales, por lo que es crucial que cites correctamente los IDs de fragmentos.\n"
+        system_prompt += "7. IMPORTANTE: Los usuarios solo verán la información de un fragmento cuando utilizas la referencia EXACTA. Si modificas el ID, no podrán ver la información original.\n"
+        system_prompt += "8. Estructura tu respuesta en formato markdown."
 
         return system_prompt
 
@@ -185,6 +187,7 @@ class AIDocumentGeneratorService:
             final no tiene acceso al documento y debemos darle toda la información necesaria en nuestra
             respuesta. Cita textualmente el texto cuando sea relevante.
             Nunca respondas con "se especifica en el apartado...", siempre responde con la información final.
+            Utiliza el formato markdown para tu respuesta.
             """
 
             task = self._process_section_with_retries(
@@ -283,7 +286,7 @@ class AIDocumentGeneratorService:
                 ejemplo: [chunk_id: chunk_0_2_anexo_i]
                 NO referencies más de un chunk en una misma lista.
                 NO inventes chunks ID que no estén en la lista de chunks.
-                Tus chunks serán procesados por una función regex que extraerá el ID del chunk re.compile(r'\[chunk_id:\s*([^\]]+)\]')
+                Tus chunks serán procesados por una función regex que extraerá el ID del chunk re.compile(r'\\[chunk_id:\\s*([^\\]]+)\\]')
                 y mapeará a un JSON por el chunk ID.
             """
 

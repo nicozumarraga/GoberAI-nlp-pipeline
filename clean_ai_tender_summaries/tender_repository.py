@@ -120,6 +120,25 @@ class TenderRepository:
         client_tender['chunks_path'] = chunks_path
         return client_tender
 
+    def update_processed_doc_path(self, tender_id: str, client_id: str, processed_doc_path: str, reference_metadata_path: str) -> Dict[str, Any]:
+        """
+        Update processed document path and reference metadata path for a client tender
+
+        Args:
+            tender_id: ID of the tender
+            client_id: ID of the client
+            processed_doc_path: Path to the processed document with clickable references
+            reference_metadata_path: Path to the reference metadata JSON file
+
+        Returns:
+            Updated client tender data
+        """
+        client_tender = self.get_client_tender(tender_id, client_id)
+        client_tender['processed_doc_path'] = processed_doc_path
+        client_tender['reference_metadata_path'] = reference_metadata_path
+        client_tender['updated_at'] = datetime.now()
+        return client_tender
+
     def get_chunk_reference(self, tender_id: str, chunk_id: str) -> Dict[str, Any]:
         """
         Get reference information for a specific chunk

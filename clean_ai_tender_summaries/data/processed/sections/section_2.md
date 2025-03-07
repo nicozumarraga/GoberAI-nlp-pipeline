@@ -1,38 +1,42 @@
 ## 4. CONDICIONES CONTRACTUALES
+### Condiciones de Ejecución Especiales
+- **Requisitos adicionales durante la ejecución:** El adjudicatario deberá adoptar medidas encaminadas a eliminar las desigualdades entre el hombre y la mujer en el mercado laboral, y la conciliación del trabajo y la vida familiar. Para su acreditación, el adjudicatario deberá aportar, con carácter previo a la formalización del contrato, declaración responsable en que detalle las medidas que se adoptan en ambos aspectos [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.8]. El material entregado defectuoso y el material devuelto, deberá ser sustituido en 48 horas por otro similar sin cargos adicionales [chunk_id: chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.4]. La empresa adjudicataria deberá presentar el Certificado Fitosanitario correspondiente con cada uno de los albaranes de entrega [chunk_id: chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.2].
 
-**Condiciones de Ejecución Especiales**
+### Modificación del Contrato
+- **Posibilidad de modificaciones:** Los contratos administrativos sólo podrán ser modificados por razones de interés público en los casos y en la forma previstos en la Subsección 4 ª de la Sección 3ª del Capítulo I del Título I del Libro Segundo de la LCSP [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_8.5].
+- **Procedimiento para solicitar modificaciones:** Las modificaciones acordadas por el órgano de contratación serán obligatorias para los contratistas en los términos establecidos en el artículo 206 de la LCSP, debiendo formalizarse conforme a lo dispuesto en el artículo 153 de la LCSP y publicarse de acuerdo con lo establecido en los artículos 207 y 63 de la citada ley [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_8.5].
 
-*   **Requisitos adicionales durante la ejecución:** Se establece como condición especial de la ejecución del contrato, la adopción por parte del contratista de medidas encaminadas a eliminar las desigualdades entre el hombre y la mujer en el mercado laboral, y la conciliación del trabajo y la vida familiar [chunk_id: chunk_26_3_cláusula_26_obligaciones_labor]. Para su acreditación, el adjudicatario deberá aportar, con carácter previo a la formalización del contrato, declaración responsable en que detalle las medidas que se adoptan en ambos aspectos [chunk_id: chunk_26_3_cláusula_26_obligaciones_labor].
-
-**Modificación del Contrato**
-
-*   **Posibilidad de modificaciones:** Los contratos administrativos sólo podrán ser modificados por razones de interés público en los casos y en la forma previstos en la Subsección 4 ª de la Sección 3ª del Capítulo I del Título I del Libro Segundo de la LCSP, y de acuerdo con el procedimiento regulado en el artículo 191 LCSP, con las particularidades previstas en el artículo 207 LCSP [chunk_id: chunk_35_2_sección_cuarta_de_la_modificac]. Los contratos administrativos celebrados por los órganos de contratación sólo podrán modificarse durante su vigencia cuando se dé alguno de los supuestos establecidos en el apartado 2 del artículo 203 LCSP [chunk_id: chunk_35_2_sección_cuarta_de_la_modificac].
-*   **Procedimiento para solicitar modificaciones:** Las modificaciones acordadas por el órgano de contratación serán obligatorias para los contratistas en los términos establecidos en el artículo 206 de la LCSP, debiendo formalizarse conforme a lo dispuesto en el artículo 153 de la LCSP y publicarse de acuerdo con lo establecido en los artículos 207 y 63 de la citada ley [chunk_id: chunk_35_2_sección_cuarta_de_la_modificac].
-
-**Facturación y Condiciones de Pago**
-
-*   **Procedimiento de facturación:** No se especifica en los fragmentos proporcionados.
-*   **Condiciones de pago:** El adjudicatario tendrá derecho al abono del precio de los bienes efectivamente entregados y formalmente recibidos por CEE MUNICIPAL "JARDINES Y NATURALEZA" del EXCMO Ayuntamiento de Jaén [chunk_id: chunk_70_3_cláusula_24_pago_del_precio_de]. La Administración deberá aprobar los documentos que acrediten la conformidad con lo dispuesto en el contrato de los suministros adquiridos dentro de los treinta días siguientes a la adquisición del suministro [chunk_id: chunk_70_3_cláusula_24_pago_del_precio_de].
-*   **Entidades responsables del pago:** CEE MUNICIPAL "JARDINES Y NATURALEZA" del EXCMO Ayuntamiento de Jaén [chunk_id: chunk_70_3_cláusula_24_pago_del_precio_de].
+### Facturación y Condiciones de Pago
+- **Procedimiento de facturación:** El adjudicatario deberá aportar con la factura el albarán de entrega [chunk_id: chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.4].
+- **Condiciones de pago:** La Administración deberá aprobar los documentos que acrediten la conformidad con lo dispuesto en el contrato de los suministros adquiridos dentro de los treinta días siguientes a la adquisición del suministro [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.6.2].
+- **Entidades responsables del pago:** CEE MUNICIPAL "JARDINES Y NATURALEZA" del EXCMO Ayuntamiento de Jaén [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.6.2].
 
 ## 5. CRITERIOS DE ADJUDICACIÓN
-
-*   **Criterios de valoración de las ofertas:** Oferta económica [chunk_id: chunk_170_4_10_criterios_de_adjudicación_d].
-*   **Ponderación de los criterios:** Oferta económica: 100 puntos [chunk_id: chunk_170_4_10_criterios_de_adjudicación_d].
-*   **Comentarios adicionales sobre la evaluación:** Se dará la puntuación máxima a la oferta más baja [chunk_id: chunk_170_4_10_criterios_de_adjudicación_d]. El resto de ofertas se puntuarán en proporción directa a aquella, según la fórmula: P = PM x (OMB/O) [chunk_id: chunk_170_4_10_criterios_de_adjudicación_d]. Donde P = puntuación de cada oferta, PM = puntuación máxima, OMB = cantidad a que asciende la oferta más baja entre las que se consideren en este apartado, O = oferta a puntuar [chunk_id: chunk_170_4_10_criterios_de_adjudicación_d]. El criterio único que se utiliza es el de factor económico por cuanto las características de los bienes a suministrar están perfectamente definidos en el PPTP y no puede ser objeto de mejora o variación, estando igualmente determinadas las restantes exigencias de la prestación [chunk_id: chunk_170_4_10_criterios_de_adjudicación_d].
+- **Criterios de valoración de las ofertas:** El criterio de adjudicación es la oferta económica, con una ponderación del 100% [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.2.2.1].
+- **Ponderación de los criterios:** Oferta económica: 100 puntos [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,2,s1_1.3.5.1].
+- **Comentarios adicionales sobre la evaluación:** Se dará la puntuación máxima a la oferta más baja. El resto de ofertas se puntuarán en proporción directa a aquella, según la fórmula: P = PM x (OMB/O), donde P = puntuación de cada oferta, PM = puntuación máxima, OMB = cantidad a que asciende la oferta más baja entre las que se consideren en este apartado, O = oferta a puntuar [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,2,s1_1.3.5.1]. Los criterios de desempate se resolverán por el sistema establecido en el artículo 147.2 LCSP [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_2.3].
 
 ## 6. OTROS COMENTARIOS Y RECOMENDACIONES
-
-*   **Comentarios generales sobre la licitación:** Los licitadores están exentos de acreditar la solvencia económica y financiera y técnica o profesional [chunk_id: chunk_93_4_cláusula_12_aptitud_para_contr].
-*   **Observaciones sobre otros apartados del pliego:** El licitador deberá indicar de manera expresa el porcentaje de baja que oferta, desglosando de manera específica la aplicación de dicho porcentaje al precio unitario de cada producto [chunk_id: chunk_184_3_26_particularidades_a_incluir_]. El porcentaje de baja será único para todos los productos incluidos en cada lote [chunk_id: chunk_184_3_26_particularidades_a_incluir_]. El importe de adjudicación coincidirá con el presupuesto base de licitación, revirtiendo la baja ofertada, a todos y cada uno de los precios unitarios de los cuadros de precios de aplicación, en el suministro de un mayor número de unidades [chunk_id: chunk_184_3_26_particularidades_a_incluir_].
+- **Comentarios generales sobre la licitación:** El contrato se adjudicará por procedimiento abierto simplificado abreviado [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.2.1.1]. Los licitadores están exentos de acreditar la solvencia económica y financiera y técnica o profesional [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1].
+- **Observaciones sobre otros apartados del pliego:** El plazo de presentación de ofertas es hasta el 25/11/2024 a las 14:00 [chunk_id: chunk_DOC_CN2024-001193585,1,s1_3.3]. La apertura de ofertas económicas será el día 27/11/2024 a las 09:00 horas [chunk_id: chunk_DOC_CN2024-001193585,1,s1_6.1].
 
 ## 7. DOCUMENTACIÓN ADICIONAL NECESARIA
+**Lista de documentos requeridos para la presentación de la oferta:**
+- Declaración responsable [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7].
+- Compromiso de constituir la unión temporal (si aplica) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1].
+- Declaración de empresas vinculadas (si aplica) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.1].
+- Declaración responsable relativa al cumplimiento de la obligación de contar con un dos por ciento de trabajadores con discapacidad o adoptar las medidas alternativas correspondientes y al cumplimiento de las obligaciones establecidas en la normativa vigente en materia laboral, social y de igualdad efectiva entre mujeres y hombres [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.1].
+- Designación de una dirección de correo electrónico en que efectuar las notificaciones [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.2].
+- Proposición económica [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.2].
+- Escritura o documento de constitución, estatutos o acto fundacional (si la empresa es persona jurídica) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
+- DNI o documento que le sustituya (si se trata de empresario individual) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
+- Documentación que acredite la capacidad de obrar de empresarios no españoles (si aplica) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
+- Informe de la Misión Diplomática Permanente de España (si aplica) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
+- Declaración de someterse a la jurisdicción de los Juzgados y Tribunales españoles (empresas extranjeras) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
+- Original o copia compulsada del alta en el Impuesto sobre Actividades Económicas (si aplica) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
+- Certificación positiva de la Agencia Estatal de la Administración tributaria [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
+- Certificación positiva de la Tesorería de la Seguridad Social [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
+- Certificación de la Mutualidad de Previsión Social (si aplica) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
+- Manifestación expresa de inscripción en el Registro Oficial de Licitadores y Empresas Clasificadas del Sector Público (si aplica) [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2].
 
-*   **Lista de documentos requeridos para la presentación de la oferta:**
-    *   Declaración responsable de conformidad con el modelo establecido en el ANEXO II a este Pliego [chunk_id: chunk_106_57_1_sobre_único_con_documentación_].
-    *   Compromiso de constituir la unión temporal por parte de los empresarios que sean parte de la misma (si aplica) [chunk_id: chunk_107_58_2_2_uniones_temporales_de_empres].
-    *   Declaración de empresas vinculadas (si aplica) [chunk_id: chunk_108_59_3_3_empresas_vinculadas].
-    *   Declaración responsable conforme al modelo del Anexo IV relativa al cumplimiento de la obligación de contar con un dos por ciento de trabajadores con discapacidad o adoptar las medidas alternativas correspondientes y al cumplimiento de las obligaciones establecidas en la normativa vigente en materia laboral, social y de igualdad efectiva entre mujeres y hombres [chunk_id: chunk_108_59_3_3_empresas_vinculadas].
-    *   Designación de una dirección de correo electrónico en que efectuar las notificaciones [chunk_id: chunk_109_60_3_5_dirección_de_correo_electrón].
-    *   Proposición económica que se presentará redactada conforme al modelo fijado en el Anexo III al presente pliego [chunk_id: chunk_109_60_3_5_dirección_de_correo_electrón].
-*   **Fuente de los documentos:** Pliego de Cláusulas Administrativas Particulares (PCAP) y Pliego de Prescripciones Técnicas Particulares (PPTP) [chunk_id: chunk_79_30_2_cláusula_1_régimen_jurídico].
+**Fuente de los documentos:** Pliego de Cláusulas Administrativas Particulares y Pliego de Prescripciones Técnicas [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2].

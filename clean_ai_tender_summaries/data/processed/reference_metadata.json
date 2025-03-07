@@ -2,172 +2,562 @@
   "document_path": "data/processed/ai_document_with_references.md",
   "references": [
     {
-      "chunk_id": "chunk_1_3_suministro_de_plantas_y_servic",
-      "matched_id": "chunk_1_3_suministro_de_plantas_y_servic",
+      "chunk_id": "doc_DOC_CN2024-001193585",
+      "matched_id": "doc_DOC_CN2024-001193585",
+      "match_type": "exact",
       "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585",
+      "matched_id": "doc_DOC_CN2024-001193585",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585",
+      "matched_id": "doc_DOC_CN2024-001193585",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585",
+      "matched_id": "doc_DOC_CN2024-001193585",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585",
+      "matched_id": "doc_DOC_CN2024-001193585",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
       "page_number": 1,
-      "title": "**Suministro de plantas y servicio de decoración con adornos de navidad para el embellecimiento de zonas del centro de Jaén.**",
+      "title": "**Cláusula 12. Aptitud para contratar y solvencia económica, financiera y profesional o técnica.**",
       "level": 3
     },
     {
-      "chunk_id": "doc_DOC_CN2024-001193585.md",
-      "matched_id": "doc_DOC_CN2024-001193585.md",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": null,
-      "title": "DOC_CN2024-001193585.md",
-      "level": 0
-    },
-    {
-      "chunk_id": "doc_DOC_CN2024-001193585.md",
-      "matched_id": "doc_DOC_CN2024-001193585.md",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": null,
-      "title": "DOC_CN2024-001193585.md",
-      "level": 0
-    },
-    {
-      "chunk_id": "doc_DOC_CN2024-001193585.md",
-      "matched_id": "doc_DOC_CN2024-001193585.md",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": null,
-      "title": "DOC_CN2024-001193585.md",
-      "level": 0
-    },
-    {
-      "chunk_id": "doc_DOC_CN2024-001193585.md",
-      "matched_id": "doc_DOC_CN2024-001193585.md",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": null,
-      "title": "DOC_CN2024-001193585.md",
-      "level": 0
-    },
-    {
-      "chunk_id": "chunk_100_4_cláusula_16_garantía_provision",
-      "matched_id": "chunk_100_4_cláusula_40_recursos",
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "match_type": "exact",
       "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
       "page_number": 1,
-      "title": "**Cláusula 40. Recursos.**",
+      "title": "**Cláusula 12. Aptitud para contratar y solvencia económica, financiera y profesional o técnica.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.2.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.2.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección segunda. De las garantías**",
       "level": 4
     },
     {
-      "chunk_id": "chunk_4_4_clasificación_cpv",
-      "matched_id": "chunk_4_4_clasificación_cpv",
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_4.3.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_4.3.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 7. Presupuesto base de licitación y precio del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_4.3.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_4.3.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 7. Presupuesto base de licitación y precio del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_4.3.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_4.3.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 7. Presupuesto base de licitación y precio del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_4.3.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_4.3.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 7. Presupuesto base de licitación y precio del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_8.5",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_8.5",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección cuarta. De la modificación y suspensión del contrato**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.2.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.2.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección segunda. De las garantías**",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.2.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.2.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección segunda. De las garantías**",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.2.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.2.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección segunda. De las garantías**",
+      "level": 4
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585",
+      "matched_id": "doc_DOC_CN2024-001193585",
+      "match_type": "exact",
       "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.8.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s4_1",
+      "match_type": "doc_page",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
       "page_number": 1,
-      "title": "Clasificación CPV",
+      "title": "**INDICE**",
       "level": 4
     },
     {
-      "chunk_id": "chunk_12_4_presupuesto_base_de_licitación",
-      "matched_id": "chunk_12_4_presupuesto_base_de_licitación",
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 12. Aptitud para contratar y solvencia económica, financiera y profesional o técnica.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 12. Aptitud para contratar y solvencia económica, financiera y profesional o técnica.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585",
+      "matched_id": "doc_DOC_CN2024-001193585",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "doc_DOC_CN2024-001193585",
+      "matched_id": "doc_DOC_CN2024-001193585",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": null,
+      "title": "DOC_CN2024-001193585.md",
+      "level": 0
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.1",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "NORMA GENERAL",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.1",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "NORMA GENERAL",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.1",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "NORMA GENERAL",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.1",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "NORMA GENERAL",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.2",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "CERTIFICADO FITOSANITARIO.",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.4",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.4",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**5.- RECEPCIONES PARCIALES DE LOS MATERIALES. LUGAR DE ENTREGA DE LOS SUMINISTROS**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.4",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.4",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**5.- RECEPCIONES PARCIALES DE LOS MATERIALES. LUGAR DE ENTREGA DE LOS SUMINISTROS**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.8",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2.8",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección tercera. De las disposiciones laborales y sociales y de transparencia.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.4",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.4",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "GARANTIA DEL PRODUCTO.",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.2",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "CERTIFICADO FITOSANITARIO.",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_8.5",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_8.5",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección cuarta. De la modificación y suspensión del contrato**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_8.5",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_8.5",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Sección cuarta. De la modificación y suspensión del contrato**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.4",
+      "matched_id": "chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.4",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=z/ghU5864J3UKnVAwwWNrCp9Nvi9o32DrO2HfqSQ/7y0QPTDGl%2BTgSxAzGaBF9hR0w94oIWtN2EkYA0Og4DmgZLmV7aY3ZdlQ8%2BxtPvjDpeB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**5.- RECEPCIONES PARCIALES DE LOS MATERIALES. LUGAR DE ENTREGA DE LOS SUMINISTROS**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.6.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.6.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 24. Pago del precio del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.6.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.6.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 24. Pago del precio del contrato.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.2.2.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.2.2.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 15. Criterios de adjudicación.**",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111094338ANEXO_I_1741284737,2,s1_1.3.5.1",
+      "matched_id": "chunk_DOC20241111094338ANEXO_I_1741284737,2,s1_1.3.5.1",
+      "match_type": "exact",
       "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": 1,
-      "title": "Presupuesto base de licitación. (IVA INCLUIDO)= 11.880,00 €",
+      "page_number": 2,
+      "title": "10.- CRITERIOS DE ADJUDICACIÓN DEL CONTRATO. JUSTIFICACIÓN DE LA PONDERACIÓN ASIGNADA A CADA UNO DE ELLOS. JUSTIFICACIÓN DE LA FÓRMULA MATEMÁTICA ESTABLECIDA PARA LOS QUE DEBAN SER VALORADOS POR LA SIMPLE APLICACIÓN DE FÓRMULAS. (ARTÍCULOS 145 Y 146 LCSP)",
       "level": 4
     },
     {
-      "chunk_id": "chunk_24_4_lote_1_suministro_de_planta_na",
-      "matched_id": "chunk_24_4_14_revisión_de_precios_artícul",
+      "chunk_id": "chunk_DOC20241111094338ANEXO_I_1741284737,2,s1_1.3.5.1",
+      "matched_id": "chunk_DOC20241111094338ANEXO_I_1741284737,2,s1_1.3.5.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 2,
+      "title": "10.- CRITERIOS DE ADJUDICACIÓN DEL CONTRATO. JUSTIFICACIÓN DE LA PONDERACIÓN ASIGNADA A CADA UNO DE ELLOS. JUSTIFICACIÓN DE LA FÓRMULA MATEMÁTICA ESTABLECIDA PARA LOS QUE DEBAN SER VALORADOS POR LA SIMPLE APLICACIÓN DE FÓRMULAS. (ARTÍCULOS 145 Y 146 LCSP)",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_2.3",
+      "matched_id": "chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_2.3",
+      "match_type": "exact",
       "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
       "page_number": 3,
-      "title": "14.- REVISIÓN DE PRECIOS. (Artículo 103 LCSP)",
-      "level": 4
-    },
-    {
-      "chunk_id": "chunk_25_4_lote_2_servicio_de_decoración_",
-      "matched_id": "chunk_25_4_lote_1_suministro_de_planta_na",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": 1,
-      "title": "**Lote 1: Suministro de planta navideña cpv 03121100 (plantas vivas)**",
-      "level": 4
-    },
-    {
-      "chunk_id": "chunk_4_4_clasificación_cpv",
-      "matched_id": "chunk_4_4_clasificación_cpv",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": 1,
-      "title": "Clasificación CPV",
-      "level": 4
-    },
-    {
-      "chunk_id": "chunk_24_4_lote_1_suministro_de_planta_na",
-      "matched_id": "chunk_24_4_14_revisión_de_precios_artícul",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=wpL05Sv0vuASNVV59os02t1zLXzhEwhUpVrAmIiI4w%2B06WPE0AvLvdg6w0OZqYyrGivKjCsC2R7gEgBRON2aZeZ1y1C5nSiBmcFaXawL1GJt/o8fNevwsujgRzaBbugn&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": 3,
-      "title": "14.- REVISIÓN DE PRECIOS. (Artículo 103 LCSP)",
-      "level": 4
-    },
-    {
-      "chunk_id": "chunk_25_4_lote_2_servicio_de_decoración_",
-      "matched_id": "chunk_25_4_lote_1_suministro_de_planta_na",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": 1,
-      "title": "**Lote 1: Suministro de planta navideña cpv 03121100 (plantas vivas)**",
-      "level": 4
-    },
-    {
-      "chunk_id": "chunk_26_3_cláusula_26_obligaciones_labor",
-      "matched_id": "chunk_26_3_sección_segunda_de_la_terminac",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": 1,
-      "title": "**Sección segunda. De la terminación del contrato.**",
-      "level": 3
-    },
-    {
-      "chunk_id": "chunk_26_3_cláusula_26_obligaciones_labor",
-      "matched_id": "chunk_26_3_sección_segunda_de_la_terminac",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": 1,
-      "title": "**Sección segunda. De la terminación del contrato.**",
-      "level": 3
-    },
-    {
-      "chunk_id": "chunk_35_2_sección_cuarta_de_la_modificac",
-      "matched_id": "chunk_35_2_capitulo_iii_del_contrato",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
-      "page_number": 1,
-      "title": "**CAPITULO III. Del contrato**",
+      "title": "15.-GARANTÍA PROVISIONAL, GARANTÍA DEFINITIVA Y GARANTÍA COMPLEMENTARIA (Artículos 106 y 107)",
       "level": 2
     },
     {
-      "chunk_id": "chunk_35_2_sección_cuarta_de_la_modificac",
-      "matched_id": "chunk_35_2_capitulo_iii_del_contrato",
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.2.1.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.2.1.1",
+      "match_type": "exact",
       "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
       "page_number": 1,
-      "title": "**CAPITULO III. Del contrato**",
+      "title": "**Cláusula 13. Procedimiento.**",
+      "level": 4
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_5.1.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**Cláusula 12. Aptitud para contratar y solvencia económica, financiera y profesional o técnica.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC_CN2024-001193585,1,s1_3.3",
+      "matched_id": "chunk_DOC_CN2024-001193585,1,s1_3.3",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "Dirección Postal",
       "level": 2
     },
     {
-      "chunk_id": "chunk_35_2_sección_cuarta_de_la_modificac",
-      "matched_id": "chunk_35_2_capitulo_iii_del_contrato",
-      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "chunk_id": "chunk_DOC_CN2024-001193585,1,s1_6.1",
+      "matched_id": "chunk_DOC_CN2024-001193585,1,s1_6.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=cGvQdaF/qmEnKvN211kkZep9eLYPa5sPlu0VFp1fA/h5Fg1pTaKl4FN73msJksylIVq1IvdI5PofzpP36PwDr6Jmx2BDu2S/t4P9dvlPFULfdyQgZAdTm3EfcUAC7CJ6&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
       "page_number": 1,
-      "title": "**CAPITULO III. Del contrato**",
+      "title": "Apertura sobre único conteniendo documentación y oferta técnica",
       "level": 2
     },
     {
-      "chunk_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
-      "matched_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7",
+      "match_type": "exact",
       "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
       "page_number": 1,
-      "title": "**Cláusula 24. Pago del precio del contrato.**",
+      "title": "**SOBRE ÚNICO CON DOCUMENTACIÓN ACREDITATIVA DEL CUMPLIMIENTO DE LOS REQUISITOS PREVIOS Y CRITERIOS VALORABLES EN CIFRAS O PORCENTAJES\"**",
+      "level": 1
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**2.- Uniones Temporales de Empresarios.**",
+      "level": 2
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.1",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**3.- Empresas vinculadas.**",
       "level": 3
     },
     {
-      "chunk_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
-      "matched_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.1",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.1",
+      "match_type": "exact",
       "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
       "page_number": 1,
-      "title": "**Cláusula 24. Pago del precio del contrato.**",
+      "title": "**3.- Empresas vinculadas.**",
       "level": 3
     },
     {
-      "chunk_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
-      "matched_id": "chunk_70_3_cláusula_24_pago_del_precio_de",
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.2",
+      "match_type": "exact",
       "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
       "page_number": 1,
-      "title": "**Cláusula 24. Pago del precio del contrato.**",
+      "title": "**5.- Dirección de correo electrónico.**",
       "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "**5.- Dirección de correo electrónico.**",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.3.2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "1.- Capacidad de obrar.",
+      "level": 3
+    },
+    {
+      "chunk_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2",
+      "matched_id": "chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s2_2",
+      "match_type": "exact",
+      "pdf_path": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=8hgVPRbuSgXhyguKtFy5AiXeHvokF%2B2dllmtzd8sapWTAcvE3IDVxGhRuhi9GWXq2A4V3aEdzAqu7KG6zJkIGd4Rr6XPeaqztAIX1SSQM%2B2B0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "page_number": 1,
+      "title": "Cláusula 12. Aptitud para contratar",
+      "level": 2
     }
   ]
 }

@@ -1,0 +1,65 @@
+2025-03-07 10:37:12,378 - __main__ - INFO - Directories created
+2025-03-07 10:37:12,378 - __main__ - INFO - Processing tender 10/2024/CONM-CEE for client client123...
+2025-03-07 10:37:12,378 - __main__ - INFO - Starting tender processing for tender_id=10/2024/CONM-CEE, client_id=client123
+2025-03-07 10:37:12,378 - __main__ - INFO - All documents already have markdown versions, skipping download and conversion
+2025-03-07 10:37:12,378 - __main__ - INFO - Generating hierarchical chunks for markdown files
+2025-03-07 10:37:12,384 - __main__ - INFO - Saved chunk hierarchy to data/chunks/10/2024/CONM-CEE/doc1_chunks.json
+2025-03-07 10:37:12,385 - __main__ - INFO - Saved chunk hierarchy to data/chunks/10/2024/CONM-CEE/doc2_chunks.json
+2025-03-07 10:37:12,389 - __main__ - INFO - Saved chunk hierarchy to data/chunks/10/2024/CONM-CEE/doc3_chunks.json
+2025-03-07 10:37:12,390 - __main__ - INFO - Saved chunk hierarchy to data/chunks/10/2024/CONM-CEE/doc4_chunks.json
+2025-03-07 10:37:12,391 - __main__ - INFO - Saved chunk hierarchy to data/chunks/10/2024/CONM-CEE/doc5_chunks.json
+2025-03-07 10:37:12,395 - __main__ - INFO - Saved combined chunks to data/chunks/10/2024/CONM-CEE/combined_chunks.json
+2025-03-07 10:37:12,395 - ai_document_generator_service - INFO - Generating AI documents using chunks...
+2025-03-07 10:37:12,398 - ai_document_generator_service - INFO - Processing section 1/2...
+2025-03-07 10:37:12,399 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-07 10:37:12,399 - ai_document_generator_service - INFO - Processing section 2/2...
+2025-03-07 10:37:12,402 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-07 10:37:25,034 - root - INFO - AFC remote call 1 is done.
+2025-03-07 10:37:25,036 - ai_document_generator_service - INFO - 
+Section 1 completed in 12.64 seconds
+2025-03-07 10:37:25,036 - ai_document_generator_service - INFO - Token Usage:
+2025-03-07 10:37:25,036 - ai_document_generator_service - INFO -   Prompt tokens: 79527
+2025-03-07 10:37:25,036 - ai_document_generator_service - INFO -   Response tokens: 2149
+2025-03-07 10:37:25,036 - ai_document_generator_service - INFO -   Section total: 81676
+2025-03-07 10:37:26,811 - root - INFO - AFC remote call 1 is done.
+2025-03-07 10:37:26,812 - ai_document_generator_service - INFO - 
+Section 2 completed in 14.41 seconds
+2025-03-07 10:37:26,812 - ai_document_generator_service - INFO - Token Usage:
+2025-03-07 10:37:26,812 - ai_document_generator_service - INFO -   Prompt tokens: 79353
+2025-03-07 10:37:26,812 - ai_document_generator_service - INFO -   Response tokens: 2597
+2025-03-07 10:37:26,812 - ai_document_generator_service - INFO -   Section total: 81950
+2025-03-07 10:37:26,816 - ai_document_generator_service - INFO - Section 1 saved to data/client_docs/client123_10/2024/sections/section_1.md
+2025-03-07 10:37:26,817 - ai_document_generator_service - INFO - Section 2 saved to data/client_docs/client123_10/2024/sections/section_2.md
+2025-03-07 10:37:26,818 - ai_document_generator_service - INFO - Complete AI document with chunk references written to data/client_docs/client123_10/2024/CONM-CEE_1741340232.md
+2025-03-07 10:37:26,819 - __main__ - INFO - Processing chunk references in data/client_docs/client123_10/2024/CONM-CEE_1741340232.md
+2025-03-07 10:37:26,819 - __main__ - INFO - Found 52 chunk references in the document
+2025-03-07 10:37:26,823 - __main__ - INFO - Reference statistics: 49 exact matches (94.2%), 3 doc+page matches (5.8%), 0 doc-only matches (0.0%), 0 legacy fuzzy matches (0.0%), 0 no matches (0.0%)
+2025-03-07 10:37:26,824 - __main__ - INFO - Document+page match: 'chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_2.3.3' to 'chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_1.3.5.2'
+2025-03-07 10:37:26,824 - __main__ - INFO - Document+page match: 'chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_2.3.3' to 'chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_1.3.5.2'
+2025-03-07 10:37:26,824 - __main__ - INFO - Document+page match: 'chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_7.2' to 'chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_1'
+2025-03-07 10:37:26,825 - __main__ - INFO - Processed document saved to data/processed/processed_client123_10/2024/CONM-CEE.md
+2025-03-07 10:37:26,828 - __main__ - INFO - Document+page match: 'chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_2.3.3' to 'chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_1.3.5.2' for metadata
+2025-03-07 10:37:26,828 - __main__ - INFO - Document+page match: 'chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_2.3.3' to 'chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_1.3.5.2' for metadata
+2025-03-07 10:37:26,828 - __main__ - INFO - Document+page match: 'chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_7.2' to 'chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_1' for metadata
+2025-03-07 10:37:26,828 - __main__ - INFO - Reference metadata statistics: 49 exact matches (94.2%), 3 doc+page matches (5.8%), 0 doc-only matches (0.0%), 0 legacy fuzzy matches (0.0%), 0 no matches (0.0%)
+2025-03-07 10:37:26,830 - __main__ - INFO - Reference metadata saved to data/processed/reference_metadata_client123_10/2024/CONM-CEE.json
+2025-03-07 10:37:26,830 - __main__ - INFO - Processed document saved to data/processed/processed_client123_10/2024/CONM-CEE.md
+2025-03-07 10:37:26,830 - __main__ - INFO - Reference metadata saved to data/processed/reference_metadata_client123_10/2024/CONM-CEE.json
+2025-03-07 10:37:26,830 - ai_document_generator_service - INFO - Generating conversational summary from AI document...
+2025-03-07 10:37:26,830 - root - INFO - AFC is enabled with max remote calls: 10.
+2025-03-07 10:37:28,207 - root - INFO - AFC remote call 1 is done.
+2025-03-07 10:37:28,207 - ai_document_generator_service - INFO - 
+Token Usage (Summary):
+2025-03-07 10:37:28,207 - ai_document_generator_service - INFO - Prompt tokens: 5091
+2025-03-07 10:37:28,207 - ai_document_generator_service - INFO - Response tokens: 224
+2025-03-07 10:37:28,207 - ai_document_generator_service - INFO - Total tokens: 5315
+2025-03-07 10:37:28,207 - __main__ - INFO - Tender processing completed in 15.83 seconds
+2025-03-07 10:37:28,208 - __main__ - INFO - === Processing Results ===
+2025-03-07 10:37:28,208 - __main__ - INFO - AI Summary: True
+2025-03-07 10:37:28,208 - __main__ - INFO - AI Document: data/client_docs/client123_10/2024/CONM-CEE_1741340232.md
+2025-03-07 10:37:28,208 - __main__ - INFO - Processed Document with References: data/processed/processed_client123_10/2024/CONM-CEE.md
+2025-03-07 10:37:28,208 - __main__ - INFO - Reference Metadata: data/processed/reference_metadata_client123_10/2024/CONM-CEE.json
+2025-03-07 10:37:28,208 - __main__ - INFO - Processing time: 15.83 seconds
+2025-03-07 10:37:28,208 - __main__ - INFO - 
+AI Summary Sample:
+2025-03-07 10:37:28,208 - __main__ - INFO - La licitación 10/2024/CONM-CEE busca un proveedor para el suministro de plantas y decoración floral navideña en el centro de Jaén. Se divide en dos lotes: Lote 1: Suministro de plantas de temporada (7...

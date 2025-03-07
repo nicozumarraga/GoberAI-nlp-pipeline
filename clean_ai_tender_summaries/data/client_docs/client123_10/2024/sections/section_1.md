@@ -1,65 +1,45 @@
-## PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACIONES PÚBLICAS
+# PLANTILLA DE RESUMEN DE INFORMACIÓN PARA LICITACIONES PÚBLICAS
 
-**1. INFORMACIÓN GENERAL DEL PROYECTO**
+## 1. INFORMACIÓN GENERAL DEL PROYECTO
+- **Nombre del proyecto:** CONTRATO MIXTO DE PLANTAS Y SERVICIO DE DECORCIÓN FLORAL Y ADRONOS DE NAVIDAD PARA EL EMBELLECIMIENTO DE ZONAS DEL CENTRO DE JAEN. [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,0,s1_1.1]
+- **Código o referencia de licitación:** 10/2024/CONM-CEE [chunk_id: chunk_DOC_CN2024-001193585,1,s1_1]
+- **Entidad convocante:** PRESIDENCIA DEL CEE MUNICIPAL "JARDINES Y NATURALEZA" DE JAEN [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,0,s1_1.3]
+- **Objeto de la licitación:** Suministro de plantas y servicio de decoración con adornos de navidad para el embellecimiento de zonas del centro de Jaén. [chunk_id: chunk_DOC_CN2024-001193585,1,s1_1.1]
+- **Plazo de presentación de ofertas:** Hasta el 25/11/2024 a las 14:00 [chunk_id: chunk_DOC_CN2024-001193585,1,s1_4.1]
 
-* **Nombre del proyecto:** Suministro de plantas y servicio de decoración con adornos de navidad para el embellecimiento de zonas del centro de Jaén.
-* **Código o referencia de licitación:** 10/2024/CONM-CEE
-* **Entidad convocante:** Presidencia del Centro Especial de Empleo Municipal Jardines y Naturaleza
-* **Objeto de la licitación:** Contrato mixto de suministro de plantas y servicio de decoración floral y adornos de navidad para el embellecimiento de zonas del centro de Jaén. 
-* **Plazo de presentación de ofertas:** Hasta el 25/11/2024 a las 14:00 horas.
+## 2. ASPECTOS ECONÓMICOS Y FINANCIEROS
+### Solvencia Económica y Financiera
+- **Requisitos básicos:** Los licitadores están exentos de acreditar la solvencia económica y financiera y técnica o profesional. [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,0,s1_1.3.3]
+- **Documentación necesaria:** Declaración responsable conforme al modelo del Anexo IV relativa al cumplimiento de la obligación de contar con un dos por ciento de trabajadores con discapacidad o adoptar las medidas alternativas correspondientes y al cumplimiento de las obligaciones establecidas en la normativa vigente en materia laboral, social y de igualdad efectiva entre mujeres y hombres. [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.1]
+- **Otros comentarios relevantes:** No se requiere garantía provisional. [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_6]
 
-**2. ASPECTOS ECONÓMICOS Y FINANCIEROS**
+### Presupuesto Base de Licitación
+- **Importe total:** 11.880,00 € (IVA INCLUIDO) [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,1,s1_1.3.3.4]
+- **Condiciones económicas:** El presupuesto base de licitación se ha elaborado teniendo en cuenta los precios de mercado, atendiendo, en virtud de lo establecido en el artículo 101.10 a) de la LCSP, al valor real de los contratos sucesivos similares adjudicados en los doce meses previos a la elaboración del presente Pliego. [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,1,s1_1.3.3.4]
+- **Desglose por lotes:**
+  - Lote 1: Suministro de planta de flor - Presupuesto base de licitación (IVA incluido) = 7.040,00 € [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,1,s1_1.3.3.5]
+  - Lote 2: Servicio de decoración floral y Suministro de adornos en maceteros de grandes dimensiones - Presupuesto base de licitación (IVA incluido) = 4.840,00 € [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,1,s1_1.3.3.9]
+- **Modificaciones presupuestarias:** No ha lugar a introducir modificaciones en el contrato. [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,4,s1_2.3.2]
 
-**Solvencia Económica y Financiera**
+### Garantía Definitiva
+- **Importe de la garantía:** No procede. [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_6.1]
+- **Condiciones de devolución:** No aplica. [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_2.3.3]
+- **Documentación requerida:** No aplica. [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,3,s1_2.3.3]
 
-* **Requisitos básicos:** Se exime a los licitadores de la acreditación de la solvencia económica y financiera y técnica o profesional. (**Cláusula 12, Pliego de Cláusulas Administrativas Particulares**)
-* **Documentación necesaria:** 
-    * Declaración responsable de conformidad con el modelo establecido en el ANEXO II a este Pliego. (**Cláusula 19, Pliego de Cláusulas Administrativas Particulares**)
-    * Compromiso de constituir la unión temporal por parte de los empresarios que sean parte de la misma. (**Cláusula 19, Pliego de Cláusulas Administrativas Particulares**)
-    * Declaración responsable conforme al modelo del Anexo IV relativa al cumplimiento de la obligación de contar con un dos por ciento de trabajadores con discapacidad o adoptar las medidas alternativas correspondientes y al cumplimiento de las obligaciones establecidas en la normativa vigente en materia laboral, social y de igualdad efectiva entre mujeres y hombres. (**Cláusula 19, Pliego de Cláusulas Administrativas Particulares**)
-* **Otros comentarios relevantes:**  No se requiere garantía provisional ni definitiva. (**Cláusula 16, Pliego de Cláusulas Administrativas Particulares**)
+## 3. ASPECTOS TÉCNICOS
+### Plazo de Ejecución
+- **Duración del contrato:** Hasta fin de 2024. [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,0,s1_1.3.3]
+- **Condiciones especiales:** El contratista está obligado a entregar los suministros en los plazos fijados en el pliego de prescripciones técnicas particulares. [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_8.4.5]
 
-**Presupuesto Base de Licitación**
+### Solvencia Técnica o Profesional
+- **Requisitos de experiencia o certificaciones:** No se exige. [chunk_id: chunk_DOC20241111094338ANEXO_I_1741284737,0,s1_1.3.3]
+- **Documentación necesaria:** Declaración responsable conforme al modelo del Anexo IV relativa al cumplimiento de la obligación de contar con un dos por ciento de trabajadores con discapacidad o adoptar las medidas alternativas correspondientes y al cumplimiento de las obligaciones establecidas en la normativa vigente en materia laboral, social y de igualdad efectiva entre mujeres y hombres. [chunk_id: chunk_DOC20241111092201Pliego_de_clausulas_administrativas,1,s1_7.1.1]
 
-* **Importe total:** 11.880,00 € (IVA incluido)
-* **Condiciones económicas:** El importe total del presupuesto se divide en dos lotes:
-    * **Lote 1:** Suministro de planta navideña CPV 03121100 (Plantas vivas) - 7.040,00 € (IVA incluido)
-    * **Lote 2:** Servicio de decoración floral y suministro de adornos típicos navideños CPV 77330000 - 4.840,00 € (IVA incluido)
-* **Modificaciones presupuestarias:** No se contempla la posibilidad de modificaciones en el presupuesto. (**Cláusula 35, Pliego de Cláusulas Administrativas Particulares**)
-
-**Garantía Definitiva**
-
-* **Importe de la garantía:** No se requiere garantía definitiva. (**Cláusula 17, Pliego de Cláusulas Administrativas Particulares**)
-* **Condiciones de devolución:** No aplica.
-* **Documentación requerida:** No aplica.
-
-**3. ASPECTOS TÉCNICOS**
-
-**Plazo de Ejecución**
-
-* **Duración del contrato:** Hasta fin de 2024. (**Anexo I, Características del Contrato**)
-* **Condiciones especiales:** No hay condiciones especiales sobre plazos de entrega, pero se indica que los suministros normales se entregarán en un plazo máximo de 5 días hábiles y los suministros urgentes en un plazo máximo de 24 horas desde la petición. (**Cláusula 5, Pliego de Prescripciones Técnicas Particulares**)
-
-**Solvencia Técnica o Profesional**
-
-* **Requisitos de experiencia o certificaciones:** No hay requisitos específicos de experiencia o certificaciones.
-* **Documentación necesaria:** No se exige documentación específica.
-
-**Especificaciones del Producto o Servicio**
-
-**Descripción de especificaciones técnicas requeridas:**
-
-* **Lote 1:** Suministro de plantas de temporada: 
-    * Se especifican las características generales de las plantas de flor en el **Pliego de Prescripciones Técnicas Particulares**.
-    * Se incluye un ANEXO I con una lista de plantas y precios. 
-* **Lote 2:** Servicio de decoración floral y suministro de adornos típicos navideños:
-    * Se detallan las características de la decoración en el **Pliego de Prescripciones Técnicas Particulares**.
-    * Se incluye un ANEXO II con una lista de adornos y precios. 
-* **Normativas o estándares a cumplir:** 
-    * El material a suministrar deberá cumplir la normativa vigente que resulte aplicable en la fecha de su entrega.
-    * Todos los artículos a suministrar deberán ser nuevos y deberán disponer de la garantía del fabricante. (**Cláusula 6, Pliego de Prescripciones Técnicas Particulares**)
-* **Plazos de entrega y transporte:**
-    * **Suministro normal:** 5 días hábiles (**Pliego de Prescripciones Técnicas Particulares**)
-    * **Suministro urgente:** 24 horas (**Pliego de Prescripciones Técnicas Particulares**)
-
-**IMPORTANTE:** Se recomienda consultar los documentos anexos y el Pliego de Prescripciones Técnicas Particulares para obtener información completa sobre las especificaciones técnicas y los requisitos de entrega. 
+### Especificaciones del Producto o Servicio
+- **Descripción de especificaciones técnicas requeridas:**
+  - Lote 1: Suministro de plantas de temporada - Las plantas de flor, objeto del contrato, se deberán ceñir a las características generales señaladas en el presente pliego de condiciones técnicas, y las especies estarán dentro de las contenidas en el ANEXO I. [chunk_id: chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1]
+  - Lote 2: Servicio de decoración floral y suministro de adornos típicos navideños - Los materiales a suministrar serán los incluidos en la relación del cuadro de material que se adjunta como ANEXO II a este pliego de prescripciones técnicas, o aquellos que de calidad y características similares se consideren más oportunos para el uso al que se destinan. [chunk_id: chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.2.1.4]
+- **Normativas o estándares a cumplir:** El ámbito legal en el que se desarrollarán los suministros es el establecido en la Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público, por la que se transponen al ordenamiento jurídico español las Directivas del Parlamento Europeo y del Consejo 2014/23/UE y 2014/24/UE, de 26 de febrero de 2014. [chunk_id: chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2]
+- **Plazos de entrega y transporte:**
+  - Suministro normal: 5 días hábiles [chunk_id: chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.4]
+  - Suministro urgente: 24 horas [chunk_id: chunk_DOC20241111091415Pliego_de_prescripciones_tecnicas,1,s1_2.4] 
