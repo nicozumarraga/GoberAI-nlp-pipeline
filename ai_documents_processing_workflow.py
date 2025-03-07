@@ -156,11 +156,15 @@ class AIDocumentsProcessingWorkflow:
         if regenerate or not ai_doc_path:
             # Use provided questions or default questions
             doc_questions = questions or [
-                "1. ¿Cuál es el objeto de la licitación?",
-                "2. ¿Cuáles son los requisitos técnicos principales?",
-                "3. ¿Cuál es el presupuesto y la forma de pago?",
-                "4. ¿Cuáles son los criterios de adjudicación?",
-                "5. ¿Cuáles son los plazos clave?"
+                """
+                1. ¿Cuál es el objeto de la licitación?
+                2. ¿Cuáles son los requisitos técnicos principales?
+                3. ¿Cuál es el presupuesto y la forma de pago?
+                """,
+                """
+                4. ¿Cuáles son los criterios de adjudicación?
+                5. ¿Cuáles son los plazos clave?
+                """
             ]
 
             # Generate output filename for storing results

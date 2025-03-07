@@ -1,8 +1,4 @@
-/config/.env
-/clean_ai_tender_summaries/.env
-
 /data
-
 /pdf_pipeline_env
-
-/clean_ai_tender_summaries/data
+.env
+*.log
