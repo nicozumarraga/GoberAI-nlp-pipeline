@@ -108,7 +108,7 @@ async def main():
         markdown_paths=markdown_paths
     )
 
-    # Process the tender with our enhanced workflow
+    # Process the tender
     logger.info(f"Processing tender {tender_id} for client {client_id}...")
     result = await workflow.process_tender(tender_id, client_id, regenerate=True, questions=QUESTIONS)
 
@@ -123,8 +123,7 @@ async def main():
     # Sample of the AI summary
     if result.get('ai_summary'):
         logger.info("\nAI Summary Sample:")
-        summary = result['ai_summary']
-        logger.info(summary[:200] + "..." if len(summary) > 200 else summary)
+        logger.info(result['ai_summary'])
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -45,9 +45,8 @@ class DocumentRetrievalService:
 
             # If file exists, add a timestamp to make it unique
             if os.path.exists(filepath):
-                name, ext = os.path.splitext(base_filename)
-                timestamp = int(datetime.now().timestamp())
-                filepath = os.path.join(self.output_dir, f"{name}_{timestamp}{ext}")
+                self.logger.info(f"File {filepath} already exists, skipping download")
+                return filepath
 
             with open(filepath, 'wb') as f:
                 for chunk in response.iter_content(chunk_size=8192):

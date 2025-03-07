@@ -94,7 +94,7 @@ class DocumentConversionService:
                         return None
 
                     # Wait before polling again
-                    time.sleep(0.5)
+                    time.sleep(0.2)
 
                 self.logger.warning("Maximum polling attempts reached. Request may still be processing.")
                 return None

@@ -143,8 +143,8 @@ class MarkdownChunkingService:
                 section_counters[(parent_section_id, chunk.metadata.level)] = section_counter
                 section_id = f"{parent_section_id}.{section_counter}"
 
-            # Ensure page number is always set (default to 1 if not available)
-            page_number = chunk.metadata.page_number if chunk.metadata.page_number is not None else 1
+            # Ensure page number is always set (default to 1 if not available) -- changing 0-index to 1-index
+            page_number = (chunk.metadata.page_number + 1) if chunk.metadata.page_number is not None else 1
 
             # Create the structured chunk ID: document_ID,page_number,section_id
             chunk.metadata.chunk_id = f"chunk_{doc_id},{page_number},{section_id}"
