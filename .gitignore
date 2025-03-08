@@ -4,3 +4,11 @@
 *.log
 .DS_Store
 __pycache__/
+*.md
+*.json
+*.txt
+*.pdf
+*.html
+*.csv
+*.jsonl
+*.jsonl.gz
