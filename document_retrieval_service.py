@@ -1,17 +1,17 @@
 import os
-import requests
-from datetime import datetime
-from typing import Optional, Dict
-from urllib.parse import unquote
 import logging
+import requests
+import asyncio
+import aiohttp
+from typing import Dict, Optional
 
 class DocumentRetrievalService:
-    """Service for retrieving documents from URLs or other sources"""
+    """Service for retrieving PDF documents from URLs"""
 
     def __init__(self, output_dir: str = "data/raw_pdfs"):
         self.output_dir = output_dir
-        os.makedirs(output_dir, exist_ok=True)
         self.logger = logging.getLogger(__name__)
+        os.makedirs(output_dir, exist_ok=True)
 
     async def retrieve_document(self, url: str) -> Optional[str]:
         """
@@ -29,28 +29,33 @@ class DocumentRetrievalService:
 
         try:
             self.logger.info(f"Downloading PDF from {url}...")
-            response = requests.get(url, stream=True)
-            response.raise_for_status()
 
-            # Simple filename extraction
-            filename = 'document.pdf'
-            if 'Content-Disposition' in response.headers:
-                content_disposition = response.headers['Content-Disposition']
-                if 'filename=' in content_disposition:
-                    filename = content_disposition.split('filename=')[1].strip('"\'')
+            # Create a new aiohttp session
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url) as response:
+                    response.raise_for_status()
 
-            # Generate a unique filename if needed
-            base_filename = os.path.basename(filename)
-            filepath = os.path.join(self.output_dir, base_filename)
+                    # Simple filename extraction
+                    filename = 'document.pdf'
+                    if 'Content-Disposition' in response.headers:
+                        content_disposition = response.headers['Content-Disposition']
+                        if 'filename=' in content_disposition:
+                            filename = content_disposition.split('filename=')[1].strip('"\'')
 
-            # If file exists, add a timestamp to make it unique
-            if os.path.exists(filepath):
-                self.logger.info(f"File {filepath} already exists, skipping download")
-                return filepath
+                    # Generate a unique filename if needed
+                    base_filename = os.path.basename(filename)
+                    filepath = os.path.join(self.output_dir, base_filename)
 
-            with open(filepath, 'wb') as f:
-                for chunk in response.iter_content(chunk_size=8192):
-                    f.write(chunk)
+                    # If file exists, return the existing file path
+                    if os.path.exists(filepath):
+                        self.logger.info(f"File {filepath} already exists, skipping download")
+                        return filepath
+
+                    # Download the file using aiohttp
+                    with open(filepath, 'wb') as f:
+                        # Read the content
+                        content = await response.read()
+                        f.write(content)
 
             self.logger.info(f"PDF downloaded to {filepath}")
             return filepath
@@ -69,8 +74,6 @@ class DocumentRetrievalService:
         Returns:
             Dictionary mapping document IDs to local filepaths
         """
-        import asyncio
-
         pdf_paths = {}
         tasks = []
 

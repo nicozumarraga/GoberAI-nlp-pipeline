@@ -1,10 +1,15 @@
 import os
+import sys
+
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
 import logging
 import json
 import asyncio
 from dotenv import load_dotenv
 from pathlib import Path
-from tests.custom_questions import QUESTIONS
+from custom_questions import QUESTIONS
 
 from markdown_chunking_service import MarkdownChunkingService
 from chunk_reference_utility import ChunkReferenceUtility

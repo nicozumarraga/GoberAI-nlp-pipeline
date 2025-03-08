@@ -1,20 +1,27 @@
 import os
-import time
 import requests
 import logging
+import asyncio
 from typing import Optional, Dict
 
 class DocumentConversionService:
     """Service for converting PDFs to markdown using Marker API"""
 
     def __init__(self, api_key: str, output_dir: str = "data/markdown"):
+        """
+        Initialize the document conversion service
+
+        Args:
+            api_key: API key for the Marker API
+            output_dir: Directory to store markdown files
+        """
         self.api_key = api_key
         self.output_dir = output_dir
-        os.makedirs(output_dir, exist_ok=True)
+        self.submit_url = "https://www.datalab.to/api/v1/marker"
         self.logger = logging.getLogger(__name__)
 
-        # API endpoints
-        self.submit_url = "https://www.datalab.to/api/v1/marker"
+        # Create output directory if it doesn't exist
+        os.makedirs(output_dir, exist_ok=True)
 
     async def convert_to_markdown(self, pdf_path: str) -> Optional[str]:
         """
@@ -39,65 +46,78 @@ class DocumentConversionService:
             return output_path
 
         try:
-            # Prepare the file for upload
-            with open(pdf_path, 'rb') as f:
-                files = {'file': (os.path.basename(pdf_path), f, 'application/pdf')}
+            # Import aiohttp here for async HTTP requests
+            import aiohttp
 
-                # Set up the request
-                headers = {
-                    'accept': 'application/json',
-                    'X-API-Key': self.api_key
-                }
+            # Set up the request
+            headers = {
+                'accept': 'application/json',
+                'X-API-Key': self.api_key
+            }
 
-                data = {
-                    'output_format': 'markdown',
-                    'disable_image_extraction': 'true',
-                    'paginate': 'true',
-                    'skip_cache': 'false',
-                }
+            data = {
+                'output_format': 'markdown',
+                'disable_image_extraction': 'true',
+                'paginate': 'true',
+                'skip_cache': 'false',
+            }
 
-                # Submit the PDF for processing
-                self.logger.info(f"Submitting {pdf_path} to Marker API...")
-                response = requests.post(self.submit_url, headers=headers, files=files, data=data)
-                response.raise_for_status()
+            # Submit the PDF for processing using aiohttp
+            self.logger.info(f"Submitting {pdf_path} to Marker API...")
 
-                # Get request ID
-                result = response.json()
-                if not result.get('success'):
-                    self.logger.error(f"Error: {result.get('error', 'Unknown error')}")
-                    return None
+            async with aiohttp.ClientSession() as session:
+                # Prepare the file for upload
+                with open(pdf_path, 'rb') as f:
+                    form_data = aiohttp.FormData()
+                    form_data.add_field('file',
+                                      f,
+                                      filename=os.path.basename(pdf_path),
+                                      content_type='application/pdf')
 
-                request_id = result['request_id']
-                check_url = f"https://www.datalab.to/api/v1/marker/{request_id}"
+                    # Add other form fields
+                    for key, value in data.items():
+                        form_data.add_field(key, value)
 
-                # Poll for results
-                self.logger.info(f"Processing request {request_id}...")
-                max_attempts = 100
-                for attempt in range(max_attempts):
-                    status_response = requests.get(check_url, headers=headers)
-                    status_response.raise_for_status()
-                    status = status_response.json()
+                    # Submit the request
+                    async with session.post(self.submit_url, headers=headers, data=form_data) as response:
+                        response.raise_for_status()
+                        result = await response.json()
 
-                    if status.get('status') == 'complete':
-                        # Get the markdown content
-                        markdown_content = status.get('markdown', '')
+                        if not result.get('success'):
+                            self.logger.error(f"Error: {result.get('error', 'Unknown error')}")
+                            return None
 
-                        # Save the markdown content
-                        with open(output_path, 'w', encoding='utf-8') as f:
-                            f.write(markdown_content)
+                        request_id = result['request_id']
+                        check_url = f"https://www.datalab.to/api/v1/marker/{request_id}"
 
-                        self.logger.info(f"Successfully converted {pdf_path} to {output_path}")
-                        return output_path
+                        # Poll for results
+                        self.logger.info(f"Processing request {request_id}...")
+                        max_attempts = 100
+                        for attempt in range(max_attempts):
+                            async with session.get(check_url, headers=headers) as status_response:
+                                status_response.raise_for_status()
+                                status = await status_response.json()
 
-                    elif status.get('status') == 'error':
-                        self.logger.error(f"Error processing PDF: {status.get('error')}")
+                                if status.get('status') == 'complete':
+                                    # Get the markdown content
+                                    markdown_content = status.get('markdown', '')
+
+                                    # Save the markdown content
+                                    with open(output_path, 'w', encoding='utf-8') as f:
+                                        f.write(markdown_content)
+
+                                    self.logger.info(f"Successfully converted {pdf_path} to {output_path}")
+                                    return output_path
+
+                                elif status.get('status') == 'error':
+                                    self.logger.error(f"Error processing PDF: {status.get('error')}")
+                                    return None
+
+                                # Wait before polling again
+                                await asyncio.sleep(0.2)
+
+                        self.logger.warning("Maximum polling attempts reached. Request may still be processing.")
                         return None
-
-                    # Wait before polling again
-                    time.sleep(0.2)
-
-                self.logger.warning("Maximum polling attempts reached. Request may still be processing.")
-                return None
 
         except Exception as e:
             self.logger.error(f"Error converting PDF to markdown: {e}")
@@ -113,8 +133,6 @@ class DocumentConversionService:
         Returns:
             Dictionary mapping document IDs to markdown file paths
         """
-        import asyncio
-
         markdown_paths = {}
         tasks = []
 

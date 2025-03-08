@@ -1,10 +1,15 @@
 import os
+import sys
+
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
 from dotenv import load_dotenv
 import asyncio
 import logging
 from datetime import datetime
 
-from tests.custom_questions import QUESTIONS
+from custom_questions import QUESTIONS
 from tender_repository import TenderRepository
 from document_retrieval_service import DocumentRetrievalService
 from document_conversion_service import DocumentConversionService
