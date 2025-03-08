@@ -231,13 +231,13 @@ class DocumentChunk:
   - Recommended server: 4+ GB RAM for production use
 
 - **Processing Time** example for `chunked_ai_summary_generator.py`:
-  - PDF Download: ~2.5s total for all 5 documents downloaded in parallel
-  - PDF Conversion: ~3.4s total for all 5 documents processed in parallel
+  - PDF Download: ~2.5s total for 5 documents downloaded in parallel
+  - PDF Conversion: ~3.4s total for 5 documents processed in parallel
   - Chunking: ~0.02s total
-  - AI Generation: ~9.1s total (sections processed in parallel, longest took 9.14s)
+  - AI Generation: ~9.1s total, 2 calls in parallel, + 1 call for ai_summary
   - Document references processing: ~0.01s total
 
-  - **Total processing time was 16.77 seconds**
+  - **After multiple runs, the average processing time ~ 15s**
 
 - **Concurrency**:
   - PDF downloads: Parallel (async - aiohttp)
