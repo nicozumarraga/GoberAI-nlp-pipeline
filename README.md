@@ -1,6 +1,6 @@
 # AI Tender Processing Pipeline
 
-An end-to-end pipeline for processing tender documents that extracts structured information from PDFs and generates AI-powered summaries with traceable references to source documents.
+An end-to-end pipeline for processing tender documents that extracts structured information from PDFs and generates AI summaries with traceable references to source documents.
 
 ## Quick Start
 
