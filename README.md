@@ -13,7 +13,7 @@ export MARKER_API_KEY=your_marker_api_key
 export GEMINI_API_KEY=your_gemini_api_key
 
 # Run the pipeline
-python chunked_ai_summary_generator.py
+python tests/main_ai_summary_generator.py
 ```
 
 ## System Architecture
